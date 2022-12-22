@@ -7,9 +7,9 @@ use Livewire\Component;
 class CategoryComponent extends Component
 {
 
-    public $categories, $category, $image, $imageTable, $ico, $megamenu, $imageEdit, $imageTableEdit, $icoEdit, $megamenuEdit;
+    public $categories, $category, $image,  $imageEdit ;
 
-    
+
     public function render()
     {
         return view('livewire.admin.category-component');

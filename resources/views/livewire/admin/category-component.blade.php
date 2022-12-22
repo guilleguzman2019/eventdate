@@ -33,7 +33,7 @@
 						<label class="fs-13 mb-2 opacity-75 mb-3">Imagen</label>
 						<div class="ratio ratio-1x1 mb-2 w-75 mx-auto bg-img rounded-4" style="background-image: url({{ asset($image ? $image -> temporaryUrl() : 'img/admin/default.png') }});">
 							<div>
-								<a onclick="$('.imageUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('img/admin/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
+								<a onclick="$('.imageUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('/img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
 							</div>
 						</div>
 						<input class="imageUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model.defer="image" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
@@ -55,8 +55,8 @@
 
 				<table class="table table-borderless">
 					<thead class="fs-12 text-muted opacity-50 text-uppercase">
-						<th class="fw-600 ps-0">Categoría</th>
-						<th class="fw-600">Nombre</th>
+						<th class="fw-600 ps-0">Nombre</th>
+						<th class="fw-600">Imagen</th>
 						<th></th>
 						<th></th>
 					</thead>
@@ -97,7 +97,7 @@
 							<label class="fs-14 fw-400 mb-3">Imagen</label>
 							<div class="ratio ratio-1x1 mb-2 w-75 mx-auto bg-img rounded-4" style="background-image: url({{ asset($imageEdit ? $imageEdit -> temporaryUrl() : ( $editArray['image'] ?? 'img/admin/default.png')) }});">
 								<div>
-									<a onclick="$('.imageEditUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('img/admin/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
+									<a onclick="$('.imageEditUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('/img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
 								</div>
 							</div>
 							<input class="imageEditUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model.defer="imageEdit" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">

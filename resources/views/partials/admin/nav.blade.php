@@ -8,19 +8,19 @@
 
 	<ul class="list-unstyled text-center navigation">
 		<li class="position-relative">
-			<a href="{{ route('admin.categories') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/tickets*') ? 'active' : '' }}">
+			<a href="{{ route('admin.dashboard') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/tickets*') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-ticket.svg') }}" width="24" height="24" class="me-2 me-sm-0">
 				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Dashboard</span>
 			</a>
 		</li>
 		<li class="position-relative">
-			<a href="#" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/eventos*') ? 'active' : '' }}">
+			<a href="{{ route('admin.categories') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/eventos*') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-calendar.svg') }}" width="24" height="24" class="me-2 me-sm-0">
 				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Categorias</span>
 			</a>
 		</li>
 		<li class="position-relative">
-			<a href="#" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/control-de-tickets*') ? 'active' : '' }}">
+			<a href="{{ route('admin.templates') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/control-de-tickets*') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-scan.svg') }}" width="24" height="24" class="me-2 me-sm-0">
 				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Template</span>
 			</a>
