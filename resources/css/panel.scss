@@ -1,0 +1,208 @@
+// Custom
+@import "custom";
+
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+*:focus {
+	outline: none;
+}
+
+nav.menu-nav {
+	background-color: #F5F7FA;
+	left: 0;
+	width: 100px;
+	z-index: 3;
+
+	ul.navigation li {
+		a {
+			border-radius: 50%;
+
+			img {
+				filter: grayscale(100%);
+				opacity: .5;
+			}
+	
+			&.active, &:hover {
+				background-color: rgba(0, 119, 255, .1);
+	
+				img {
+					filter: grayscale(0);
+					opacity: 1;
+				}
+			}
+		}
+
+		span {
+			background-color: #FFF;
+			box-shadow: 0px 0px 40px rgb(29 58 83 / 10%);
+			display: none;
+			left: 110px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:hover span {
+			display: block;
+		}
+	}
+}
+
+main {
+	padding-left: 100px;
+}
+
+.accordion-button {
+	&:not(.collapsed) {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	&:focus {
+		border-color: transparent;
+		box-shadow: none;
+	}
+}
+
+
+#advanceSettings {
+	margin: 0 -1rem;
+}
+
+.menuEvent {
+	border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+	position: fixed;
+	height: 100%;
+	top: 0;
+	width: 300px;
+}
+
+.contentEvent {
+	padding-left: calc(300px + 1.5rem);
+}
+
+.select2-container--default .select2-selection--multiple {
+	background: transparent;
+	border: none;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	border: none;
+}
+.select2-dropdown {
+	border: none;
+	box-shadow: 0px 0px 40px rgb(29 58 83 / 10%) !important;
+	border-radius: 5px !important;
+	overflow: hidden;
+}
+
+
+.pagination {
+	 li {
+	 	span, button {
+	 		border-radius: 8px !important;
+	 		margin: 0 5px 0 0 !important;
+	 	}
+
+	 	&.active {
+	 		span {
+	 			background-color: #5143d9;
+	 			border-color: #5143d9;
+	 		}
+	 	}
+	 }
+}
+
+.dashline {
+	border-bottom: 2px dashed #f1f3f4;
+
+	&:after {
+		background-color: #f1f3f4;
+		border-radius: 50%;
+		content: '';
+		display: block;
+		height: 30px;
+		position: absolute;
+		right: -15px;
+		top: -15px;
+		width: 30px;
+	}
+
+	&:before {
+		background-color: #f1f3f4;
+		border-radius: 50%;
+		content: '';
+		display: block;
+		height: 30px;
+		left: -15px;
+		position: absolute;
+		top: -15px;
+		width: 30px;
+	}
+}
+
+
+.ck-editor__editable {
+    min-height: 200px;
+    max-height: 1200px;
+}
+
+
+@media( max-width: 767px ) {
+	nav.menu-nav {
+		left: -280px;
+		transition: all ease-in-out .3s;
+		width: 280px;
+
+		ul.navigation li {
+			a {
+				border-radius: 15px;
+			}
+	
+			span {
+				background-color: transparent;
+				box-shadow: none;
+				display: inline;
+				position: inherit;
+				top: inherit;
+				transform: none;
+			}
+
+			&:hover span {
+				display: inline;
+			}
+		}
+
+		&.view {
+			left: 0;
+		}
+	}
+
+	main {
+		padding-left: 0;
+	}
+
+	.menuEvent {
+		border: none;
+		position: inherit;
+		width: 100%;
+
+		& > .border-bottom {
+			border-bottom: none !important;
+		}
+
+		.menu {
+			background-color: rgb(248,249,250);
+
+			.items {
+				display: none;
+			}
+		}
+	}
+
+	.contentEvent {
+		padding-left: 0;
+	}
+}
