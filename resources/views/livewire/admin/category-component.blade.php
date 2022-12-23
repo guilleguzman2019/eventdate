@@ -1,137 +1,155 @@
-<div class="p-4">
-	<div class="mb-4">
-		<h1 class="fs-18 fw-600 m-0">Categorías</h1>
-		<span class="text-muted fs-12">Crear, editar y eliminar categorías</span>
-	</div>
+<div>
+    <x-slot name="titlePage">- Categorías</x-slot>
+
+    <h1 class="fs-21 fw-700 mb-1">Categorías</h1>
+    <h2 class="fs-14 text-muted mb-5">Creación, edición y eliminación de categorías</h2>
+
+    <div class="row gx-sm-5">
+        <div class="col-sm-5">
+            <div class="p-4 border-dashed rounded-4 position-relative">
+                <div wire:loading wire:target="save, image" class="position-absolute w-100 h-100 top-0 start-0 bg-light" style="--bs-bg-opacity: 0.9; z-index: 2;">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="fs-18 mb-3">Crear categoría</h3>
+
+                <div class="">
+                    <div class="bg-secondary bg-opacity-10 px-4 py-2 rounded-4">
+                        <label class="fs-14 text-muted">Nombre<span class="text-danger fs-16">*</span></label><br>
+                        <input class="border-0 bg-transparent w-100" type="text" wire:model.defer="createArray.name" autofocus placeholder="Nombre de categoría" />
+                    </div>
+
+                    @error('createArray.name')
+                        <span class="fs-12 text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-3">
+                            <label class="fs-14 d-block mb-2">Icono<span class="text-danger fs-16">*</span></label>
+                            <div class="ratio ratio-1x1 bg-img w-75 mx-auto rounded-4" style="background-image: url({{ asset($image ? $image -> temporaryUrl() : 'img/panel/default.png') }});">
+                                <div>
+                                    <a onclick="$('.imageUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
+                                </div>
+                            </div>
+
+                            <input class="imageUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model="image" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
+
+                            @error('image')
+                                <span class="fs-12 text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <span class="fs-12 text-muted d-block text-center">Sólo se acepta imágenes en formato *.png, *.jpg and *.jpeg. Peso máximo 4MB.</span>
+
+                <button class="btn btn-success py-3 lh-1 px-4 rounded-3" wire:click="save" wire:loading.attr="disabled" wire:target="save, image">Guardar</button>
+            </div>
+        </div>
+
+        <div class="col-sm-7">
+            @if ( $categories -> count() )
+
+                <table class="table table-borderless">
+                    <thead class="fs-14 text-muted opacity-50 text-uppercase border-bottom">
+                        <th class="ps-0">Nombre</th>
+                        <th>Slug</th>
+                        <th></th>
+                    </thead>
+                    <tbody class="fs-14">
+                        @foreach ($categories as $category)
+                            <tr class="border-bottom-dashed align-middle">
+                                <td class="ps-0 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="ratio ratio-1x1 rounded-3 bg-img me-3" style="background-image: url({{ asset($category -> image) }}); width: 40px;"></div>
+                                        <span class="fs-16 fw-700">{{ $category -> name }}</span>
+                                    </div>
+                                </td>
+                                <td>{{ $category -> slug }}</td>
+                                <td class="text-end pe-0">
+                                    <div class="dropdown">
+                                        <button class="bg-light rounded-circle border-0 p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{ asset('img/icos/ico-dots.svg') }}" width="16" height="16" class="d-block"></button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editCat" wire:click="edit('{{ $category -> slug }}')">Editar</a></li>
+                                          <li><a class="dropdown-item" onclick="confirm('¿Seguro que deseas eliminar este registro?') || event.stopImmediatePropagation()" wire:click="destroy('{{ $category -> slug }}')">Eliminar</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+                {{ $categories -> withQueryString() -> onEachSide(1) -> links() }}
+
+            @else
+
+                <div class="py-5">
+                    <img src="{{ asset('img/panel/think.svg') }}" width="128" class="d-block mx-auto mb-3">
+                    <p class="text-center">No hay categorías aquí.</p>
+                </div>
+
+            @endif  
+        </div>
+    </div>
 
 
-	<div class="row">
-		<div class="col-sm-5">
-			<div class="border-dashed bg-dark-2 br-10 p-4 mb-4 sticky-top">
-				<div wire:loading wire:target="save, image, imageTable, ico" class="position-absolute w-100 h-100 top-0 start-0 bg-dark br-10" style="--bs-bg-opacity: 0.9; z-index: 2;">
-					<div class="position-absolute top-50 start-50 translate-middle">
-						<div class="spinner-border text-light" role="status">
-							<span class="visually-hidden">Loading...</span>
+    <div wire:ignore.self class="modal fade" id="editCat" tabindex="-1" aria-labelledby="editCatLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div wire:loading wire:target="edit,update,imageEdit" class="position-absolute w-100 h-100 top-0 start-0 bg-light" style="--bs-bg-opacity: 0.9; z-index: 2;">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-header border-bottom-dashed p-4">
+                    <h1 class="modal-title fs-5" id="editCatLabel">Editar categoría</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+						<div class="bg-secondary bg-opacity-10 px-4 py-2 rounded-4">
+							<label class="fs-14 text-muted">Nombre<span class="text-danger fs-16">*</span></label><br>
+							<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="editArray.name" autofocus placeholder="Nombre de categoría" />
 						</div>
-					</div>
-				</div>
-
-				<h2 class="fs-18 mb-4 text-white">Crear una nueva categoría</h2>
-
-				<div class="mb-3">
-					<label class="fs-13 mb-1 text-white">Nombre<span class="text-danger fs-16">*</span></label>
-					<input class="form-control bg-transparent text-white" type="text" wire:model="createArray.name">
-
-					@error('createArray.name')
-						<br><span class="fs-12 text-danger">{{ $message }}</span>
-					@enderror
-				</div>
-
-
-				<div class="row">
-					<div class="col-sm-3 mb-3 mb-sm-0">
-						<label class="fs-13 mb-2 opacity-75 mb-3">Imagen</label>
-						<div class="ratio ratio-1x1 mb-2 w-75 mx-auto bg-img rounded-4" style="background-image: url({{ asset($image ? $image -> temporaryUrl() : 'img/admin/default.png') }});">
-							<div>
-								<a onclick="$('.imageUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('/img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
-							</div>
-						</div>
-						<input class="imageUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model.defer="image" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
-
-						@error('image')
+						@error('editArray.name')
 							<span class="fs-12 text-danger">{{ $message }}</span>
 						@enderror
 					</div>
 
-
-				</div>
-				<button class="btn btn-success fs-14 px-4" wire:click="save" wire:loading.attr="disabled" wire:target="image, imageTable, save">Guardar categoría</button>
-			</div>
-		</div>
-
-		<div class="col-sm-7">
-			<div class="border-dashed bg-dark-2 br-10 p-4 mb-4">
-				<h2 class="fs-18 mb-4 text-white">Listado de categorías</h2>
-
-				<table class="table table-borderless">
-					<thead class="fs-12 text-muted opacity-50 text-uppercase">
-						<th class="fw-600 ps-0">Nombre</th>
-						<th class="fw-600">Imagen</th>
-						<th></th>
-						<th></th>
-					</thead>
-					<tbody class="text-white fs-14">
-						
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade" wire:ignore.self id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content bg-dark-2">
-				<div wire:loading wire:target="edit, imageEdit, imageTableEdit, icoEdit, megamenuEdit, update" class="position-absolute w-100 h-100 top-0 start-0 bg-dark br-10" style="--bs-bg-opacity: 0.9; z-index: 2;">
-					<div class="position-absolute top-50 start-50 translate-middle">
-						<div class="spinner-border text-light" role="status">
-							<span class="visually-hidden">Loading...</span>
-						</div>
-					</div>
-				</div>
-				<div class="modal-header border-bottom-dashed">
-					<h5 class="modal-title" id="editModalLabel">Editar categoría</h5>
-					<button type="button" class="btn-close f-invert" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="mb-3">
-						<label class="fs-13 mb-1 opacity-75">Nombre<span class="text-danger fs-16">*</span></label>
-						<input class="form-control bg-transparent text-white" type="text" wire:model="editArray.name">
-
-						@error('editArray.name')
-							<br><span class="fs-12 text-danger">{{ $message }}</span>
-						@enderror
-					</div>
-
 					<div class="row">
-						<div class="col-sm-3 mb-3 mb-sm-0">
-							<label class="fs-14 fw-400 mb-3">Imagen</label>
-							<div class="ratio ratio-1x1 mb-2 w-75 mx-auto bg-img rounded-4" style="background-image: url({{ asset($imageEdit ? $imageEdit -> temporaryUrl() : ( $editArray['image'] ?? 'img/admin/default.png')) }});">
-								<div>
-									<a onclick="$('.imageEditUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('/img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
+						<div class="col-sm-6">
+							<div class="mb-3">
+								<label class="fs-14 d-block mb-2">Imagen<span class="text-danger fs-16">*</span></label>
+								<div class="ratio ratio-1x1 bg-img w-75 mx-auto rounded-4" style="background-image: url({{ asset($imageEdit ? $imageEdit -> temporaryUrl() : $editArray['image']) }});">
+									<div>
+										<a onclick="$('.imageEditUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="{{ asset('img/icos/ico-edit.svg') }}" width="16" height="16" class="float-start f-invert"></a>
+									</div>
 								</div>
-							</div>
-							<input class="imageEditUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model.defer="imageEdit" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
 
-							@error('imageEdit')
-								<span class="fs-12 text-danger">{{ $message }}</span>
-							@enderror
+								<input class="imageEditUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model="imageEdit" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
+
+								@error('imageEdit')
+									<span class="fs-12 text-danger">{{ $message }}</span>
+								@enderror
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="modal-footer pt-0 border-top-0">
-					<button type="button" class="btn fs-14 btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn fs-14 btn-primary" wire:click="update" wire:loading.attr="disabled" wire:target="imageEdit, imageTableEdit, icoEdit, megamenuEdit, update">Actualizar</button>
-				</div>
-			</div>
-		</div>
-	</div>
+					<span class="fs-12 text-muted d-block text-center">Sólo se acepta imágenes en formato *.png, *.jpg and *.jpeg. Peso máximo 4MB.</span>
+                </div>
 
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div id="liveToast" class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex justify-content-between align-items-center pe-2">
-                <div class="toast-body">Actualizado correctamente</div>
-                <button type="button" class="btn-close f-invert" data-bs-dismiss="toast" aria-label="Close"></button>
+                <div class="modal-footer pt-0 border-0">
+                    <button type="button" class="btn btn-secondary py-3 lh-1 px-4 rounded-4" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary py-3 lh-1 px-4 rounded-4" wire:click="update" wire:loading.attr="disabled" wire:target="edit,update,imageEdit">Guardar</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-@push('scripts')
-    <script type="text/javascript">
-        window.livewire.on('updated', () => {
-        	$('.modal').modal('hide')
-            var toast = new bootstrap.Toast(document.getElementById('liveToast'))
-            toast.show()
-        })
-    </script>
-@endpush

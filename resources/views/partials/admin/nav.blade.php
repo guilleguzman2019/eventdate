@@ -1,5 +1,5 @@
 <nav class="position-fixed top-0 h-100 d-sm-flex flex-column justify-content-between menu-nav p-4 p-sm-0">
-	<img src="{{ asset('img/logo-ico.svg') }}" width="56" class="d-none d-sm-block mx-auto mt-4">
+	<img src="https://eleve11.ar/wp-content/uploads//2022/07/logo-eleven-con-degradado-13.svg" width="90" class="d-none d-sm-block mx-auto mt-4">
 
 	<div class="d-flex justify-content-between align-items-center d-sm-none border-bottom pb-4 mb-4">
 		<h3 class="d-block d-sm-none text-uppercase fw-700 m-0">Dashboard</h3>

@@ -147,7 +147,10 @@ return [
     */
 
     'attributes' => [
-        'password' => 'Contraseña'
+        'password' => 'Contraseña',
+        'image' => 'Imagen',
+
+        'createArray.name' => 'Nombre',
     ],
 
 ];

@@ -14,6 +14,6 @@ class Template extends Model
 
     public function categories()
     {
-        return $this -> hasMany(Category::Class); 
+        return $this -> belongsToMany(Category::Class); 
     }
 }
