@@ -8,9 +8,9 @@
 
 	<ul class="list-unstyled text-center navigation">
 		<li class="position-relative">
-			<a href="#" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/tickets*') ? 'active' : '' }}">
+			<a href="{{ route('panel.cards') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/tickets*') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-ticket.svg') }}" width="24" height="24" class="me-2 me-sm-0">
-				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Mis tickets</span>
+				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Mis Invitaciones</span>
 			</a>
 		</li>
 		<li class="position-relative">

@@ -38,8 +38,8 @@ return new class extends Migration
             $table->string('instagram_title')->nullable();
             $table->string('instagram_hashtag')->nullable();
 
-            $table->tinyText('confirm_description');
-            $table->tinyText('phrase');
+            $table->tinyText('confirm_description')->nullable();
+            $table->tinyText('phrase')->nullable();
 
             $table->tinyInteger('dresscode_type');
             $table->boolean('countdown_status')->default(0);

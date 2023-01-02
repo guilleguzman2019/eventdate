@@ -26,13 +26,13 @@
 			</a>
 		</li>
 		<li class="position-relative">
-			<a href="#" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/finanzas*') ? 'active' : '' }}">
+			<a href="{{ route('admin.clientes') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/finanzas*') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-balance.svg') }}" width="24" height="24" class="me-2 me-sm-0">
 				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Clientes</span>
 			</a>
 		</li>
 		<li class="position-relative">
-			<a href="#" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/reventas') ? 'active' : '' }}">
+			<a href="{{ route('admin.usuarios') }}" class="d-sm-inline-block text-start d-block my-2 p-3 {{ request()->is('panel/reventas') ? 'active' : '' }}">
 				<img src="{{ asset('img/icos/ico-sells.svg') }}" width="24" height="24" class="me-2 me-sm-0">
 				<span class="text-dark py-sm-2 px-sm-3 rounded-3 text-nowrap">Usuarios</span>
 			</a>
