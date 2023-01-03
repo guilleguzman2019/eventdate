@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
+
+
 Route::get('redirect', function() {
     if ( Auth::user() -> role == 1 ) {
         return redirect() -> route('admin.dashboard');
@@ -15,3 +17,9 @@ Route::get('redirect', function() {
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+
+

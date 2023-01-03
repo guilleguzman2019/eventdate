@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use App\Models\Card;
+use App\Models\Template;
 
 class CardComponent extends Component
 {
@@ -28,35 +29,35 @@ class CardComponent extends Component
     }
 
     public function save()
-    {
+    {   
         $this -> validate([
             'createArray.title' => 'required',
-            'createArray.slug' => 'required',
-            'createArray.subtitle' => 'required',
-            'createArray.title' => 'required',
-            'home_bg_desktop' => 'required|image|mimes:png,jpg,jpeg|max:4096',
-            'home_bg_mobile' => 'required|image|mimes:png,jpg,jpeg|max:4096',
+            'createArray.template_id' => 'required',
         ]);
 
-        $this -> createArray['home_bg_desktop'] = $this -> home_bg_desktop -> store('img/invitacion');
-        $this -> createArray['home_bg_mobile'] = $this -> home_bg_mobile -> store('img/invitacion');
 
-        $this -> createArray['slug'] = $this -> slug ;
+        $this -> createArray['slug'] = Str::slug($this -> createArray['title']) ;
 
         $this -> createArray['user_id'] = Auth::user() -> id ;
 
         $this -> createArray['start_date'] = date('Y-m-d H:i:s') ;
 
-        Card::create( $this -> createArray );
+        $card = Card::create( $this -> createArray );
 
-        $this -> reset(['home_bg_desktop', 'home_bg_mobile','createArray']);
+        $id = $card -> id ;
+
+        $this -> reset(['createArray']);
         $this -> emit('saved');
+
+        redirect()->route('panel.edit.card', [$id]);
     }
 
     public function render()
     {
         $invitaciones = Card::orderBy('title') -> paginate();
-        return view('livewire.panel.card-component', compact('invitaciones'))
+        $templates = Template::orderBy('name') -> with('categories')->get() ;
+
+        return view('livewire.panel.card-component', compact('invitaciones', 'templates'))
                                                     ->layout('layouts.panel');
 
     }

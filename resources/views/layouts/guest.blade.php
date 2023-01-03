@@ -20,23 +20,7 @@
 
 		<div class="p-sm-5 p-4 text-dark">
 
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="d-flex justify-content-between">
-						<a href="{{ url('/') }}"><img src="{{ asset('img/logo.svg') }}" width="120"></a>
-
-						<nav>
-							@if ( ! request() -> is('login') )
-								<a href="{{ route('login') }}" class="text-muted ms-sm-5 ms-3 fs-16">Iniciar sesión</a>
-							@endif
-							@if ( ! request() -> is('register') )
-								<a href="{{ route('register') }}" class="text-muted ms-sm-5 ms-3 fs-16">Registrarse</a>
-							@endif
-						</nav>
-					</div>
-				</div>
-			</div>
-
+			
 			<div class="px-sm-5 px-3">{{ $slot }}</div>
 
 		</div>
