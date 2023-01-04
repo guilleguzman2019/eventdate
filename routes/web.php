@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
-
-
+use App\Http\Livewire\Web as Livewire;
 
 Route::get('redirect', function() {
     if ( Auth::user() -> role == 1 ) {
@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 
+//Route::get('/prueba/{post}', [Controllers\InvitacionController::class, 'post']);
 
 
+Route::get('/invitacion/{slug}',  Livewire\CardComponent::class)-> name('invitacion');
 
 

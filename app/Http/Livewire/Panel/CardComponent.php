@@ -44,12 +44,13 @@ class CardComponent extends Component
 
         $card = Card::create( $this -> createArray );
 
-        $id = $card -> id ;
+        $slug = $card ->slug ;
+
 
         $this -> reset(['createArray']);
         $this -> emit('saved');
 
-        redirect()->route('panel.edit.card', [$id]);
+        redirect()->route('panel.edit.card', $slug);
     }
 
     public function render()
