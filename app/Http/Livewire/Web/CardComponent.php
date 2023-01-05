@@ -26,6 +26,6 @@ class CardComponent extends Component
     public function render()
     {
         return view('livewire.web.card-component')
-                    ->layout('layouts.guest');
+                    ->layout('layouts.template1');
     }
 }

@@ -23,6 +23,7 @@ class FormCardComponent extends Component
     {
         $this -> slug -> title = $this -> title;
         $this -> slug -> save();
+
     }
 
 
