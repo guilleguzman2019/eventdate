@@ -1,50 +1,87 @@
-<div class="fh5co-loader"></div>
+@extends('layouts.template')
+
+@section('css')
+    <link rel="stylesheet" href="{{asset('/build/assets/'.$card-> template -> name.'.css')}}">
+@stop
+
+@section('content')
+
+	@php
+
+
+	$timestamp=date('d-m-Y',strtotime($card -> start_date));
+
 	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+		
+	@endphp
+	@if(Request::url() === 'http://localhost:8000/panel/edit-invitacion/'.$card ->slug)
+	<div>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">Eventdate<strong>.</strong></a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({{asset('/img/portada.jpg')}});" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t">
-						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>{{$card -> title}}</h1>
-							<h2>We Are Getting Married</h2>
-							<div class="simply-countdown simply-countdown-one"></div>
-						</div>
-					</div>
-				</div>
+			  <div class="col align-self-start">
+				<button class="btn btn-success text-white" wire:click="save" wire:target="save">Actualizar</button>
+			  </div>
+			  <div class="col align-self-center">
+				
+			  </div>
+			  <div class="col align-self-end">
+				<button class="btn btn-primary" ><a style="color:white;" href="http://localhost:8000/invitacion/{{$card->slug}}">Ver</a></button>
+			  </div>
 			</div>
 		</div>
-	</header>
+	@endif
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<div class="main-card">
+	<div class="border">
 
-	<div id="fh5co-couple-story">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>We Love Each Other</span>
-					<h2>Our Story</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-				</div>
-			</div>
+		
+		<div class="image-upload img-top">
+			<label for="file-input">
+				<img src="{{ asset(($image) ? $image -> temporaryUrl() : 'img/invitacion/flor.png') }}"/>
+			</label>
+			<input class="file-input imageUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model.defer="image" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
 		</div>
+
+		<div class="image-upload img-bottom">
+			<label for="file-input">
+				<img src="{{ asset(($image) ? $image -> temporaryUrl() : 'img/invitacion/flor.png') }}"/>
+			</label>
+		
+			<input id="file-input" type="file" wire:model="image"/>
+		</div>
+  
+	  <div class="text-content">
+		@if(Request::url() === 'http://localhost:8000/panel/edit-invitacion/'.$card ->slug)
+			<textarea  wire:model.defer="historia" rows="4" cols="50" style="background-color:transparent; color:#fcc779; font-family: 'Dancing Script'; font-size:20px; border: 0;">{{$card -> history_description}}</textarea>
+		@else
+			<p class="fm">{{$card -> history_description}}</p>
+		@endif
+		<br /><br />
+		@if(Request::url() === 'http://localhost:8000/panel/edit-invitacion/'.$card ->slug)
+			<input wire:model.defer="titulo" type="text" value="" style="width: 500px; background-color:transparent; color:#fcc779; font-family: 'Dancing Script' ; font-size:90px; border: 0;">
+		@else
+			<p class="fl">{{$card -> title}}</p>
+		@endif
+		<br />
+		<br />
+		<p class="fs">Fecha del Evento</p>
+		@if(Request::url() === 'http://localhost:8000/panel/edit-invitacion/'.$card ->slug)
+			<input class="date-input" wire:model.defer="fecha" type="date" value="" style="background-color:transparent; color:#fcc779; font-family: 'Dancing Script'; font-size:34px; border: 0;">
+		@else
+			<p class="date">{{$timestamp}}</p>
+		@endif
+		
+	  </div>
+	</div>
+  </div>
 	</div>
 
-	</div>
+@stop
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>

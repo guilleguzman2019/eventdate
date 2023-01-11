@@ -19,9 +19,6 @@ Route::get('/', function () {
 });
 
 
-//Route::get('/prueba/{post}', [Controllers\InvitacionController::class, 'post']);
-
-
 Route::get('/invitacion/{slug}',  Livewire\CardComponent::class)-> name('invitacion');
 
 

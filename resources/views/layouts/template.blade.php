@@ -5,13 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="{{asset('/build/assets/style.css')}}">
+
+	@yield('css')
+
+	
 </head>
 <body>
 	<div>
-		{{ $slot }}
+		@yield('content')
 	</div>
 	@livewireScripts
+
+	@yield('js')
+
 	<script src="script.js"></script>
 </body>
 </html>
