@@ -12,17 +12,13 @@ use App\Models\Card;
 
 use Illuminate\Support\Facades\Auth;
 
-class CardComponent extends Component
+class PostComponent extends Component
 {
-
-    use WithFileUploads;
 
     public $card, $titulo, $fecha, $historia, $image;
 
-
     public function mount(Card $slug)
     {
-
 
         $this -> card = $slug;
 
@@ -36,32 +32,14 @@ class CardComponent extends Component
 
     }
 
-
     public function save()
     {
-
-        $this -> card -> title = $this -> titulo;
-
-        $this -> card -> start_date = $this -> fecha;
-
-        $this -> card -> history_description = $this -> historia;
-
-        //$this -> card -> slug = Str::slug($this -> titulo);
-
-        $this -> card -> save();
-
-        redirect()->to('http://localhost:8000/invitacion/'.$this -> card -> slug.'?edit=true');
-
-        $this -> emit('loadPage');
-
-
-
-        
+        dd($this -> card ->  slug);
     }
 
     public function render()
     {
-        return view('livewire.web.chic-component')
+        return view('livewire.web.post-component')
                     ->layout('layouts.template');
     }
 }
