@@ -15,9 +15,10 @@
 		@yield('content') 
 		@if( isset($slot) ) {{ $slot }} @endif
 	</div>
-	@livewireScripts
 
 	@yield('js')
+
+	@livewireScripts
 
 </body>
 </html>

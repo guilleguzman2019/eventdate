@@ -14,7 +14,6 @@ Route::get('/edit-invitacion/{slug}', Controllers\EditInvitacionController::clas
 Route::get('/cards', Livewire\CardComponent::class) -> name('panel.cards');
 
 
-Route::get('form', Livewire\FormCardComponent::class) -> name('panel.form.card');
-
+Route::get('boton', Livewire\BotonComponent::class) -> name('panel.boton.card');
 
 

@@ -17,6 +17,7 @@ class CardComponent extends Component
 
     use WithFileUploads;
 
+
     public $card, $titulo, $fecha, $historia, $image;
 
 
@@ -40,6 +41,7 @@ class CardComponent extends Component
     public function save()
     {
 
+
         $this -> card -> title = $this -> titulo;
 
         $this -> card -> start_date = $this -> fecha;
@@ -51,10 +53,6 @@ class CardComponent extends Component
         $this -> card -> save();
 
         redirect()->to('http://localhost:8000/invitacion/'.$this -> card -> slug.'?edit=true');
-
-        $this -> emit('loadPage');
-
-
 
         
     }

@@ -8,6 +8,8 @@ use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Redirect;
+
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use App\Models\Card;
@@ -50,7 +52,7 @@ class CardComponent extends Component
         $this -> reset(['createArray']);
         $this -> emit('saved');
 
-        redirect()->route('panel.edit.card', $slug);
+        Redirect::to('http://localhost:8000/invitacion/'.$slug.'?edit=true');
     }
 
     public function render()

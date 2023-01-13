@@ -10,28 +10,24 @@
 	$timestamp=date('Y-m-d',strtotime($card -> start_date));
 
 @endphp
-
 @if(Request::get('edit'))
-	<div>
-		<div class="container">
-			<div class="row">
-			  <div class="col align-self-start">
-				<button id="boton" class="btn btn-success text-white" wire:click="save" wire:target="save" style="font-size: 20px;">Actualizar</button>
-			  </div>
-			  <div class="col align-self-center">
-				
-			  </div>
-			  <div class="col align-self-end">
-				{{--<button class="btn btn-primary" ><a style="color:white;" href="http://localhost:8000/invitacion/{{$card->slug}}">Ver</a></button>--}}
-			  </div>
-			</div>
-		</div>
-		
-	
 
-	<br>
-		<br>
-		<br>
+<div>
+    <div class="container-fluid p-4" id="boton_cont">
+        <div class="row">
+          <div class="col align-self-start">
+            <button id="boton" class="btn btn-success text-white" wire:click="save" wire:target="save">Actualizar</button>
+            <a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/{{$card->slug}}"><button class="btn btn-primary" >VER</button></a>
+
+          </div>
+          <div class="col align-self-center">
+            
+          </div>
+          <div class="col align-self-end">
+          </div>
+        </div>
+    </div>
+
 @endif
 <header>
     <!-- Header Start -->
@@ -70,7 +66,7 @@
                                 <span data-animation="fadeInLeft" data-delay=".3s">{{$timestamp}}</span>
                                 @endif
                                 @if(Request::get('edit'))
-			                        <input wire:model.defer="titulo" type="text" value="{{$card->title}}" style="width: 700px; background-color:transparent; color:white; font-family: 'Dancing Script' ; font-size:90px; border: 0; z-index:999;">
+			                        <input id="titulo" wire:model.defer="titulo" type="text" value="{{$card->title}}" style="width: 800px; background-color:transparent; color:white; font-family: 'Dancing Script' ; font-size:110px; font-weight: bold; border: 0; z-index:999;">
 		                        @else
                                     <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">{{$card -> title }}</h1>
 		                        @endif
@@ -211,3 +207,101 @@
   
     <!--? End map Area -->
 </main>
+
+@if(Request::get('edit'))
+
+@section('js')
+    <script>
+
+document.addEventListener('DOMContentLoaded',function(){
+
+let options = [
+    {
+        label: 'Text Color',
+        type: 'color',
+        property: 'textcolor',
+        default: '#fff'
+    },
+    {
+        label: 'Box Color',
+        type: 'color',
+        property: 'boxcolor',
+        default: 'orange'
+    },
+    {
+        label: 'Padding',
+        type: 'range',
+        property: 'padding',
+        attributes: {min: "20", max: "90"},
+        default: '20'
+    },
+    {
+        label: 'Margin',
+        type: 'number',
+        property: 'margin',
+        attributes: {min: "20", max: "90"},
+        default: '20'
+    },
+    {
+        label: 'Font Size',
+        type: 'range',
+        property: 'fontsize-h2',
+        attributes: {min: "20", max: "200"},
+        default: '20'
+    },
+    {
+        label: 'Font Size Paragraph',
+        type: 'range',
+        property: 'fontsize-p',
+        attributes: {min: "18", max: "30"},
+        default: '14'
+    }
+];
+
+let styler_Editor = document.createElement('div');
+styler_Editor.classList.add('styler-editor');
+
+document.querySelector('body').appendChild(styler_Editor);
+
+function setAttributes(el, attrs) {
+  for(var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+}
+
+options.forEach((option, i) => {
+
+    let optionLabel = document.createElement('label');
+    optionLabel.innerHTML = option.label;
+   
+    let optionField = document.createElement('input');
+    optionField.type = option.type;
+    optionField.value = option.default;
+    setAttributes(optionField,option.attributes);
+    styler_Editor.appendChild(optionLabel);
+    styler_Editor.appendChild(optionField);
+
+    optionField.addEventListener('change',function(){
+       switch(option.type){
+         case 'range':
+         document.getElementById('titulo').style.setProperty("font-size", optionField.value+'px');
+           break;
+         case 'number':
+         document.getElementById('titulo').style.setProperty("background-color", "yellow");
+           break;
+         case 'color':
+         document.getElementById('titulo').style.setProperty("color", optionField.value);
+           break;
+         case 'text':
+         document.getElementById('titulo').style.setProperty("background-color", "yellow");
+           break;
+       }
+      
+    });
+});
+
+});
+    </script>
+@stop
+
+@endif
