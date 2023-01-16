@@ -41,7 +41,6 @@ class CardComponent extends Component
     public function save()
     {
 
-
         $this -> card -> title = $this -> titulo;
 
         $this -> card -> start_date = $this -> fecha;
@@ -59,7 +58,7 @@ class CardComponent extends Component
 
     public function render()
     {
-        return view('livewire.web.chic-component')
+        return view('livewire.web.western-component')
                     ->layout('layouts.template');
     }
 }

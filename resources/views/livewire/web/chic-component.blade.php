@@ -6,7 +6,6 @@
 
 @php
 
-
 	$timestamp=date('Y-m-d',strtotime($card -> start_date));
 
 @endphp
@@ -278,6 +277,7 @@ options.forEach((option, i) => {
     optionField.type = option.type;
     optionField.value = option.default;
     setAttributes(optionField,option.attributes);
+    
     styler_Editor.appendChild(optionLabel);
     styler_Editor.appendChild(optionField);
 

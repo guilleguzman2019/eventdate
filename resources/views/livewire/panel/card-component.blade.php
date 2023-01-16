@@ -1,20 +1,148 @@
 <div>
     <x-slot name="titlePage">- Invitacion</x-slot>
 
-    <h1 class="fs-21 fw-700 mb-1">invitacion</h1>
-    <h2 class="fs-14 text-muted mb-5">Creación, edición y eliminación de Invitaciones</h2>
+    <div class="container">
+        <a href="https://getbootstrap.com/docs/4.0/components/navs/#tabs"
+           target="_blank">
+          <h1> Invitaciones </h1>
+        </a>
+        <br>
+        <br>
+        <p class="lead">
+        </p>
 
-    
-        
-    <div class="row ">
-            @foreach ($templates as $tmp)
-                <div class="col p-0 m-0">
-                    <img src="{{asset( $tmp -> image )}}" alt="" height="400px" width="250px">
-                    <br>
-                    <span>{{$tmp -> name}}</span>
-                </div>		
+          <ul class="nav nav-tabs" role="tablist" style="border-style: none;">
+            <li class="nav-item" style="width: 271px;px">
+              <a href="#bodas" role="tab" data-toggle="tab"
+                 class="nav-link active"> Bodas </a>
+                 <img src="https://cdn-icons-png.flaticon.com/128/146/146457.png" alt="">
+            </li>
+            <li class="nav-item" style="width: 271px;px">
+              <a href="#quince" role="tab" data-toggle="tab"
+                 class="nav-link"> Quince Años </a>
+                 <img src="https://cdn-icons-png.flaticon.com/128/640/640941.png" alt="">
+            </li>
+            <li class="nav-item" style="width: 271px;px">
+                <a href="#despedida" role="tab" data-toggle="tab"
+                   class="nav-link"> Despedida </a>
+                   <img src="https://cdn-icons-png.flaticon.com/128/6556/6556099.png" alt="">
+              </li>
+
+
+            <li class="nav-item" style="width: 271px;px">
+                <a href="#funeral" role="tab" data-toggle="tab"
+                   class="nav-link"> Funeral </a>
+                   <img src="https://cdn-icons-png.flaticon.com/128/3555/3555399.png" alt="">
+            </li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <div class="tab-content p-0 m-0">
+
+            <div class="tab-pane active" role="tabpanel" id="bodas">
+              <h3> bodas </h3>
+              <div class="row p-3 m-3">
+                @foreach ($templates as $tmp)
+
+                @foreach($tmp-> categories as $tmpfinal)
+                
+                    @if($tmpfinal->name ==='boda ')
+                    
+                        <div class="col-3">
+                            <img src="{{asset( $tmp -> image )}}" alt="" height="400px" width="250px">
+                            <br>
+                            <span>{{$tmp -> name}}</span>
+                        </div>
+                    @endif
+                                   
+                 @endforeach
+
+			    @endforeach
+              </div>
+            </div>
+
+            <div class="tab-pane" role="tabpanel" id="quince">
+              <h3> quince </h3>
+              @foreach ($templates as $tmp)
+
+                @foreach($tmp-> categories as $tmpfinal)
+                
+                    @if($tmpfinal->name ==='Quince')
+                    
+                        <div class="col p-0 m-0">
+                            <img src="{{asset( $tmp -> image )}}" alt="" height="400px" width="250px">
+                            <br>
+                            <span>{{$tmp -> name}}</span>
+                        </div>
+                    @endif
+                                   
+                 @endforeach
+
 			@endforeach
-    </div>
+            </div>
+
+            <div class="tab-pane" role="tabpanel" id="despedida">
+              <h3> despedida </h3>
+              @foreach ($templates as $tmp)
+
+                @foreach($tmp-> categories as $tmpfinal)
+                
+                    @if($tmpfinal->name ==='Despedida')
+                    
+                        <div class="col p-0 m-0">
+                            <img src="{{asset( $tmpf -> image )}}" alt="" height="400px" width="250px">
+                            <br>
+                            <span>{{$tmp -> name}}</span>
+                        </div>
+                    @endif
+                                   
+                 @endforeach
+
+			@endforeach
+            </div>
+
+            <div class="tab-pane " role="tabpanel" id="funeral">
+                <h3> funeral </h3>
+                <div class="row m-0 p-0">
+                    @foreach ($templates as $tmp)
+
+                        @foreach($tmp-> categories as $tmpfinal)
+                
+                            @if($tmp->name ==='Funeral')
+                    
+                                <div class="col p-0 m-0">
+                                    <img src="{{asset( $tmpfinal -> image )}}" alt="" height="400px" width="250px">
+                                    <br>
+                                    <span>{{$tmp -> name}}</span>
+                                </div>
+                            @endif
+                                   
+                        @endforeach
+
+			        @endforeach
+                </div>
+              </div>
+
+          </div>
+      </div>
+      <script
+              src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+              integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+              crossorigin="anonymous">
+      </script>
+      <script
+              src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+              integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+              crossorigin="anonymous">
+      </script>
+      <script
+              src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+              integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+              crossorigin="anonymous">
+      </script>
 
     <div class="row mt-5">
         <div class="col-2">
