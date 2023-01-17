@@ -5,14 +5,7 @@
 <title>Ignacio &amp; Sofía – Eventdate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
-<title>Ignacio &amp; Sofía – Eventdate</title>
-<link rel="alternate" type="application/rss+xml" title="Eventdate » Feed" href="https://eventdate.es/feed/">
-<link rel="alternate" type="application/rss+xml" title="Eventdate » Feed de los comentarios" href="https://eventdate.es/comments/feed/">
-<script src="{{asset('/build/assets/western/1164807641100463')}}" async=""></script><script async="" src="{{asset('/build/assets/western/fbevents.js.descarga')}}"></script><script>
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png')}}","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/eventdate.es\/wp-includes\/js')}}\/wp-emoji-release.min.js')}}?ver=6.1.1"}};
-/*! This file is auto-generated */
-!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
-</script><script src="" type="text/javascript" defer=""></script>
+
 <style>
 img.wp-smiley,
 img.emoji {
@@ -104,35 +97,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				display: none !important;
 			}
 		</style>
-	<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1164807641100463');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1164807641100463&ev=PageView&noscript=1"
-/></noscript>
+
 <!-- End Meta Pixel Code --><!-- Google tag (gtag.js')}}) -->
 <script async="" src="{{asset('/build/assets/western/js')}}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js')}}', new Date());
 
-  gtag('config', 'G-HDMWD51WSK');
-</script><meta name="facebook-domain-verification" content="b9vnl4aull8mg75w1qdwu4c4p4womk"><link rel="icon" href="https://eventdate.es/wp-content/uploads/2022/10/cropped-FAVICON-02-32x32.png')}}" sizes="32x32">
+<meta name="facebook-domain-verification" content="b9vnl4aull8mg75w1qdwu4c4p4womk"><link rel="icon" href="https://eventdate.es/wp-content/uploads/2022/10/cropped-FAVICON-02-32x32.png')}}" sizes="32x32">
 <link rel="icon" href="https://eventdate.es/wp-content/uploads/2022/10/cropped-FAVICON-02-192x192.png')}}" sizes="192x192">
 <link rel="apple-touch-icon" href="https://eventdate.es/wp-content/uploads/2022/10/cropped-FAVICON-02-180x180.png')}}">
 <meta name="msapplication-TileImage" content="https://eventdate.es/wp-content/uploads/2022/10/cropped-FAVICON-02-270x270.png')}}">
-<script src="{{asset('/build/assets/western/js')}}(1)" data-uid-auto="uid_iyrfqkrdjrrjdriisejljfrdcclpzf')}}"></script>		<style id="wp-custom-css')}}">
+<script src="{{asset('/build/assets/western/js')}}" data-uid-auto="uid_iyrfqkrdjrrjdriisejljfrdcclpzf')}}"></script>		<style id="wp-custom-css')}}">
 			
 #contenedor-play{
 	
@@ -189,7 +162,7 @@ padding: 10px;
 
 .elementor-10947 .elementor-element.elementor-element-58991e98 > .elementor-background-overlay {
     background-color: #000000;
-    background-image: url(https://eleve11.ar/wp-content/uploads/2022/10/fondo_rock.png')}});
+    background-image: url('https://eleve11.ar/wp-content/uploads/2022/10/fondo_rock.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -222,7 +195,7 @@ background-size: 100px 100px;
 
 .input_musica .jet-engine-file-upload__content {
 	
-		background: url('https://img.freepik.com/vector-premium/diseno-plano-moderno-icono-archivo-mp3-web-estilo-simple_599062-487.jpg')}}?w=2000');
+		background: url('https://img.freepik.com/vector-premium/diseno-plano-moderno-icono-archivo-mp3-web-estilo-simple_599062-487.jpg');
 background-repeat: no-repeat;
 background-size: 100px 100px;
 	
@@ -334,10 +307,6 @@ background-size: 100px 100px;
 	
 }
 
-
-
-
-
 #toggle_funeral2 .bdt-show-hide-title{
 	
 	 margin-top: 19px !important;
@@ -364,8 +333,6 @@ background-size: 100px 100px;
 }
 
 
-
-
 #toggle_funeral4 .bdt-show-hide-title{
 	
 	 margin-top: 19px !important;
@@ -390,8 +357,6 @@ background-size: 100px 100px;
     
 	
 }
-
-
 
 
 #loading-spinner {
@@ -472,8 +437,6 @@ input:focus {
  }
 
 
-
-
 </style>
 
 @stop
@@ -496,7 +459,11 @@ input:focus {
           <div class="col align-self-center">
             
           </div>
-          <div class="col align-self-end">
+          <div class="col align-self-end" style="text-align: end; display:none;" id="addEvent">
+			<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/{{$card->slug}}"><button class="btn" >AGREGAR EVENTO</button></a>
+          </div>
+		  <div class="col align-self-end" style="text-align: end; display:none;" id="addGalery">
+			<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/{{$card->slug}}"><button class="btn" >AGREGAR FOTO</button></a>
           </div>
         </div>
     </div>
@@ -532,7 +499,15 @@ input:focus {
 				</div>
 				<div class="elementor-element elementor-element-59bf94d3 elementor-widget elementor-widget-heading" data-id="59bf94d3" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">¡Nos Casamos!</h2>		</div>
+					@if(Request::get('edit'))
+						<input id="elementor-heading-title elementor-size-default" wire:model.defer="" type="text" value="¡NOS CASAMOS!" style="width: 500px; background-color:transparent; color:white; font-size:25px; color: #FFFFFF; font-family: 'Montserrat', Sans-serif ; border: 0; z-index:999; text-align: center; font-weight: 300;
+						text-transform: uppercase;
+						letter-spacing: 6px;">
+					@else
+						<h2 class="elementor-heading-title elementor-size-default">¡Nos Casamos!</h2>
+					@endif
+
+				</div>
 				</div>
 					</div>
 		</div>
@@ -650,16 +625,30 @@ input:focus {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-12959277 elementor-widget elementor-widget-heading" data-id="12959277" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Durante nuestra boda utiliza el hashtag</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Durante nuestra boda utiliza el hashtag</h2>		
+				</div>
 				</div>
 				<div class="elementor-element elementor-element-3f817e48 elementor-widget elementor-widget-jet-listing-dynamic-field" data-id="3f817e48" data-element_type="widget" data-widget_type="jet-listing-dynamic-field.default">
 				<div class="elementor-widget-container">
-			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap"><div class="jet-listing-dynamic-field__content">#bodaignacioysofia</div></div></div>		</div>
+			<div class="jet-listing jet-listing-dynamic-field display-inline"><div class="jet-listing-dynamic-field__inline-wrap">
+				<div class="jet-listing-dynamic-field__content">
+					@if(Request::get('edit'))
+						<input type="text" value="#bodaignacioysofia" style="color: #D7B7A2;
+						font-family: 'Montserrat', Sans-serif;
+						font-size: 25px;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: 5px;
+						text-align: center; background-color:transparent; width: 600px; border: 0;">
+					@else
+						#bodaignacioysofia
+						@endif
+				</div></div></div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-2f1021f elementor-align-center elementor-widget elementor-widget-button" data-id="2f1021f" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://www.instagram.com/explore/tags/bodaignacioysofia" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a href="" class="elementor-button-link elementor-button elementor-size-sm" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">VER MURAL</span>
 		</span>
@@ -1825,7 +1814,11 @@ CUIT: 23-36988681-9</p>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-29730ccb elementor-widget elementor-widget-text-editor" data-id="29730ccb" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							<p>Vayan preparando sus mejores prendas porque estos locos que se aman van a dar el si.</p>
+							@if(Request::get('edit'))
+								<input id="elementor-heading-title elementor-size-default" wire:model.defer="" type="text" value="Vayan preparando sus mejores prendas porque estos locos que se aman van a dar el si" style="width: 900px; background-color:transparent; color:white; font-size:18px; color: #FFFFFF;font-family: 'Noto Serif Display', Sans-serif ;font-style: italic; border: 0; z-index:999; text-align: center;">
+							@else
+								<p>Vayan preparando sus mejores prendas porque estos locos que se aman van a dar el si.</p>       
+							@endif
 						</div>
 				</div>
 					</div>
@@ -1880,7 +1873,13 @@ CUIT: 23-36988681-9</p>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-a869763 elementor-widget elementor-widget-heading" data-id="a869763" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Confirmación</h2>		</div>
+
+					@if(Request::get('edit'))         
+						<input id="elementor-heading-title elementor-size-default" wire:model.defer="" type="text" value="Confirmacion" style="width: 500px; background-color:transparent; color:white; font-size:35px; color: #FFFFFF;font-family: 'Noto Serif Display', Sans-serif ;font-style: italic; border: 0; z-index:999; text-align: center;">	         
+					@else
+						<h2 class="elementor-heading-title elementor-size-default">Confirmación</h2>       
+					@endif		
+				</div>
 				</div>
 				<div class="elementor-element elementor-element-c782d95 elementor-widget elementor-widget-text-editor" data-id="c782d95" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
@@ -1924,7 +1923,9 @@ CUIT: 23-36988681-9</p>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-2093f4a elementor-widget elementor-widget-heading" data-id="2093f4a" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">¡Nos Casamos!</h2>		</div>
+
+			<h2 class="elementor-heading-title elementor-size-default">¡Nos Casamos!</h2>		
+			</div>
 				</div>
 				<div class="elementor-element elementor-element-72fae346 elementor-widget elementor-widget-heading" data-id="72fae346" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2052,140 +2053,143 @@ track.addEventListener("ended", function() {
 		}
 	</style>
 
-		<script>
-	( function() {
-		var skipLinkTarget = document.querySelector( 'main' ),
-			sibling,
-			skipLinkTargetID,
-			skipLink;
-
-		// Early exit if a skip-link target can't be located.
-		if ( ! skipLinkTarget ) {
-			return;
-		}
-
-		// Get the site wrapper.
-		// The skip-link will be injected in the beginning of it.
-		sibling = document.querySelector( '.wp-site-blocks' );
-
-		// Early exit if the root element was not found.
-		if ( ! sibling ) {
-			return;
-		}
-
-		// Get the skip-link target's ID, and generate one if it doesn't exist.
-		skipLinkTargetID = skipLinkTarget.id;
-		if ( ! skipLinkTargetID ) {
-			skipLinkTargetID = 'wp--skip-link--target';
-			skipLinkTarget.id = skipLinkTargetID;
-		}
-
-		// Create the skip link.
-		skipLink = document.createElement( 'a' );
-		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
-		skipLink.href = '#' + skipLinkTargetID;
-		skipLink.innerHTML = 'Saltar al contenido';
-
-		// Inject the skip link.
-		sibling.parentElement.insertBefore( skipLink, sibling );
-	}() );
-	</script>
 
 @section('js')
 
-<link rel="stylesheet" id="dce-dynamic-visibility-css')}}" href="{{asset('/build/assets/western/dynamic-visibility.min.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4517-css')}}" href="{{asset('/build/assets/western/post-4517.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4609-css')}}" href="{{asset('/build/assets/western/post-4609.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4382-css')}}" href="{{asset('/build/assets/western/post-4382.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4379-css')}}" href="{{asset('/build/assets/western/post-4379.css')}}" media="all">
-<link rel="stylesheet" id="ep-toggle-css')}}" href="{{asset('/build/assets/western/ep-toggle.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4649-css')}}" href="{{asset('/build/assets/western/post-4649.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4646-css')}}" href="{{asset('/build/assets/western/post-4646.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4695-css')}}" href="{{asset('/build/assets/western/post-4695.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4690-css')}}" href="{{asset('/build/assets/western/post-4690.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4565-css')}}" href="{{asset('/build/assets/western/post-4565.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-3893-css')}}" href="{{asset('/build/assets/western/post-3893.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4102-css')}}" href="{{asset('/build/assets/western/post-4102.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4107-css')}}" href="{{asset('/build/assets/western/post-4107.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4110-css')}}" href="{{asset('/build/assets/western/post-4110.css')}}" media="all">
-<link rel="stylesheet" id="elementor-post-4114-css')}}" href="{{asset('/build/assets/western/post-4114.css')}}" media="all">
-<script src="{{asset('/build/assets/western/select2.full.min.js')}}.descarga" id="select2-js')}}"></script>
-<script src="{{asset('/build/assets/western/underscore.min.js')}}.descarga" id="underscore-js')}}"></script>
-<script id="wp-util-js')}}-extra">
+<script>
+
+window.onscroll = function() {
+  console.log("Vertical: " + window.scrollY);
+  console.log("Horizontal: " + window.scrollX);
+
+};
+
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    console.log(scroll)
+
+	if(scroll > 700){
+
+		document.getElementById('addEvent').style.display = "block";
+
+	}
+
+	if(scroll < 1000){
+
+		document.getElementById('addEvent').style.display = "none";
+
+	}
+
+	if(scroll > 1750){
+
+		document.getElementById('addEvent').style.display = "none";
+
+	}
+
+	if(scroll > 1850){
+
+		document.getElementById('addGalery').style.display = "block";
+
+	}
+});
+
+
+
+</script>
+
+<link rel="stylesheet" id="dce-dynamic-visibility" href="{{asset('/build/assets/western/dynamic-visibility.min.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4517-css" href="{{asset('/build/assets/western/post-4517.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4609-css" href="{{asset('/build/assets/western/post-4609.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4382-css" href="{{asset('/build/assets/western/post-4382.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4379-css" href="{{asset('/build/assets/western/post-4379.css')}}" media="all">
+<link rel="stylesheet" id="ep-toggle-css" href="{{asset('/build/assets/western/ep-toggle.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4649-css" href="{{asset('/build/assets/western/post-4649.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4646-css" href="{{asset('/build/assets/western/post-4646.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4695-css" href="{{asset('/build/assets/western/post-4695.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4690-css" href="{{asset('/build/assets/western/post-4690.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4565-css" href="{{asset('/build/assets/western/post-4565.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-3893-css" href="{{asset('/build/assets/western/post-3893.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4102-css" href="{{asset('/build/assets/western/post-4102.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4107-css" href="{{asset('/build/assets/western/post-4107.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4110-css" href="{{asset('/build/assets/western/post-4110.css')}}" media="all">
+<link rel="stylesheet" id="elementor-post-4114-css" href="{{asset('/build/assets/western/post-4114.css')}}" media="all">
+<script src="{{asset('/build/assets/western/select2.full.min.js.descarga')}}" id="select2-js"></script>
+<script src="{{asset('/build/assets/western/underscore.min.js.descarga')}}" id="underscore-js"></script>
+<script id="wp-util-js-extra">
 var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 </script>
-<script src="{{asset('/build/assets/western/wp-util.min.js')}}.descarga" id="wp-util-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-crop.min.js')}}.descarga" id="um_crop-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-modal.min.js')}}.descarga" id="um_modal-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-jquery-form.min.js')}}.descarga" id="um_jquery_form-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-fileupload.js')}}.descarga" id="um_fileupload-js')}}"></script>
-<script src="{{asset('/build/assets/western/picker.js')}}.descarga" id="um_datetime-js')}}"></script>
-<script src="{{asset('/build/assets/western/picker.date.js')}}.descarga" id="um_datetime_date-js')}}"></script>
-<script src="{{asset('/build/assets/western/picker.time.js')}}.descarga" id="um_datetime_time-js')}}"></script>
-<script src="{{asset('/build/assets/western/es_ES.js')}}.descarga" id="um_datetime_locale-js')}}"></script>
-<script src="{{asset('/build/assets/western/regenerator-runtime.min.js')}}.descarga" id="regenerator-runtime-js')}}"></script>
-<script src="{{asset('/build/assets/western/wp-polyfill.min.js')}}.descarga" id="wp-polyfill-js')}}"></script>
-<script src="{{asset('/build/assets/western/hooks.min.js')}}.descarga" id="wp-hooks-js')}}"></script>
-<script src="{{asset('/build/assets/western/i18n.min.js')}}.descarga" id="wp-i18n-js')}}"></script>
-<script id="wp-i18n-js')}}-after">
+<script src="{{asset('/build/assets/western/wp-util.min.js.descarga')}}" id="wp-util-js"></script>
+<script src="{{asset('/build/assets/western/um-crop.min.js.descarga')}}" id="um_crop-js"></script>
+<script src="{{asset('/build/assets/western/um-modal.min.js.descarga')}}" id="um_modal-js"></script>
+<script src="{{asset('/build/assets/western/um-jquery-form.min.js.descarga')}}" id="um_jquery_form-js"></script>
+<script src="{{asset('/build/assets/western/um-fileupload.js.descarga')}}" id="um_fileupload-js"></script>
+<script src="{{asset('/build/assets/western/picker.js.descarga')}}" id="um_datetime-js"></script>
+<script src="{{asset('/build/assets/western/picker.date.js.descarga')}}" id="um_datetime_date-js"></script>
+<script src="{{asset('/build/assets/western/picker.time.js.descarga')}}" id="um_datetime_time-js"></script>
+<script src="{{asset('/build/assets/western/es_ES.js.descarga')}}" id="um_datetime_locale-js"></script>
+<script src="{{asset('/build/assets/western/regenerator-runtime.min.js.descarga')}}" id="regenerator-runtime-js"></script>
+<script src="{{asset('/build/assets/western/wp-polyfill.min.js.descarga')}}" id="wp-polyfill-js"></script>
+<script src="{{asset('/build/assets/western/hooks.min.js.descarga')}}" id="wp-hooks-js"></script>
+<script src="{{asset('/build/assets/western/i18n.min.js.descarga')}}" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 </script>
-<script src="{{asset('/build/assets/western/um-raty.min.js')}}.descarga" id="um_raty-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-tipsy.min.js')}}.descarga" id="um_tipsy-js')}}"></script>
-<script src="{{asset('/build/assets/western/imagesloaded.min.js')}}.descarga" id="imagesloaded-js')}}"></script>
-<script src="{{asset('/build/assets/western/masonry.min.js')}}.descarga" id="masonry-js')}}"></script>
-<script src="{{asset('/build/assets/western/jquery.masonry.min.js')}}.descarga" id="jquery-masonry-js')}}"></script>
-<script src="{{asset('/build/assets/western/simplebar.min.js')}}.descarga" id="um_scrollbar-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-functions.min.js')}}.descarga" id="um_functions-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-responsive.min.js')}}.descarga" id="um_responsive-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-conditional.min.js')}}.descarga" id="um_conditional-js')}}"></script>
-<script id="um_scripts-js')}}-extra">
-var um_scripts = {"max_upload_size":"134217728","nonce":"3f3fdc7b42"};
+<script src="{{asset('/build/assets/western/um-raty.min.js.descarga')}}" id="um_raty-js"></script>
+<script src="{{asset('/build/assets/western/um-tipsy.min.js.descarga')}}" id="um_tipsy-js"></script>
+<script src="{{asset('/build/assets/western/imagesloaded.min.js.descarga')}}" id="imagesloaded-js"></script>
+<script src="{{asset('/build/assets/western/masonry.min.js.descarga')}}" id="masonry-js"></script>
+<script src="{{asset('/build/assets/western/jquery.masonry.min.js.descarga')}}" id="jquery-masonry-js"></script>
+<script src="{{asset('/build/assets/western/simplebar.min.js.descarga')}}" id="um_scrollbar-js"></script>
+<script src="{{asset('/build/assets/western/um-functions.min.js.descarga')}}" id="um_functions-js"></script>
+<script src="{{asset('/build/assets/western/um-responsive.min.js.descarga')}}" id="um_responsive-js"></script>
+<script src="{{asset('/build/assets/western/um-conditional.min.jsdescarga')}}" id="um_conditional-js"></script>
+<script id="um_scripts-js-extra">
+var um_scripts = {"max_upload_size":"134217728","nonce":"3f3fdc7b4"}
 </script>
-<script src="{{asset('/build/assets/western/um-scripts.min.js')}}.descarga" id="um_scripts-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-profile.min.js')}}.descarga" id="um_profile-js')}}"></script>
-<script src="{{asset('/build/assets/western/um-account.min.js')}}.descarga" id="um_account-js')}}"></script>
-<script src="{{asset('/build/assets/western/slick.min.js')}}.descarga" id="jquery-slick-js')}}"></script>
+<script src="{{asset('/build/assets/western/um-scripts.min.js.descarga')}}" id="um_scripts-js"></script>
+<script src="{{asset('/build/assets/western/um-profile.min.js.descarga')}}" id="um_profile-js"></script>
+<script src="{{asset('/build/assets/western/um-account.min.js.descarga')}}" id="um_account-js"></script>
+<script src="{{asset('/build/assets/western/slick.min.js.descarga')}}" id="jquery-slick-js"></script>
 <script id="jet-engine-frontend-js')}}-extra">
 var JetEngineSettings = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","ajaxlisting":"https:\/\/eventdate.es\/bodas\/ignacio-sofia\/?nocache=1673870406","mapPopupTimeout":"400"};
 </script>
-<script src="{{asset('/build/assets/western/frontend.js')}}.descarga" id="jet-engine-frontend-js')}}"></script>
-<script src="{{asset('/build/assets/western/frontend-forms.js')}}.descarga" id="jet-engine-frontend-forms-js')}}"></script>
-<script id="bdt-uikit-js')}}-extra">
+<script src="{{asset('/build/assets/western/frontend.js.descarga')}}" id="jet-engine-frontend-js"></script>
+<script src="{{asset('/build/assets/western/frontend-forms.js.descarga')}}" id="jet-engine-frontend-forms-js"></scr
+<script id="bdt-uikit-js-extra">
 var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","language":"es","loadingmessage":"Sending user info, please wait...","unknownerror":"Unknown error, make sure access is correct!"};
 var ElementPackConfig = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","nonce":"fec30abae4","data_table":{"language":{"lengthMenu":"Show _MENU_ Entries","info":"Showing _START_ to _END_ of _TOTAL_ entries","search":"Search :","sZeroRecords":"No matching records found","paginate":{"previous":"Previous","next":"Next"}}},"contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"mailchimp":{"subscribing":"Subscribing you please wait..."},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
 </script>
-<script src="{{asset('/build/assets/western/bdt-uikit.min.js')}}.descarga" id="bdt-uikit-js')}}"></script>
-<script src="{{asset('/build/assets/western/webpack.runtime.min.js')}}.descarga" id="elementor-webpack-runtime-js')}}"></script>
-<script src="{{asset('/build/assets/western/frontend-modules.min.js')}}.descarga" id="elementor-frontend-modules-js')}}"></script>
-<script src="{{asset('/build/assets/western/waypoints.min.js')}}.descarga" id="elementor-waypoints-js')}}"></script>
-<script src="{{asset('/build/assets/western/core.min.js')}}.descarga" id="jquery-ui-core-js')}}"></script>
+<script src="{{asset('/build/assets/western/bdt-uikit.min.js.descarga')}}" id="bdt-uikit-js"></script>
+<script src="{{asset('/build/assets/western/webpack.runtime.min.js.descarga')}}" id="elementor-webpack-runtime-js"></script>
+<script src="{{asset('/build/assets/western/frontend-modules.min.js.descarga')}}" id="elementor-frontend-modules-js"></script>
+<script src="{{asset('/build/assets/western/waypoints.min.js.descarga')}}" id="elementor-waypoints-js"></script>
+<script src="{{asset('/build/assets/western/core.min.js.descarga')}}" id="jquery-ui-core-js"></script>
 <script id="elementor-frontend-js')}}-before">
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"M\u00f3vil","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"M\u00f3vil grande","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta grande","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Port\u00e1til","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.10.0","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css')}}_loading":true,"a11y_improvements":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"landing-pages":true,"kit-elements-defaults":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/eventdate.es\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":11684,"title":"Ignacio%20%26%20Sof%C3%ADa%20%E2%80%93%20Eventdate","excerpt":"","featuredImage":false}};
 </script>
-<script src="{{asset('/build/assets/western/frontend.min.js')}}.descarga" id="elementor-frontend-js')}}"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-<script src="{{asset('/build/assets/western/ep-toggle.min.js')}}.descarga" id="ep-toggle-js')}}"></script>
-<script src="{{asset('/build/assets/western/helper.min.js')}}.descarga" id="element-pack-helper-js')}}"></script>
-<script src="{{asset('/build/assets/western/webpack-pro.runtime.min.js')}}.descarga" id="elementor-pro-webpack-runtime-js')}}"></script>
-<script id="elementor-pro-frontend-js')}}-before">
+<script src="{{asset('/build/assets/western/frontend.min.js.descarga')}}" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+<script src="{{asset('/build/assets/western/ep-toggle.min.js.descarga')}}" id="ep-toggle-js"></script>
+<script src="{{asset('/build/assets/western/helper.min.js.descarga')}}" id="element-pack-helper-js"></script>
+<script src="{{asset('/build/assets/western/webpack-pro.runtime.min.js.descarga')}}" id="elementor-pro-webpack-runtime-js"></script>
+<script id="elementor-pro-frontend-js-before">
 var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","nonce":"67d2705a32","urls":{"assets":"https:\/\/eventdate.es\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/eventdate.es\/wp-js')}}on\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"es_ES","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/eventdate.es\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.js')}}on"}};
 </script>
-<script src="{{asset('/build/assets/western/frontend.min.js')}}(1).descarga" id="elementor-pro-frontend-js')}}"></script>
-<script src="{{asset('/build/assets/western/elements-handlers.min.js')}}.descarga" id="pro-elements-handlers-js')}}"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
-<script id="jet-elements-js')}}-extra">
+<script src="{{asset('/build/assets/western/frontend.min.js(1).descarga')}}" id="elementor-pro-frontend-js"></script>
+<script src="{{asset('/build/assets/western/elements-handlers.min.js.descarga')}}" id="pro-elements-handlers-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+<script id="jet-elements-js-extra">
 var jetElements = {"ajaxUrl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/eventdate.es\/wp-js')}}on\/jet-elements-api\/v1\/elementor-template","devMode":"false","messages":{"invalidMail":"Please specify a valid e-mail"}};
 </script>
-<script src="{{asset('/build/assets/western/jet-elements.min.js')}}.descarga" id="jet-elements-js')}}"></script>
-<script id="jet-tabs-frontend-js')}}-extra">
-var JetTabsSettings = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/eventdate.es\/wp-js')}}on\/jet-tabs-api\/v1\/elementor-template","devMode":"false"};
+<script src="{{asset('/build/assets/western/jet-elements.min.js.descarga')}}" id="jet-elements-js"></script>
+<script id="jet-tabs-frontend-js-extra">
+var JetTabsSettings = {"ajaxurl":"https:\/\/eventdate.es\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/eventdate.es\/wp-json\/jet-tabs-api\/v1\/elementor-template","devMode":"false"};
 </script>
-<script src="{{asset('/build/assets/western/jet-tabs-frontend.min.js')}}.descarga" id="jet-tabs-frontend-js')}}"></script>
-<script src="{{asset('/build/assets/western/settings.min.js')}}.descarga" id="dce-settings-js')}}"></script>
-<script src="{{asset('/build/assets/western/fix-background-loop.min.js')}}.descarga" id="dce-fix-background-loop-js')}}"></script>
-<script id="wpforms-elementor-js')}}-extra">
+<script src="{{asset('/build/assets/western/jet-tabs-frontend.min.js.descarga')}}" id="jet-tabs-frontend-js"></script>
+<script src="{{asset('/build/assets/western/settings.min.js.descarga')}}" id="dce-settings-js"></script>
+<script src="{{asset('/build/assets/western/fix-background-loop.min.js.descarga')}}" id="dce-fix-background-loop-js"></script>
+<script id="wpforms-elementor-js-extra">
 var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
 </script>
-<script src="{{asset('/build/assets/western/frontend.min.js')}}(2).descarga" id="wpforms-elementor-js')}}"></script>
+<script src="{{asset('/build/assets/western/frontend.min.js')}}" id="wpforms-elementor-js"></script>
 <style id="dce-template-fix-2fa887a1-inline">.elementor .dce-elementor-post-11684 .elementor-element.elementor-element-2fa887a1:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-11684 .elementor-element.elementor-element-2fa887a1 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg");}</style><style id="dce-template-fix-1fc5fd81-inline">.elementor .dce-elementor-post-11684 .elementor-element.elementor-element-1fc5fd81:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-11684 .elementor-element.elementor-element-1fc5fd81 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg");}</style><style id="dce-template-fix-2231e418-inline">.elementor .dce-elementor-post-11684 .elementor-element.elementor-element-2231e418:not(.elementor-motion-effects-element-type-background), .elementor .dce-elementor-post-11684 .elementor-element.elementor-element-2231e418 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://eleve11.ar/wp-content/uploads/jet-engine-forms/17/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg");}</style>		<script type="text/javascript">
 			jQuery( window ).on( 'load', function() {
 				jQuery('input[name="um_request"]').val('');
@@ -2193,6 +2197,6 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 		</script>
 		
 
-<script src="{{asset('/build/assets/western/dialog.min.js')}}.descarga"></script></body></html>
+<script src="{{asset('/build/assets/western/dialog.min.js.descarga')}}"></script></body></html>
 
 @stop
