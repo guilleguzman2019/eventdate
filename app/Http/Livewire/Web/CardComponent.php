@@ -50,8 +50,9 @@ class CardComponent extends Component
         //$this -> card -> slug = Str::slug($this -> titulo);
 
         $this -> card -> save();
+        $this -> card = $this -> card -> fresh();
 
-        redirect()->to('http://localhost:8000/invitacion/'.$this -> card -> slug.'?edit=true');
+        //redirect()->to('http://localhost:8000/invitacion/'.$this -> card -> slug.'?edit=true');
 
         
     }
