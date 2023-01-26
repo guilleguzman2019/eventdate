@@ -1,7 +1,7 @@
 <div>
     <x-slot name="titlePage">- Invitacion</x-slot>
 
-    <div class="container">
+    {{--<div class="container">
         <a href="https://getbootstrap.com/docs/4.0/components/navs/#tabs"
            target="_blank">
           <h1> Invitaciones </h1>
@@ -148,7 +148,7 @@
         <div class="col-2">
             <button type="button" class="btn btn-primary"><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editCat" wire:click="">Crear invitacion </a></button>
         </div>
-    </div>
+    </div>--}}
         
 
 
@@ -179,16 +179,8 @@
 					</div>
 
                     <div class="mb-3">
-                        <label class="fs-14 fw-400 mb-1">template</label>
-                        <select class="form-select  py-2 rounded-3 text-muted fs-14" wire:model.defer="createArray.template_id">
-                            <option value="">Elige un template</option>
-                            @foreach ($templates  as $tmp)
-                                <option value="{{ $tmp -> id }}" class="">{{ $tmp -> name }}</option>
-                            @endforeach
-                        </select>
-                        @error('createArray.template_id')
-                            <span class="fs-12 text-danger">{{ $message }}</span>
-                        @enderror
+                        <input class="template_id" wire:model.defer="createArray.template_id" type="text" value="hola mundo">
+                        
                     </div>
                 </div>
 
@@ -201,3 +193,102 @@
     </div>
 </div>
 
+<div class="container-fluid">
+    <div class="row">
+      <div class="icon-tab col-xs-12 col-sm-2 col-sm-offset-3 active">
+          {{--<span class="glyphicon glyphicon-music"></span>--}}
+          <img class="glyphicon" src="https://cdn-icons-png.flaticon.com/512/84/84239.png" alt="" height="50" width="50">
+          <span class="icon-label">BODAS</span>
+      </div>
+      <div class="icon-tab col-xs-12 col-sm-2 ">
+          {{--<span class="glyphicon glyphicon-camera"></span>--}}
+          <img class="glyphicon" src="https://images.vexels.com/media/users/3/236440/isolated/lists/5cff4483ed2d0027d2512e2b29c227c3-quinceaneras-2.png" alt="" height="50" width="50">
+          <span class="icon-label">QUINCES</span>
+      </div>
+
+      <div class="icon-tab col-xs-12 col-sm-2">
+          {{--<span class="glyphicon glyphicon-facetime-video"></span>--}}
+          <img class="glyphicon" src="https://cdn-icons-png.flaticon.com/128/918/918234.png" alt=""  height="50" width="50">
+          <span class="icon-label">CUMPLEAÑOS</span>
+      </div>
+
+      <div class="icon-tab col-xs-12 col-sm-2">
+        {{--<span class="glyphicon glyphicon-facetime-video"></span>--}}
+        <img class="glyphicon" src="https://cdn-icons-png.flaticon.com/128/10/10958.png" alt=""  height="50" width="50">
+        <span class="icon-label">EMPRESARIAL</span>
+    </div>
+
+    <div class="icon-tab col-xs-12 col-sm-2">
+        {{--<span class="glyphicon glyphicon-facetime-video"></span>--}}
+        <img class="glyphicon" src="https://cdn-icons-png.flaticon.com/128/1161/1161670.png" alt="" height="50" >
+        <span class="icon-label">SOLTEROS</span>
+    </div>
+
+      <div class="icon-tab col-xs-12 col-sm-2">
+        {{--<span class="glyphicon glyphicon-facetime-video"></span>--}}
+        <img class="glyphicon" src="https://cdn-icons-png.flaticon.com/128/5525/5525779.png" alt="" height="50" >
+        <span class="icon-label">FUNERAL</span>
+    </div>
+
+    </div> 
+  </div>
+  
+  <!-- Your elements -->
+  <div class="item col-sm-10 col-sm-offset-1 pt-4">
+      <div class="panel panel-default">
+        <div class="row p-3 m-3">
+            <div class="col-12">
+            @foreach ($templates as $tmp)
+
+            @foreach($tmp-> categories as $tmpfinal)
+            
+                @if($tmpfinal->name ==='boda ')
+
+                        <div class="m-3 border text-center" style="display: inline-block; border-radius: 5px;">
+                            <a href="#" title="{{ $tmp -> id }}" onclick="updateValue(this.title, event);" data-bs-toggle="modal" data-bs-target="#editCat">
+                                <img class="rounded" src="{{asset( $tmp -> image )}}" alt="" height="200px" width="220ox">
+                            </a>
+                            <br>
+                            <br>
+                            <p class="font-weight-bold">{{$tmp -> name}}</p>
+                            <input type="text" id="country" name="country" value="" />
+                            <br>
+                            {{--<button type="button" class="btn btn-dark">Elegir</button>--}}
+                        </div>
+                @endif
+                               
+             @endforeach
+
+            @endforeach
+                </div>
+          </div>
+      </div>    
+  </div>
+    
+  <div class="item col-sm-10 col-sm-offset-1">
+      <div class="panel panel-default">
+          <div class="panel-heading"><h3>Element 2</h3></div>
+          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis tempor quam quis ultricies. In laoreet posuere odio, eget viverra nisl auctor eu. Aenean auctor turpis vel justo tincidunt molestie.</div>
+      </div>    
+  </div>
+    
+  <div class="item col-sm-10 col-sm-offset-1">
+      <div class="panel panel-default">
+          <div class="panel-heading"><h3>Element 3</h3></div>
+          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis tempor quam quis ultricies. In laoreet posuere odio, eget viverra nisl auctor eu. Aenean auctor turpis vel justo tincidunt molestie.</div>
+      </div>    
+  </div>
+
+  <script>
+
+function updateValue(val, event) {
+    document.getElementById("template_id").value = val;
+    event.preventDefault();
+}
+
+
+  </script>
+
+
+  
+  

@@ -31,7 +31,7 @@ class TemplateComponent extends Component
         $this -> validate([
             'createArray.name' => 'required',
             'category_id' =>'required',
-            'image' => 'required|image|mimes:png,jpg,jpeg|max:4096',
+            'image' => 'required|image|mimes:png,jpg,jpeg',
         ]);
 
         $this -> createArray['image'] = $this -> image -> store('img/templates');
@@ -58,7 +58,7 @@ class TemplateComponent extends Component
         $this -> validate([
             'editArray.name' => 'required',
             'editArray.category_id' => 'required',
-            'imageEdit' => 'nullable|image|mimes:png,jpg,jpeg|max:4096',
+            'imageEdit' => 'nullable|image|mimes:png,jpg,jpeg',
         ]);
 
         if ( $this -> imageEdit ) {

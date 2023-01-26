@@ -7,8 +7,11 @@ use Livewire\Component;
 use Illuminate\Support\Str;
 
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 use App\Models\Card;
+
+use App\Models\Place;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -16,9 +19,12 @@ class CardComponent extends Component
 {
 
     use WithFileUploads;
+    use WithPagination;
+
+    protected $paginationTheme = 'bootstrap';
 
 
-    public $card, $titulo, $fecha, $historia, $image;
+    public $card, $titulo, $fecha, $historia, $image, $event, $imageEvent;
 
 
     public function mount(Card $slug)
@@ -41,6 +47,10 @@ class CardComponent extends Component
     public function save()
     {
 
+        if ( $this -> image ) {
+            $this -> card -> home_bg_desktop = $this -> image -> store('img/invitaciones');
+        }
+
         $this -> card -> title = $this -> titulo;
 
         $this -> card -> start_date = $this -> fecha;
@@ -57,9 +67,31 @@ class CardComponent extends Component
         
     }
 
+    public function addEvent()
+    {
+
+
+
+        if ( $this -> imageEvent ) {
+            $this -> event['image'] = $this -> imageEvent -> store('img/eventos');
+        }
+
+        $this -> event['card_id'] = $this -> card -> id;
+
+        $event = Place::create( $this -> event );
+
+
+
+
+    }
+
     public function render()
     {
-        return view('livewire.web.western-component')
+        $events = Place::orderBy('title')
+                                -> where('card_id', $this -> card -> id)
+                                -> paginate();
+
+        return view('livewire.web.western-component', compact('events'))
                     ->layout('layouts.template');
     }
 }

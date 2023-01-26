@@ -32,10 +32,7 @@ class CardComponent extends Component
 
     public function save()
     {   
-        $this -> validate([
-            'createArray.title' => 'required',
-            'createArray.template_id' => 'required',
-        ]);
+        
 
 
         $this -> createArray['slug'] = Str::slug($this -> createArray['title']) ;
