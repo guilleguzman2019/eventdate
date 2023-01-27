@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::get('/invitacion/{slug}',  Livewire\CardComponent::class)-> name('invitacion');
 
 
-Route::get('/post/{slug}',  Livewire\PostComponent::class);
+Route::get('/editar/{id}',  Livewire\EditarComponent::class)-> name('editar');
+
+
+
 
 

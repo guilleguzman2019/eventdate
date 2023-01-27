@@ -30,10 +30,15 @@ class CardComponent extends Component
         $this -> slug = Str::slug($value);
     }
 
-    public function save()
-    {   
-        
+    public function save($id)
 
+    {
+
+        $this->emit('edit_documento',$id);
+
+        return redirect()->route('editar');
+
+        /*
 
         $this -> createArray['slug'] = Str::slug($this -> createArray['title']) ;
 
@@ -49,7 +54,7 @@ class CardComponent extends Component
         $this -> reset(['createArray']);
         $this -> emit('saved');
 
-        Redirect::to('http://localhost:8000/invitacion/'.$slug.'?edit=true');
+        Redirect::to('http://localhost:8000/invitacion/'.$slug.'?edit=true');*/
     }
 
     public function render()
