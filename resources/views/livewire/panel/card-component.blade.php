@@ -88,7 +88,7 @@
                     @if($tmpfinal->name ==='boda ')
     
                             <div class="m-3 border text-center" style="display: inline-block; border-radius: 5px;">
-                                <a href="{{ route('editar', $tmp -> id) }}">
+                                <a href="{{ route('crear', $tmp -> id) }}">
                                     <img class="rounded" src="{{asset( $tmp -> image )}}" alt="" height="200px" width="220ox">
                                 </a>
                                 <br>

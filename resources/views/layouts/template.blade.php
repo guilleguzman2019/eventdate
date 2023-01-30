@@ -15,6 +15,8 @@
 		@if( isset($slot) ) {{ $slot }} @endif
 	</div>
 
+	@livewireScripts
+
 	@yield('js')
 
 	@livewireScripts

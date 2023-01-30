@@ -24,7 +24,9 @@ class CardComponent extends Component
     protected $paginationTheme = 'bootstrap';
 
 
-    public $card, $titulo, $fecha, $historia, $image, $event, $imageEvent;
+    public $card, $titulo, $fecha, $historia, $image, $event, $imageEvent, $arrayEventEdit;
+
+    public $eventos ;
 
 
     public function mount(Card $slug)
@@ -41,11 +43,37 @@ class CardComponent extends Component
 
         $this -> fecha = $time ;
 
+        $this -> eventos = Place::orderBy('title')-> where('card_id', $this -> card -> id)->get();
+
+
+        for ($i =0; $i < count($this -> eventos) ; $i++) {
+
+            $this -> arrayEventEdit[$i]['id'] = $this -> eventos[$i] -> id;
+            $this -> arrayEventEdit[$i]['title'] = $this -> eventos[$i] -> title;
+            $this -> arrayEventEdit[$i]['place_name'] = $this -> eventos[$i] -> place_name;
+            $this -> arrayEventEdit[$i]['address'] = $this -> eventos[$i] -> address;
+            $this -> arrayEventEdit[$i]['start_date'] = $this -> eventos[$i] -> start_date;
+
+        }
+
+    }
+
+    public function eliminar($id)
+    {
+
+        dd($id);
+
+        $place = Place::find($id);
+        
+        $place->delete();
+
     }
 
 
     public function save()
     {
+
+        dd($this ->eventos);
 
         if ( $this -> image ) {
             $this -> card -> home_bg_desktop = $this -> image -> store('img/invitaciones');
@@ -91,7 +119,30 @@ class CardComponent extends Component
                                 -> where('card_id', $this -> card -> id)
                                 -> paginate();
 
-        return view('livewire.web.western-component', compact('events'))
+        if ($this-> card -> template -> name == 'Boho') {
+
+            return view('template_edit.boho' , compact('events'))
+                        ->layout('layouts.template');
+        }
+    
+        if ($this-> card -> template -> name == 'Chic') {
+    
+            return view('template_edit.Chic' , compact('events'))
+                      ->layout('layouts.template');
+        }
+    
+        if ($this-> card -> template -> name == 'Romantic') {
+    
+            return view('template_edit.romantic' , compact('events'))
                     ->layout('layouts.template');
+        }
+    
+        if ($this-> card -> template -> name == 'Western') {
+    
+          return view('template_edit.western' , compact('events'))
+                      ->layout('layouts.template');
+        }
+
+
     }
 }

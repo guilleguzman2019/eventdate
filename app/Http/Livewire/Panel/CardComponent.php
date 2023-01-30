@@ -36,7 +36,7 @@ class CardComponent extends Component
 
         $this->emit('edit_documento',$id);
 
-        return redirect()->route('editar');
+        return redirect()->route('crear');
 
         /*
 
