@@ -28,6 +28,8 @@ class CardComponent extends Component
 
     public $eventos ;
 
+    public $cantidaEvent ;
+
 
     public function mount(Card $slug)
     {

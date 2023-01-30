@@ -1,0 +1,27 @@
+{
+  "resources/css/auth.scss": {
+    "file": "assets/auth-6ac685c3.css",
+    "src": "resources/css/auth.scss",
+    "isEntry": true
+  },
+  "resources/css/panel.scss": {
+    "file": "assets/panel-5ee17597.css",
+    "src": "resources/css/panel.scss",
+    "isEntry": true
+  },
+  "resources/js/panel.js": {
+    "file": "assets/panel-4ed993c7.js",
+    "src": "resources/js/panel.js",
+    "isEntry": true
+  },
+  "resources/css/web.scss": {
+    "file": "assets/web-4ed993c7.js",
+    "src": "resources/css/web.scss",
+    "isEntry": true
+  },
+  "resources/js/web.js": {
+    "file": "assets/web-99c86e76.js",
+    "src": "resources/js/web.js",
+    "isEntry": true
+  }
+}
