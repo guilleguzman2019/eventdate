@@ -29,7 +29,7 @@ class EditarComponent extends Component
 
   
 
-    public $template, $titulo, $image, $events , $arrayPlaces = 3;
+    public $template, $titulo, $image, $events = [], $arrayPlaces = 3;
 
     public $createArray ;
 
@@ -42,56 +42,59 @@ class EditarComponent extends Component
 
       }
 
+      public function add(){
+
+        $this -> arrayPlaces ++ ;
+
+  
+      }
+
     
     public function save(){
+
 
       $this -> createArray['title'] = $this -> titulo;
 
       $this -> createArray['slug'] = Str::slug($this -> titulo) ;
 
-        $this -> createArray['user_id'] = Auth::user() -> id ;
+      $this -> createArray['user_id'] = Auth::user() -> id ;
 
-        $this -> createArray['start_date'] = date('Y-m-d H:i:s') ;
+      $this -> createArray['start_date'] = date('Y-m-d H:i:s') ;
 
-        $this -> createArray['template_id'] = $this->template -> id ;
+      $this -> createArray['template_id'] = $this->template -> id ;
 
-        $card = Card::create( $this -> createArray );
+      $card = Card::create( $this -> createArray );
 
-        $slug = $card ->slug ;
+      $slug = $card ->slug ;
 
-        $id = $card -> id ;
-
+      $id = $card -> id ;
 
       $now = new DateTime();
 
-      if(!empty($this -> events)){
+      $array = $this -> events ;
 
-        foreach ($this -> events as $event)
-   		  {
-          $event['image'] = 'img/eventos/CZVKJy8dopy8cpzdAKj7niKResfaue7asKphQqjL.jpg';
+      foreach ($array as $event)
+   		{
+        $event['image'] = 'img/eventos/CZVKJy8dopy8cpzdAKj7niKResfaue7asKphQqjL.jpg';
 
-          $event['start_date'] = date('Y-m-d H:i:s') ;
+        $event['start_date'] = date('Y-m-d H:i:s') ;
+  
+        $event['card_id'] = $id ;
+  
+        Place::create($event);
 
-          $event['card_id'] = $id ;
+   		}
 
-          Place::create( $event);
+         //return Redirect::to('http://localhost:8000/invitacion/'.$slug);
 
-           return Redirect::to('http://localhost:8000/invitacion/'.$slug);
-
-   		  }
-
-      }
+      
 
       Redirect::to('http://localhost:8000/invitacion/'.$slug);
 
 	  }
 
 
-    public function add(){
-
-      $this -> arrayPlaces ++ ;
-
-    }
+    
 
 
     public function render()
@@ -120,6 +123,9 @@ class EditarComponent extends Component
       return view('template_create.western')
                   ->layout('layouts.template');
   }
+
+
+  return view('livewire.web.editar-component');
 
 }
 

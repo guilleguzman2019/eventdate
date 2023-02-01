@@ -27,13 +27,11 @@
             {{--<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>--}}
 
           </div>
-          <div class="col align-self-center">
-            
-          </div>
-
-          <div class="col align-self-end" style="text-align: end; display:none;" id="addEvent">
+          <div class="col align-self-end" style="text-align: end;" id="addEvent">
 			<button class="botonhashtag" onclick="addguille()" wire:click="add" wire:target="add">AGREGAR EVENTO</button>
-          </div>
+		  </div>
+
+          
 
 		  <div class="col align-self-end" style="text-align: end; display:none;" id="addGalery">
 			<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR FOTO</button></a>
@@ -117,7 +115,7 @@
 					<br>
 					<img class="card-img-top" src="http://2.bp.blogspot.com/--xxynRG0ycg/VjEUQUNVKpI/AAAAAAAAAC8/Aj_aRspCICc/s1600/catedral1.jpg" alt="Card image cap" height="450px" width="150px">
 					<div class="card-body text-center">
-                      <input wire:model.defer="events.{{$i}}.title" class="card-title" type="text" placeholder="CEREMONIA">
+					  <input wire:model.defer="events.{{$i}}.title" class="card-title" type="text" placeholder="CEREMONIA">
 					  <input wire:model.defer="events.{{$i}}.place_name" class="card-lugar" placeholder="Catedral de cordoba">
 					  <input wire:model.defer="events.{{$i}}.start_date" class="card-text" type="date" placeholder="dia de la ceremonia">
 					  <input wire:model.defer="events.{{$i}}.address" class="card-text" placeholder="Colon 677, Cordoba">
@@ -129,12 +127,12 @@
 
 				@endfor
 
-                {{--<div class="item card p-4 two" >
+				{{--<div class="item card p-4 two" >
 					<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
 					<br>
 					<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
 					<div class="card-body">
-                        <input class="card-title" type="text" value="Iglesia diabolica">
+						<input class="card-title" type="text" value="Iglesia diabolica">
 					  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
 					  <span class="card-text">Independencia 80, Cordoba</span>
 					  <br>
@@ -143,12 +141,12 @@
 					</div>
 				</div>
 
-                <div class="item card p-4 two" >
+				<div class="item card p-4 two" >
 					<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
 					<br>
 					<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
 					<div class="card-body">
-                        <input class="card-title" type="text" value="Iglesia circo">
+						<input class="card-title" type="text" value="Iglesia circo">
 					  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
 					  <span class="card-text">Independencia 80, Cordoba</span>
 					  <br>
@@ -164,6 +162,7 @@
 	  </div>
 	</div>
 	</section>
+
 
   
   <section id="hashtag">

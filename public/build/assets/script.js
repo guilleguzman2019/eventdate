@@ -1,7 +1,7 @@
 $(document).ready(function () {
+
+
   (function ($) {
-
-
 
     $('.owl-carousel').owlCarousel({
 
@@ -17,13 +17,9 @@ $(document).ready(function () {
       itemsMobile : false,
       loop: false
  
-  });
+    });
 
- 
 
-    
-   
- 
 
   })(jQuery);
 
@@ -57,8 +53,8 @@ $('#yin').click(function() {
 $(document).ready(function() {
 
 window.onscroll = function() {
-  console.log("Vertical: " + window.scrollY);
-  console.log("Horizontal: " + window.scrollX);
+  //console.log("Vertical: " + window.scrollY);
+  //.log("Horizontal: " + window.scrollX);
 
 };
 
@@ -68,7 +64,7 @@ window.onscroll = function() {
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
-  console.log(scroll)
+  //console.log(scroll)
 
 if(scroll > 1400){
 
@@ -209,26 +205,27 @@ function remove_image(trigger) {
   console.log($('.owl-carousel .item').length);
 }
 
-console.log($('.owl-carousel .item').length);
 
 
 
 function addguille(){
+
+  var evts = $('.owl-carousel .item').length ;
 
   $('.owl-carousel').trigger('add.owl.carousel', [`<div class="item card p-4 two" >
   <button class="btn-delete btn btn-danger" onclick="remove_image(this);">Eliminar</button>
   <br>
   <img class="card-img-top" src="http://2.bp.blogspot.com/--xxynRG0ycg/VjEUQUNVKpI/AAAAAAAAAC8/Aj_aRspCICc/s1600/catedral1.jpg" alt="Card image cap" height="450px" width="150px">
   <div class="card-body text-center">
-              <input wire:model.defer="events.{{$i}}.title" class="card-title" type="text" placeholder="CEREMONIA">
-    <input wire:model.defer="events.{{$i}}.place_name" class="card-lugar" placeholder="Catedral de cordoba">
-    <input wire:model.defer="events.{{$i}}.start_date" class="card-text" type="date" placeholder="dia de la ceremonia">
-    <input wire:model.defer="events.{{$i}}.address" class="card-text" placeholder="Colon 677, Cordoba">
+              <input wire:model.defer="events.`+ evts +`.title" class="card-title" type="text" placeholder="CEREMONIA">
+    <input wire:model.defer="events.`+ evts +`.place_name" class="card-lugar" placeholder="Catedral de cordoba">
+    <input wire:model.defer="events.`+ evts +`.start_date" class="card-text" type="date" placeholder="dia de la ceremonia">
+    <input wire:model.defer="events.`+ evts +`.address" class="card-text" placeholder="Colon 677, Cordoba">
     <br>
     <br>
     <a href="#" class="botonhashtag">VER UBICACION</a>
   </div>
-</div>`,0])
+</div>`])
         .trigger('refresh.owl.carousel');
 
     
@@ -239,8 +236,10 @@ console.log($('.owl-carousel .item').length);
 
 function addedit(){
 
+  var evts = $('.owl-carousel .item').length ;
+
   $('.owl-carousel').trigger('add.owl.carousel', [`<div class="item card p-4 two" >
-  <button class="btn-delete btn btn-danger" wire:click="eliminar({{$arrayEventEdit[$index]['id']}})" wire:target="eliminar">Eliminar</button>
+  <button class="btn-delete btn btn-danger" wire:click="eliminar({{$arrayEventEdit[`+ evts +`]['id']}})" wire:target="eliminar">Eliminar</button>
   <br>
   <img class="card-img-top" src="http://2.bp.blogspot.com/--xxynRG0ycg/VjEUQUNVKpI/AAAAAAAAAC8/Aj_aRspCICc/s1600/catedral1.jpg" alt="Card image cap" height="450px" width="150px">
   <div class="card-body text-center">
@@ -260,6 +259,26 @@ function addedit(){
 console.log($('.owl-carousel .item').length);
 
 }
+
+
+livewire.on('addEvent', () => {
+
+  $('.owl-carousel').owlCarousel({
+
+    navigation : true, // Show next and prev buttons
+
+    slideSpeed : 300,
+    paginationSpeed : 400,
+
+    items : 5, 
+    itemsDesktop : false,
+    itemsDesktopSmall : false,
+    itemsTablet: false,
+    itemsMobile : false,
+    loop: false
+
+  });
+});
 
 
 
