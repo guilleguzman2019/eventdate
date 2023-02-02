@@ -527,11 +527,19 @@ p{
   }
 
 
-  input:focus { 
-    outline: none !important;
+  input:hover { 
+    
     border-color: #004288;
     box-shadow: 0 0 10px #719ECE;
  }
+
+ input:focus { 
+    
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
 
 
  .imgizq{
@@ -827,6 +835,53 @@ padding: 10px;
     top: 2px;
     left: -5%;
 }
+
+
+input{
+
+  border: 0;
+}
+
+
+.circulo {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin:0px auto;
+  padding:3%
+}
+
+.circulo > span {
+	font-family: sans-serif;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+
+
+
+
+.panel-heading .accordion-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+  content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+  float: right;        /* adjust as needed */
+  color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+
+
+
 
 
 

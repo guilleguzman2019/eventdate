@@ -29,9 +29,10 @@ class EditarComponent extends Component
 
   
 
-    public $template, $titulo, $image, $events = [], $arrayPlaces = 3;
+    public $template, $titulo, $image, $events = [], $arrayPlaces = 5;
 
     public $createArray ;
+
 
     public function mount( Template $id){
 
@@ -42,16 +43,9 @@ class EditarComponent extends Component
 
       }
 
-      public function add(){
-
-        $this -> arrayPlaces ++ ;
-
-  
-      }
 
     
     public function save(){
-
 
       $this -> createArray['title'] = $this -> titulo;
 
@@ -73,8 +67,10 @@ class EditarComponent extends Component
 
       $array = $this -> events ;
 
+
       foreach ($array as $event)
    		{
+
         $event['image'] = 'img/eventos/CZVKJy8dopy8cpzdAKj7niKResfaue7asKphQqjL.jpg';
 
         $event['start_date'] = date('Y-m-d H:i:s') ;

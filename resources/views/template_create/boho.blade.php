@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 
@@ -28,7 +30,8 @@
 
           </div>
           <div class="col align-self-end" style="text-align: end;" id="addEvent">
-			<button class="botonhashtag" onclick="addguille()" wire:click="add" wire:target="add">AGREGAR EVENTO</button>
+			<button class="botonhashtag" onclick="addguille()" >AGREGAR EVENTO</button>
+			<button class="botonhashtag" onclick="eliminar()"> ELIMINAR EVENTO </button>
 		  </div>
 
           
@@ -61,8 +64,9 @@
 						<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
 					</div>
 					<div class="col-10 text-center p-0 m-0">
-						
-						<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
+						<div class="box" style="">
+							<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="background-color:transparent; color:white; border: 0; text-align: center; width:80%; z-index:999999">
+						</div>
 						{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
 						<h3 class="titulo">!Nos Casamos!</h3>
 					</div>
@@ -105,26 +109,29 @@
 	<div class="container p-4">
 	  <div class="row  p-0 m-0">
 		<div class="col-md-12 text-center">
-		  <div class="carousel-wrap " wire:ignore>
+		  <div class="carousel-wrap " >
 			<div class="owl-carousel" wire:ignore>
 
 				@for ($i = 0; $i < $arrayPlaces; $i++)
 
-				<div class="item card p-4 two" >
-					<button class="btn-delete btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-					<br>
-					<img class="card-img-top" src="http://2.bp.blogspot.com/--xxynRG0ycg/VjEUQUNVKpI/AAAAAAAAAC8/Aj_aRspCICc/s1600/catedral1.jpg" alt="Card image cap" height="450px" width="150px">
-					<div class="card-body text-center">
-					  <input wire:model.defer="events.{{$i}}.title" class="card-title" type="text" placeholder="CEREMONIA">
-					  <input wire:model.defer="events.{{$i}}.place_name" class="card-lugar" placeholder="Catedral de cordoba">
-					  <input wire:model.defer="events.{{$i}}.start_date" class="card-text" type="date" placeholder="dia de la ceremonia">
-					  <input wire:model.defer="events.{{$i}}.address" class="card-text" placeholder="Colon 677, Cordoba">
-					  <br>
-					  <br>
-					  <a href="#" class="botonhashtag">VER UBICACION</a>
-					</div>
-				</div>
-
+						<div class="item card p-4 two" >
+							<div class="align-self-start">
+								<div class="circulo"><span>{{$i + 1}}</span>
+							  	</div>
+							</div>
+							<br>
+							<img class="card-img-top" src="https://i.pinimg.com/originals/a2/30/94/a230943c025808d10a2e279864ebbc86.jpg" alt="Card image cap" height="450px" width="150px">
+							<div class="card-body text-center">
+							<input wire:model.defer="events.{{$i}}.title" class="card-title" type="text" placeholder="TITULO DEL LUGAR">
+							<input wire:model.defer="events.{{$i}}.place_name" class="card-lugar" placeholder="NOMBRE DEL LUGAR">
+							<input wire:model.defer="events.{{$i}}.start_date" class="card-text" type="date" placeholder="DIA DEL EVENTO">
+							<input wire:model.defer="events.{{$i}}.address" class="card-text" placeholder="DIRECCION DEL LUGAR">
+							<br>
+							<br>
+							<a href="#" class="botonhashtag">VER UBICACION</a>
+							</div>
+						</div>         
+					
 				@endfor
 
 				{{--<div class="item card p-4 two" >
@@ -362,6 +369,80 @@
 
 					<h1 class="titulotransporte text-light">Recomendaciones</h1>
 
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								Collapsible Group Item #1
+							  </a>
+							</h4>
+						  </div>
+						  <div id="collapseOne" class="panel-collapse collapse in">
+							<div class="panel-body">
+							  <div class="container">
+						<h2>Dynamic Tabs</h2>
+						<p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+					  
+						<ul class="nav nav-tabs">
+						  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+						  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+						  <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+						  <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+						</ul>
+					  
+						<div class="tab-content">
+						  <div id="home" class="tab-pane fade in active">
+							<h3>HOME</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						  </div>
+						  <div id="menu1" class="tab-pane fade">
+							<h3>Menu 1</h3>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						  </div>
+						  <div id="menu2" class="tab-pane fade">
+							<h3>Menu 2</h3>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						  </div>
+						  <div id="menu3" class="tab-pane fade">
+							<h3>Menu 3</h3>
+							<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						  </div>
+						</div>
+					  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+								Collapsible Group Item #2
+							  </a>
+							</h4>
+						  </div>
+						  <div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">
+							  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						  </div>
+						</div>
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+								Collapsible Group Item #3
+							  </a>
+							</h4>
+						  </div>
+						  <div id="collapseThree" class="panel-collapse collapse">
+							<div class="panel-body">
+							  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						  </div>
+						</div>
+					  </div>
+					
 				</div>
 			  </div>
 			</div>
@@ -633,6 +714,10 @@
 
 @section('js')
 
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
