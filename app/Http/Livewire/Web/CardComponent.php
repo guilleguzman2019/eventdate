@@ -30,6 +30,8 @@ class CardComponent extends Component
 
     public $cantidaEvent ;
 
+    public $arrayPlaces;
+
 
     public function mount(Card $slug)
     {

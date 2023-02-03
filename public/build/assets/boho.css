@@ -355,6 +355,7 @@ p{
 
   .textodedicatoria{
 
+    margin-top: 90px;
     text-align: center;
     color: #FFFFFF;
     font-family: "Noto Serif Display", Sans-serif;
@@ -879,6 +880,103 @@ input{
   content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
 
+
+.accordion_head {
+  background-color: white;
+ 
+  cursor: pointer;
+  
+  margin: 0 0 1px 0;
+  padding: 21px 28px;
+  font-weight: bold;
+  height: 60px;
+
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.accordion_body {
+  background: white;
+  border-radius: 20px;
+  color:black ;
+}
+
+.accordion_body p {
+  padding: 18px 5px;
+  margin: 0px;
+}
+
+.plusminus {
+  float: right;
+}
+
+
+.container {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+.contador{
+
+  font-family: serif;
+  font-size: 90px;
+  font-weight: 700;
+  font-style: italic;
+  padding: 5px 71px 0px 0;
+}
+
+.countdown{
+
+  background-color: #54595f !important;
+}
 
 
 

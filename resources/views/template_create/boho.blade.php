@@ -96,14 +96,35 @@
 		<br>
 		<h3 class="tituloHistoria">Nuestra Historia</h3>
 		<br>
-		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.
+		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.<br>
   
-		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.
+		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.<br>
 		  
 		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>
 	</div>
   </div>
   </section>
+
+  <div id="main-bg">
+	<div class="container">
+	  <div class="row">
+		<div class="col-12 text-center pt-5">
+
+		  <div>
+			<div id="countdown">
+			  <ul>
+				<li><span id="days" class="contador"></span>Dias</li>
+				<li><span id="hours" class="contador"></span>hrs</li>
+				<li><span id="minutes" class="contador"></span>Min</li>
+				<li><span id="seconds" class="contador"></span>Seg</li>
+			  </ul>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</div>
+  </div>
 
   <section id="eventos">
 	<div class="container p-4">
@@ -369,80 +390,21 @@
 
 					<h1 class="titulotransporte text-light">Recomendaciones</h1>
 
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-						  <div class="panel-heading">
-							<h4 class="panel-title">
-							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-								Collapsible Group Item #1
-							  </a>
-							</h4>
+					<div style="text-align: start;">
+						<div class="accordion_container">
+		  
+						  <div class="accordion_head align-self-start">HOSPEDAJE<span class="plusminus">+</span></div>
+						  <div class="accordion_body" style="display: none;">
+							<p style="color:black">Second Accordian Body, it will have description</p>
 						  </div>
-						  <div id="collapseOne" class="panel-collapse collapse in">
-							<div class="panel-body">
-							  <div class="container">
-						<h2>Dynamic Tabs</h2>
-						<p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
-					  
-						<ul class="nav nav-tabs">
-						  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-						  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-						  <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-						  <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-						</ul>
-					  
-						<div class="tab-content">
-						  <div id="home" class="tab-pane fade in active">
-							<h3>HOME</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						  </div>
-						  <div id="menu1" class="tab-pane fade">
-							<h3>Menu 1</h3>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						  </div>
-						  <div id="menu2" class="tab-pane fade">
-							<h3>Menu 2</h3>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-						  </div>
-						  <div id="menu3" class="tab-pane fade">
-							<h3>Menu 3</h3>
-							<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						  <br>
+						  <div class="accordion_head">TRANSPORTE<span class="plusminus">+</span></div>
+						  <div class="accordion_body" style="display: none;">
+							<p style="color:black">Second Accordian Body, it will have description</p>
 						  </div>
 						</div>
-					  </div>
-							</div>
-						  </div>
-						</div>
-						<div class="panel panel-default">
-						  <div class="panel-heading">
-							<h4 class="panel-title">
-							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-								Collapsible Group Item #2
-							  </a>
-							</h4>
-						  </div>
-						  <div id="collapseTwo" class="panel-collapse collapse">
-							<div class="panel-body">
-							  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-							</div>
-						  </div>
-						</div>
-						<div class="panel panel-default">
-						  <div class="panel-heading">
-							<h4 class="panel-title">
-							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-								Collapsible Group Item #3
-							  </a>
-							</h4>
-						  </div>
-						  <div id="collapseThree" class="panel-collapse collapse">
-							<div class="panel-body">
-							  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-							</div>
-						  </div>
-						</div>
-					  </div>
-					
+					</div>
+
 				</div>
 			  </div>
 			</div>
@@ -451,19 +413,27 @@
 		<section id="testigos">
 		  <div class="container">
 			<div class="row ">
-			  <div class="col-3"></div>
-			  <div class="col-6 text-center">
+			  <div class="col-12 text-center">
+
 				<h1 class="titulotransporte">Padrinos</h1>
-				<div class="d-inline p-4 ">
-				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
-		  
-				</div>
-				<div class="d-inline p-4 ">
-				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
-			
-				</div>
+
+					<div class="m-5" style="display: inline-flex; padding:5px;">
+						<div class="d-inline" style="margin: 33px;">
+							<img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
+							<div>
+								<h5 class="text-dark">Roberta</h5>
+							</div>
+						</div>
+	
+						<div class="d-inline" style="margin: 33px;">
+							<img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
+							<div>
+								<h5 class="text-dark">Roberto</h5>
+							</div>
+						</div>
+					</div>
+
 			  </div>
-			  <div class="col-3"></div>
 			</div>
 		  </div>
 		</section>

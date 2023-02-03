@@ -35,6 +35,9 @@
 
 	<body>
 
+		<nav>
+		</nav>
+
 		@include('partials.panel.nav')
 
 		<main>

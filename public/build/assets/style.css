@@ -146,6 +146,7 @@ p{
     border-radius: 100px 100px 100px 100px;
     padding: 15px 40px 12px 40px;
     border-color: white;
+    width: 250px;
 }
 
 
@@ -556,10 +557,6 @@ p{
 
  #my-button{
 
-  position: absolute;
-  right: 5px;
-  top: 650px;
-  width: 150px;
  }
 
 #inputfinal{
@@ -828,6 +825,76 @@ padding: 10px;
     position: absolute;
     top: 2px;
     left: -5%;
+}
+
+
+.view:hover{
+
+  border: 5px solid turquoise;
+}
+
+.tituloParejas:hover{
+
+  border: 5px solid turquoise !important;
+}
+
+
+.container {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+.contador{
+
+  font-family: Sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: italic;
 }
 
 

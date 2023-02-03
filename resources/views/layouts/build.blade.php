@@ -1,60 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bootstrap 5 Side Bar Navigation</title>
-  <!-- bootstrap 5 css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-  <!-- BOX ICONS CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+		<title>{{ config('app.name', 'Laravel') }} {{ $titlePage ?? '' }}</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <!-- custom css -->
-  <link rel="stylesheet" href="{{asset('/build/assets/build.css')}}">
-</head>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<body>
-  <!-- Side-Nav -->
-  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
-    <ul class="nav flex-column text-white w-100">
-      <div class="p-3">
-        <br>
-        <img src="https://eventdate.es/wp-content/uploads/2022/10/LOGO-EVENTDATE-BLANCO.png" alt="" width="200">
-      </div>
-      <a href="#" class="nav-link h3 text-white my-2">
-      </a>
-      <li href="#" class="nav-link">
-        <button id="button_events" type="button" class="btn btn-light">Gestion de Eventos</button>
-      </li>
-    </ul>
+		<!-- Styles -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.2/ui/trumbowyg.min.css" integrity="sha512-K87nr2SCEng5Nrdwkb6d6crKqDAl4tJn/BD17YCXH0hu2swuNMqSV6S8hTBZ/39h+0pDpW/tbQKq9zua8WiZTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-    <span href="#" class="nav-link h4 w-100 mb-5">
-      <a href=""><i class="bx bxl-instagram-alt text-white"></i></a>
-      <a href=""><i class="bx bxl-twitter px-2 text-white"></i></a>
-      <a href=""><i class="bx bxl-facebook text-white"></i></a>
-    </span>
-  </div>
+		<link rel="stylesheet" href="{{asset('/build/assets/build.css')}}">
 
-  <!-- Main Wrapper -->
-  <div class="p-4 my-container active-cont">
-    <!-- Top Nav -->
-    <nav class="navbar top-navbar navbar-light bg-light px-5">
-      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
-    </nav>
-    <!--End Top Nav -->
-    <br>
-    <br>
-    <div class="p-3">
-      <livewire:web.editar-component :id="16" />
+		<!-- Styles -->
+		@livewireStyles
+	</head>
+
+	<body>
+
+		<div class="">
+      {{ $slot }}
     </div>
-  </div>
 
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+		@livewireScripts
 
-  <script src="{{asset('/build/assets/builder.js')}}"></script>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.2/trumbowyg.min.js" integrity="sha512-mBsoM2hTemSjQ1ETLDLBYvw6WP9QV8giiD33UeL2Fzk/baq/AibWjI75B36emDB6Td6AAHlysP4S/XbMdN+kSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.2/langs/es_ar.min.js" integrity="sha512-WbE5RQUnNBEzC7FXz1XGMbfNHrhdruZsjle/stNvyqIwayzZedI1nN5HeGS70m6NSmiA4TQaeAgfs98hFXy2iw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.2/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" integrity="sha512-UInqT8f+K1tkck6llPo0HDxlT/Zxv8t4OGeCuVfsIlXLrnP1ZKDGb+tBsBPMqDW15OcmV8NDfQe9+EaAG4aXeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+		
 
+		@stack('scripts')
+	</body>
 </html>

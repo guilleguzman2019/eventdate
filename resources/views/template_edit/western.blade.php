@@ -19,12 +19,12 @@
 
 
 <div>
-    <div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
+    {{--<div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
         <div class="row">
           <div class="col align-self-start">
             <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
             <button id="boton" class="botonhashtag" wire:click="save" wire:target="save">CREAR INVITACION</button>
-            {{--<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>--}}
+            {{--<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>
 
           </div>
           <div class="col align-self-center">
@@ -51,11 +51,11 @@
 
 
         </div>
-    </div>
+    </div>--}}
 
 
 <main>
-	<div class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg') }})">
+	<div id="portada" class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg') }})">
 		<div class="full-bg-img flex-center">
 			<div class="container-fluid">
 				<div class="row align-items-center">
@@ -63,6 +63,13 @@
 						<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-izquierda-285x1024.png" alt="">
 					</div>
 					<div class="col-10 text-center p-0 m-0">
+
+						<div id="my-button" style="display:none;">
+							<label for="file-upload" class="botonhashtag">
+								<img src="https://cdn-icons-png.flaticon.com/512/16/16498.png" alt="" width="30px">
+								CAMBIAR PORTADA</label>
+							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
+						</div>
 						
 						<input class="tituloParejas" wire:model.defer="titulo" type="text" value="Juan y Veronica" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
 						{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
@@ -70,11 +77,6 @@
 					</div>
 					<div class="col-1">
 						<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-derecha.png" alt="">
-						<div id="my-button">
-							<label for="file-upload" class="botonhashtag">PORTADA</label>
-                            <label for="">Tamaño 900x1024</label>
-							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-						</div>
 
 					</div>
 				</div>
@@ -393,6 +395,27 @@
 		  <div class="row">
 			<div class="col-12 text-center pt-5">
 			  <h4 class="textodedicatoria">Vayan poniendose sus mejores trajes que estos novios se casan</h4>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div id="main-bg">
+		<div class="container">
+		  <div class="row">
+			<div class="col-12 text-center pt-5">
+	
+			  <div>
+				<div id="countdown">
+				  <ul>
+					<li><span id="days" class="contador"></span>Dias</li>
+					<li><span id="hours" class="contador"></span>hrs</li>
+					<li><span id="minutes" class="contador"></span>Min</li>
+					<li><span id="seconds" class="contador"></span>Seg</li>
+				  </ul>
+				</div>
+			  </div>
+	
 			</div>
 		  </div>
 		</div>
