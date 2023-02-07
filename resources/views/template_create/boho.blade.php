@@ -2,6 +2,10 @@
 
 @section('css')
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
@@ -23,16 +27,16 @@
 <div>
     <div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
         <div class="row">
-          <div class="col align-self-start">
+          {{--<div class="col align-self-start">
             <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
             <button id="boton" class="botonhashtag" wire:click="save" wire:target="save">CREAR INVITACION</button>
-            {{--<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>--}}
+            <a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>
 
           </div>
           <div class="col align-self-end" style="text-align: end;" id="addEvent">
 			<button class="botonhashtag" onclick="addguille()" >AGREGAR EVENTO</button>
 			<button class="botonhashtag" onclick="eliminar()"> ELIMINAR EVENTO </button>
-		  </div>
+		  </div>--}}
 
           
 
@@ -72,11 +76,10 @@
 					</div>
 					<div class="col-1">
 						<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas-2.png" alt="">
-						<div id="my-button">
+						{{--<div id="my-button">
 							<label for="file-upload" class="botonhashtag">PORTADA</label>
-                            <label for="">Tamaño 900x1024</label>
 							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-						</div>
+						</div>--}}
 
 					</div>
 				</div>
@@ -96,35 +99,14 @@
 		<br>
 		<h3 class="tituloHistoria">Nuestra Historia</h3>
 		<br>
-		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.<br>
+		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.<br><br>
   
-		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.<br>
+		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.<br><br>
 		  
 		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>
 	</div>
   </div>
   </section>
-
-  <div id="main-bg">
-	<div class="container">
-	  <div class="row">
-		<div class="col-12 text-center pt-5">
-
-		  <div>
-			<div id="countdown">
-			  <ul>
-				<li><span id="days" class="contador"></span>Dias</li>
-				<li><span id="hours" class="contador"></span>hrs</li>
-				<li><span id="minutes" class="contador"></span>Min</li>
-				<li><span id="seconds" class="contador"></span>Seg</li>
-			  </ul>
-			</div>
-		  </div>
-
-		</div>
-	  </div>
-	</div>
-  </div>
 
   <section id="eventos">
 	<div class="container p-4">
@@ -192,6 +174,27 @@
 	</section>
 
 
+	<div id="main-bg-count">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center pt-5">
+		  <div>
+			<div id="countdown">
+			  <ul>
+				<li><span id="days" class="contador"></span>Dias</li>
+				<li><span id="hours" class="contador"></span>hrs</li>
+				<li><span id="minutes" class="contador"></span>Min</li>
+				<li><span id="seconds" class="contador"></span>Seg</li>
+			  </ul>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</div>
+  	</div>
+
+
   
   <section id="hashtag">
 	<div class="container">
@@ -200,36 +203,32 @@
 		  <br>
 		  <h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>
 		  <br>
-		  <h5 class="hashtag">#BODAMARTIN&LAURA</h5>
+			<div class="row mb-5">
+				<div class="col-4"></div>
+				<div class="col-4"><h5 class="hashtag">#BODAMARTINYLAURA</h5></div>
+				<div class="col-4"></div>
+			</div>
 		  <br>
 		  <button class="botonhashtag">VER MURAL</button>
 	  </div>
 	</div>
 	</section>
 
-	{{--<section id="eventos">
-		<div class="container">
+	<section id="galeria">
+		<div class="container-fluid">
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
 			  <div class="carousel-wrap">
 				<div class="owl-carousel">
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
+				  <div class="item"><img class="img" src="https://eventdate.es/wp-content/uploads/jet-engine-forms/1/2022/10/jonathan-borba-w5_xJ13Ryf0-unsplash-683x1024-1.jpg" width="350px" height="500px"></div>
+				  <div class="item"><img class="img" src="https://eventdate.es/wp-content/uploads/jet-engine-forms/1/2022/10/jonathan-borba-w5_xJ13Ryf0-unsplash-683x1024-1.jpg" width="350px" height="500px"></div>
+				  <div class="item"><img class="img" src="https://eventdate.es/wp-content/uploads/jet-engine-forms/1/2022/10/jonathan-borba-w5_xJ13Ryf0-unsplash-683x1024-1.jpg" width="350px" height="500px"></div>
+				  <div class="item"><img class="img" src="https://eventdate.es/wp-content/uploads/jet-engine-forms/1/2022/10/jonathan-borba-w5_xJ13Ryf0-unsplash-683x1024-1.jpg" width="350px" height="500px"></div>
 				</div>
 			  </div>
 		  </div>
 		</div>
-		</section>--}}
+		</section>
   
 	<section id="vestimenta">
 	  <div class="container">

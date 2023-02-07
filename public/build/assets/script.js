@@ -296,7 +296,7 @@ function eliminar(){
   });
 }
 
-
+/*
 $(document).ready(function(){
 
   (function () {
@@ -344,6 +344,8 @@ $(document).ready(function(){
     }());
 });
 
+*/
+
 
 
   $(document).ready(function() {
@@ -364,22 +366,67 @@ $(document).ready(function(){
   });
 
 
-  $(document).ready(function() {
-
-    var view = document.getElementById('portada');
-
-    view.addEventListener('click', (event) => {
-    
-      document.getElementById('my-button').style.display = 'block';
-    });
-
-
-    
   
-  });
+
+    const view = document.getElementById('portada');
+
+    const btnportada = document.getElementById("my-button");
+
+    view.addEventListener('click', (e) => {
+
+      if(event.target.className == 'tituloParejas'){
+
+        return 
+      }
 
 
- 
+      if (btnportada.style.display === "none") {
+
+        btnportada.style.display = "block";
+
+        console.log(1);
+
+      } else {
+
+        btnportada.style.display = "none";
+
+        console.log(2);
+      }
+
+    });
+  
+
+
+
+
+
+  window.onload = function() {
+    const hijo = document.querySelector('.tituloParejas');			
+    const padre = document.querySelector('.view');
+
+    hijo.addEventListener('mouseenter', function() {
+      this.style.border = '3px solid cyan';
+      padre.style.border = '';
+          
+    });
+    
+    hijo.addEventListener('mouseleave', function() {  
+      this.style.border = '';
+      padre.style.border = '3px solid cyan';
+    });		
+    
+    padre.addEventListener('mouseenter', function() {
+      this.style.border = '3px solid cyan';
+          
+    });
+    
+    padre.addEventListener('mouseleave', function() {  
+      this.style.border = '';
+    });		
+  };
+
+
+
 
  
 

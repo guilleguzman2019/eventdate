@@ -1,40 +1,7 @@
 <div>
     <x-slot name="titlePage">- Invitacion</x-slot>
 
-    <div wire:ignore.self class="modal fade" id="editCat" tabindex="-1" aria-labelledby="editCatLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4 border-0">
-                <div wire:loading wire:target="edit,update,imageEdit" class="position-absolute w-100 h-100 top-0 start-0 bg-light" style="--bs-bg-opacity: 0.9; z-index: 2;">
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-header border-bottom-dashed p-4">
-                    <h1 class="modal-title fs-5" id="editCatLabel">Crear invitacion</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-
-                    <div class="mb-3">
-						<div class="bg-secondary bg-opacity-10 px-4 py-2 rounded-4">
-							<label class="fs-14 text-muted">Nombre<span class="text-danger fs-16">*</span></label><br>
-							<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="createArray.title" autofocus placeholder="Nombre de la invitacion" />
-						</div>
-						@error('createArray.title')
-							<span class="fs-12 text-danger">{{ $message }}</span>
-						@enderror
-					</div>
-                </div>
-
-                <div class="modal-footer pt-0 border-0">
-                    <button type="button" class="btn btn-secondary py-3 lh-1 px-4 rounded-4" data-bs-dismiss="modal">Cancelar</button>
-                    <button class="btn btn-success py-3 lh-1 px-4 rounded-3" wire:click="save()" wire:loading.attr="disabled" wire:target="save, image">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="container-fluid">
         <div class="row">
@@ -88,7 +55,7 @@
                     @if($tmpfinal->name ==='boda ')
     
                             <div class="m-3 border text-center" style="display: inline-block; border-radius: 5px;">
-                                <a href="{{ route('crear', $tmp -> id) }}">
+                                <a href="" data-bs-toggle="modal" data-bs-target="#{{$tmp -> name}}">
                                     <img class="rounded" src="{{asset( $tmp -> image )}}" alt="" height="200px" width="220ox">
                                 </a>
                                 <br>
@@ -97,6 +64,25 @@
                                 <br>
                                 {{--<button type="button" class="btn btn-dark">Elegir</button>--}}
                             </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="{{$tmp -> name}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Elige el nombre de la invitacion con el template {{$tmp -> name}}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="border-0 bg-transparent w-100" type="text" wire:model.defer="createArray.title" autofocus placeholder="nombre de la invitacion" />
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
+                                    <button type="button" class="btn btn-primary" wire:click="save({{$tmp -> id}})" wire:loading.attr="disable" wire:target="save">Crear</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>     
                     @endif
                                    
                  @endforeach
@@ -120,7 +106,8 @@
               <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis tempor quam quis ultricies. In laoreet posuere odio, eget viverra nisl auctor eu. Aenean auctor turpis vel justo tincidunt molestie.</div>
           </div>    
       </div>
-
+      
+      
 
 </div>
 

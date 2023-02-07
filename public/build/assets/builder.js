@@ -1,20 +1,38 @@
+$('#owl-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    dots: false,
+    nav: false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    items : 2,
+    responsive: {
+    0: {
+      items: 2
+    },
 
-$(document).ready(function() {
-    console.log("Ready!");
+    600: {
+      items: 2
+    },
+
+    1024: {
+      items: 2
+    },
+
+    1366: {
+      items: 2
+    }
+  }
+})
+
+
+var div = document.getElementById('click');
+
+div.addEventListener('click', function(){
+
+    document.getElementById('input_file').click();
 });
 
 
 
-var menu_btn = document.querySelector("#menu-btn");
-var sidebar = document.querySelector("#sidebar");
-var container = document.querySelector(".my-container");
-menu_btn.addEventListener("click", () => {
-  sidebar.classList.toggle("active-nav");
-  container.classList.toggle("active-cont");
-});
-
-
-
-window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-  });

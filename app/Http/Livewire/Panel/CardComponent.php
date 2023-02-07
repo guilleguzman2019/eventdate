@@ -25,6 +25,8 @@ class CardComponent extends Component
 
     public $slug, $createArray, $home_bg_desktop, $home_bg_mobile, $editArray = ['image' => null], $imageEdit, $ctgry;
 
+
+
     public function updatedCreateArrayTitle($value)
     {
         $this -> slug = Str::slug($value);
@@ -34,17 +36,18 @@ class CardComponent extends Component
 
     {
 
-        $this->emit('edit_documento',$id);
+        //$this->emit('edit_documento',$id);
 
-        return redirect()->route('crear');
+        //return redirect()->route('crear');
 
-        /*
 
         $this -> createArray['slug'] = Str::slug($this -> createArray['title']) ;
 
         $this -> createArray['user_id'] = Auth::user() -> id ;
 
         $this -> createArray['start_date'] = date('Y-m-d H:i:s') ;
+
+        $this -> createArray['template_id'] = $id ;
 
         $card = Card::create( $this -> createArray );
 
@@ -54,7 +57,7 @@ class CardComponent extends Component
         $this -> reset(['createArray']);
         $this -> emit('saved');
 
-        Redirect::to('http://localhost:8000/invitacion/'.$slug.'?edit=true');*/
+        Redirect::to('http://localhost:8000/panel/panel/'.$slug);
     }
 
     public function render()

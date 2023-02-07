@@ -52,7 +52,6 @@ html,
 .tituloParejas {
 
 
-    margin-top: 430px;
     color: #FFFFFF;
     font-family: "Noto Serif Display", Sans-serif;
     font-size: 95px;
@@ -167,6 +166,7 @@ p{
     font-size: 35px;
     font-weight: 700;
     font-style: italic;
+    text-transform: capitalize !important;
 
 }
 
@@ -270,6 +270,7 @@ p{
     font-size: 35px;
     font-weight: 700;
     font-style: italic;
+    text-transform: capitalize !important;
 
 }
 
@@ -531,9 +532,8 @@ p{
 
 
   input:focus { 
-    outline: none !important;
-    border-color: #004288;
-    box-shadow: 0 0 10px #719ECE;
+    
+    border: 0px solid turquoise;
  }
 
 
@@ -557,6 +557,7 @@ p{
 
  #my-button{
 
+    margin-bottom: 10px;
  }
 
 #inputfinal{
@@ -828,15 +829,7 @@ padding: 10px;
 }
 
 
-.view:hover{
 
-  border: 5px solid turquoise;
-}
-
-.tituloParejas:hover{
-
-  border: 5px solid turquoise !important;
-}
 
 
 .container {
@@ -896,6 +889,32 @@ li span {
   font-weight: 700;
   font-style: italic;
 }
+
+
+
+.view:hover{
+
+  border: 5px solid turquoise;
+}
+
+
+.tituloParejas:hover{
+
+  border: 5px solid turquoise !important;
+}
+
+.tituloParejas:focus{
+
+  border: 5px solid turquoise !important;
+}
+
+.tituloParejas{
+
+  border: none ;
+}
+
+
+
 
 
 

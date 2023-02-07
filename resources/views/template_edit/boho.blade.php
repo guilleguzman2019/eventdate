@@ -19,7 +19,7 @@
 
 
 <div>
-    <div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
+    {{--<div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
         <div class="row">
           <div class="col align-self-start">
             <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
@@ -51,11 +51,11 @@
 
 
         </div>
-    </div>
+    </div>--}}
 
 
 <main>
-	<div class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg') }})">
+	<div id="portada" class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg') }})">
 		<div class="full-bg-img flex-center">
 			<div class="container-fluid">
 				<div class="row align-items-center">
@@ -63,18 +63,30 @@
 						<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
 					</div>
 					<div class="col-10 text-center p-0 m-0">
-						
-						<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
-						{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
-						<h3 class="titulo">!Nos Casamos!</h3>
+
+						<div style="margin-top:350px">
+
+							<div id="my-button" style="display:none;">
+								<label for="file-upload" class="botonhashtag">
+									<img src="{{asset('/img/reemplazar.svg')}}" alt="" width="30px" class="mr-4 text-light">
+									CAMBIAR PORTADA
+								</label>
+								<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
+							</div>
+							
+							<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
+							{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
+							<h3 class="titulo">!Nos Casamos!</h3>
+						</div>
+
 					</div>
 					<div class="col-1">
 						<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas-2.png" alt="">
-						<div id="my-button">
+						{{--<div id="my-button">
 							<label for="file-upload" class="botonhashtag">PORTADA</label>
                             <label for="">Tamaño 900x1024</label>
 							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-						</div>
+						</div>--}}
 
 					</div>
 				</div>
@@ -103,7 +115,7 @@
   </div>
   </section>
 
-  <section id="eventos">
+  {{--<section id="eventos">
 	<div class="container p-4">
 	  <div class="row  p-0 m-0">
 		<div class="col-md-12 text-center">
@@ -158,13 +170,13 @@
 						  <br>
 						  <a href="#" class="botonhashtag">VER UBICACION</a>
 						</div>
-					</div>--}}
+					</div>
 	
 				</div>
 			  </div>
 	  </div>
 	</div>
-	</section>
+	</section>--}}
 
   
   <section id="hashtag">
@@ -174,7 +186,11 @@
 		  <br>
 		  <h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>
 		  <br>
-		  <h5 class="hashtag">#BODAMARTIN&LAURA</h5>
+		  <div class="row">
+			<div class="col-4"></div>
+			<div class="col-4"><h5 class="hashtag">#BODAMARTIN&LAURA</h5></div>
+			<div class="col-4"></div>
+		  </div>
 		  <br>
 		  <button class="botonhashtag">VER MURAL</button>
 	  </div>
@@ -210,9 +226,13 @@
 		<div class="row text-xs-center p-t-1 p-b-4">
 		  <div class="col-md-12 text-center">
 			<br>
-			<h3 class="titulovestimenta">Codigo de Vestimenta</h3>
+			<h3 class="titulohashtag text-light">Codigo de Vestimenta</h3>
 			<br>
-			<h5 class="hashtag">CASUAL-CHIC</h5>
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-4"><h5 class="hashtag">CASUAL-CHIC</h5></div>
+				<div class="col-4"></div>
+			  </div>
 			<br>
 			<button class="botonhashtag">VER EJEMPLO</button>
 		</div>
@@ -224,7 +244,7 @@
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
 			  <br>
-			  <h3 class="titulocanciones">¿Qué canciones no pueden faltar?</h3>
+			  <h3 class="titulohashtag text-dark">¿Qué canciones no pueden faltar?</h3>
 			  <br>
 			  <span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>
 			  <br>
@@ -362,7 +382,7 @@
 			  <div class="row ">
 				<div class="col-12 text-center ">
 
-					<h1 class="titulotransporte text-light">Recomendaciones</h1>
+					<h1 class="titulohashtag text-light">Recomendaciones</h1>
 
 				</div>
 			  </div>
@@ -374,7 +394,7 @@
 			<div class="row ">
 			  <div class="col-3"></div>
 			  <div class="col-6 text-center">
-				<h1 class="titulotransporte">Padrinos</h1>
+				<h1 class="titulohashtag">Padrinos</h1>
 				<div class="d-inline p-4 ">
 				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
 		  
@@ -407,7 +427,7 @@
 			<div class="row text-xs-center fila">
 			  <div class="col-md-12 text-center">
 				<br>
-				<h3 class="titulotransporte">Transporte Privado</h3>
+				<h3 class="titulohashtag">Transporte Privado</h3>
 				<br>
 				<span class="textotransporte">Para facilitarte el traslado al lugar del evento contamos con un transporte privado.Para este servicio es necesario que confirmes para reservar tu lugar.</span>
 				<br>
@@ -434,7 +454,7 @@
 			<div class="container-fuild ">
 			  <div class="row ">
 				<div class="col-6 text-center ">
-				  <h1 class="titulovestimenta">Confirmacion</h1>
+				  <h1 class="titulohashtag text-light">Confirmacion</h1>
 				  <p class="textoconfirmacion">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.
 					La fecha límite es el 20 de Marzo del 2023.
 					Completa el siguiente formulario para confirmar tu asistencia.</p>
