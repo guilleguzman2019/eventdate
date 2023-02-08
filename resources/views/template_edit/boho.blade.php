@@ -115,68 +115,32 @@
   </div>
   </section>
 
-  {{--<section id="eventos">
+  <section id="eventos">
 	<div class="container p-4">
 	  <div class="row  p-0 m-0">
 		<div class="col-md-12 text-center">
 
 			<div class="carousel-wrap" wire:ignore>
-				<div class="owl-carousel" wire:ignore>
+				<div class="owl-carousel carousel-boho" wire:ignore>
 	
-					@foreach ($arrayEventEdit as $index => $event)
-	
-						<div class="item card p-4 two" >
-							<button class="btn-delete btn btn-danger" wire:click="eliminar({{$arrayEventEdit[$index]['id']}})" wire:target="eliminar">Eliminar</button>
-							<br>
-							<img class="card-img-top" src="http://2.bp.blogspot.com/--xxynRG0ycg/VjEUQUNVKpI/AAAAAAAAAC8/Aj_aRspCICc/s1600/catedral1.jpg" alt="Card image cap" height="450px" width="150px">
-							<div class="card-body text-center">
-							<input wire:model.defer="arrayEventEdit.{{$index}}.title" class="card-title" type="text" placeholder="">
-							<input wire:model.defer="arrayEventEdit.{{$index}}.place_name" class="card-lugar" placeholder="Catedral de cordoba">
-							<input wire:model.defer="" class="card-text" type="date" placeholder="dia de la ceremonia">
-							<input wire:model.defer="" class="card-text" placeholder="Colon 677, Cordoba">
-							<br>
-							<br>
-							<a href="#" class="botonhashtag">VER UBICACION</a>
+					@foreach ($events as $e)
+						<div class="item card p-4 two" wire:ignore>
+							<img class="card-img-top" src="{{asset($e -> image)}}" alt="Card image cap" height="350px" width="150px">
+							<div class="card-body">
+								<h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
+								<span class="card-text">Independencia 80, Cordoba</span>
+								<br>
+								<br>
+								<a href="#" class="botonhashtag">VER UBICACION</a>
 							</div>
 						</div>
-	
 					@endforeach
-	
-	
-	
-					{{--<div class="item card p-4 two" >
-						<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-						<br>
-						<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
-						<div class="card-body">
-							<input class="card-title" type="text" value="Iglesia diabolica">
-						  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
-						  <span class="card-text">Independencia 80, Cordoba</span>
-						  <br>
-						  <br>
-						  <a href="#" class="botonhashtag">VER UBICACION</a>
-						</div>
-					</div>
-	
-					<div class="item card p-4 two" >
-						<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-						<br>
-						<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
-						<div class="card-body">
-							<input class="card-title" type="text" value="Iglesia circo">
-						  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
-						  <span class="card-text">Independencia 80, Cordoba</span>
-						  <br>
-						  <br>
-						  <a href="#" class="botonhashtag">VER UBICACION</a>
-						</div>
-					</div>
 	
 				</div>
 			  </div>
 	  </div>
 	</div>
-	</section>--}}
+	</section>
 
   
   <section id="hashtag">
@@ -197,29 +161,19 @@
 	</div>
 	</section>
 
-	{{--<section id="eventos">
+	<section id="eventos">
 		<div class="container">
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
 			  <div class="carousel-wrap">
-				<div class="owl-carousel">
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				</div>
+				<div class="owl-carousel carousel-boho-galeria">
+					@foreach ($fotos as $f)
+				  		<div class="item"><img class="img" src="{{asset($f->image) }}" width="350px" height="500px"></div>
+					@endforeach
 			  </div>
 		  </div>
 		</div>
-		</section>--}}
+		</section>
   
 	<section id="vestimenta">
 	  <div class="container">
@@ -284,7 +238,7 @@
 		</div>
 		</section>
 
-		{{--<section id="regalos">
+		<section id="regalos">
 			<div class="container">
 			  <div class="row text-xs-center p-t-1 p-b-3">
 				<div class="col-md-12 text-center p-5">
@@ -310,52 +264,32 @@
 					Nº DE CUENTA: 1301171494001
 					CUIT: 23-36988681-9</span>
 					<br>
-					<div class="carousel-wrap" style="display:none;">
-					  <div class="owl-carousel ">
+					<div class="carousel-wrap regalos" style="display:none;">
+					  <div class="owl-carousel carousel-boho-regalos">
+
+						@foreach ($regalos as $re)
 		
-						<div class="card p-4">
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
+						<div class="card p-5">
+						  <img class="card-img-top" src="{{asset($re ->image)}}" alt="Card image cap">
 						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
+							<h5 class="card-title">{{$re -> title}}</h5>
 							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<h5 class="cardprecio mt-3">$36452</h5>
+							<h5 class="cardprecio mt-3">${{$re -> precio}}</h5>
+							<br>
+							<a href="{{$re -> link}}" class="botonregalo">REGALAR</a>
 							<br>
 							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
 						  </div>
 						</div>
+
+						@endforeach
 						
-						<div class="card p-4" >
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<h5 class="cardprecio mt-3">$36452</h5>
-							<br>
-							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
-						  </div>
-						</div>
-						
-						<div class="card p-4" >
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<br>
-							<h5 class="cardprecio mt-3">$36452</h5>
-							<br>
-							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
-						  </div>
-						</div>
-		  
 					  </div>
 					</div>
 				</div>
 			  </div>
 			</div>
-		  </section>--}}
+		  </section>
   
 		{{--<section id="testigos">
 		  <div class="container">

@@ -40,6 +40,16 @@ class Card extends Model
         return $this -> hasMany(Place::Class); 
     }
 
+    public function gift()
+    {
+        return $this -> hasMany(Gift::Class); 
+    }
+
+    public function galery()
+    {
+        return $this -> hasMany(Galery::Class); 
+    }
+
     public function transports()
     {
         return $this -> hasMany(Transport::Class); 

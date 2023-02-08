@@ -51,7 +51,7 @@ html,
 .tituloParejas {
 
     color: #FFFFFF;
-    font-family: "Meow Script", Sans-serif;
+    font-family: "Meow Script", Sans-serif !important;
     font-size: 120px;
     font-weight: 300;
 
@@ -811,7 +811,7 @@ padding: 10px;
 .card{
 
 
-  height: 700px !important;
+  height: 500px !important;
   width: 350px !important;
 }
 
@@ -997,6 +997,16 @@ input:hover{
   border: 2px solid cyan;
   outline: none;
 
+}
+
+.carousel-galeria{
+
+  height: 600px;
+}
+
+.carousel-galeria .item .img{
+
+  height: 500px;
 }
 
 

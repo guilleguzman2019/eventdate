@@ -13,6 +13,10 @@ use App\Models\Card;
 
 use App\Models\Place;
 
+use App\Models\Galery;
+
+use App\Models\Gift;
+
 use Illuminate\Support\Facades\Auth;
 
 class CardComponent extends Component
@@ -119,31 +123,39 @@ class CardComponent extends Component
 
     public function render()
     {
+        $regalos = Gift::orderBy('title')
+                                -> where('card_id', $this -> card -> id)
+                                ->get();
+
+        $fotos = Galery::orderBy('image')
+                                -> where('card_id', $this -> card -> id)
+                                -> get();
+
         $events = Place::orderBy('title')
                                 -> where('card_id', $this -> card -> id)
                                 -> paginate();
 
         if ($this-> card -> template -> name == 'Boho') {
 
-            return view('template_edit.boho' , compact('events'))
+            return view('template_edit.boho' , compact('events', 'fotos', 'regalos'))
                         ->layout('layouts.template');
         }
     
         if ($this-> card -> template -> name == 'Chic') {
     
-            return view('template_edit.Chic' , compact('events'))
+            return view('template_edit.Chic' , compact('events', 'fotos', 'regalos'))
                       ->layout('layouts.template');
         }
     
         if ($this-> card -> template -> name == 'Romantic') {
     
-            return view('template_edit.romantic' , compact('events'))
+            return view('template_edit.romantic' , compact('events', 'fotos', 'regalos'))
                     ->layout('layouts.template');
         }
     
         if ($this-> card -> template -> name == 'Western') {
     
-          return view('template_edit.western' , compact('events'))
+          return view('template_edit.western' , compact('events', 'fotos', 'regalos'))
                       ->layout('layouts.template');
         }
 
