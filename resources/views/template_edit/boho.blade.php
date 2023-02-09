@@ -142,17 +142,40 @@
 	</div>
 	</section>
 
+	<div id="main-bg">
+		<div class="container">
+		  <div class="row">
+			<div class="col-12 text-center pt-3">
+  
+			  <div>
+				<div id="countdown">
+				  <ul>
+					<li><span id="days" class="contador"></span>Dias</li>
+					<li><span id="hours" class="contador"></span>hrs</li>
+					<li><span id="minutes" class="contador"></span>Min</li>
+					<li><span id="seconds" class="contador"></span>Seg</li>
+				  </ul>
+				</div>
+			  </div>
+  
+			</div>
+		  </div>
+		</div>
+	  </div>
+
   
   <section id="hashtag">
-	<div class="container">
+	<div class="container-fluid">
 	  <div class="row text-xs-center p-t-1 p-b-4">
 		<div class="col-md-12 text-center">
 		  <br>
 		  <h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>
 		  <br>
-		  <div class="row">
-			<div class="col-4"></div>
-			<div class="col-4"><h5 class="hashtag">#BODAMARTIN&LAURA</h5></div>
+		  <div class="row text-center">
+			<div class="col-4">
+				<img class="imgizq2" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
+			</div>
+			<div class="col-4 text-center"><h5 class="hashtag">#BODAMARTIN&LAURA</h5></div>
 			<div class="col-4"></div>
 		  </div>
 		  <br>
@@ -161,7 +184,7 @@
 	</div>
 	</section>
 
-	<section id="eventos">
+	<section id="galeria">
 		<div class="container">
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
@@ -174,13 +197,61 @@
 		  </div>
 		</div>
 		</section>
+
+		<section id="canciones">
+			<div class="container-fluid">
+			  <div class="row text-xs-center p-t-1 p-b-4">
+				<div class="col-md-12 text-center">
+				  <br>
+				  <h3 class="titulohashtag text-dark">¿Qué canciones no pueden faltar?</h3>
+				  <br>
+				  <span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>
+				  <br>
+				  <div class="row">
+					<div class="col-2"></div>
+					<div class="col-8">
+					  <form>
+						<div class="row pt-5">
+	  
+						  <div class="col text-left">
+		  
+							<label class="labelform" for="inputEmail4">Nombre de la cancion*</label>
+							<input type="email" class="form-control" id="inputEmail4" placeholder="">
+		  
+						  </div>
+						  <div class="col text-left">
+		  
+							<label class="labelform" for="inputEmail4">Autor*</label>
+							<input type="email" class="form-control" id="inputEmail4" placeholder="">
+		  
+						  </div>
+						  <div class="col text-left">
+		  
+							<label class="labelform" for="inputEmail4">Link de Spotify, Youtube, etc</label>
+							<input type="email" class="form-control" id="inputEmail4" placeholder="">
+		  
+						  </div>
+						</div>
+						<br>
+						<button class="botonhashtag" type="submit">CONFIRMACION</button>
+					  </form>
+	  
+					</div>
+					<div class="col-2">
+						<img src="" alt="">
+						<img class="imgdech2 position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas-2.png" alt="">
+					</div>
+				  </div>
+			  </div>
+			</div>
+		</section>
   
 	<section id="vestimenta">
 	  <div class="container">
 		<div class="row text-xs-center p-t-1 p-b-4">
 		  <div class="col-md-12 text-center">
 			<br>
-			<h3 class="titulohashtag text-light">Codigo de Vestimenta</h3>
+			<h3 class="titulohashtag text-dark">Codigo de Vestimenta</h3>
 			<br>
 			<div class="row">
 				<div class="col-4"></div>
@@ -193,59 +264,15 @@
 	  </div>
 	  </section>
 
-	  <section id="canciones">
-		<div class="container">
-		  <div class="row text-xs-center p-t-1 p-b-4">
-			<div class="col-md-12 text-center">
-			  <br>
-			  <h3 class="titulohashtag text-dark">¿Qué canciones no pueden faltar?</h3>
-			  <br>
-			  <span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>
-			  <br>
-			  <div class="row">
-				<div class="col-1"></div>
-				<div class="col-10">
-				  <form>
-					<div class="row pt-5">
-  
-					  <div class="col text-left">
-	  
-						<label class="labelform" for="inputEmail4">Nombre de la cancion*</label>
-						<input type="email" class="form-control" id="inputEmail4" placeholder="">
-	  
-					  </div>
-					  <div class="col text-left">
-	  
-						<label class="labelform" for="inputEmail4">Autor*</label>
-						<input type="email" class="form-control" id="inputEmail4" placeholder="">
-	  
-					  </div>
-					  <div class="col text-left">
-	  
-						<label class="labelform" for="inputEmail4">Link de Spotify, Youtube, etc</label>
-						<input type="email" class="form-control" id="inputEmail4" placeholder="">
-	  
-					  </div>
-					</div>
-					<br>
-					<button class="botonhashtag" type="submit">CONFIRMACION</button>
-				  </form>
-  
-				</div>
-				<div class="col-1"></div>
-			  </div>
-		  </div>
-		</div>
-		</section>
 
 		<section id="regalos">
 			<div class="container">
 			  <div class="row text-xs-center p-t-1 p-b-3">
 				<div class="col-md-12 text-center p-5">
 				  <br>
-				  <h3 class="tituloregalo">Mesa de Regalo</h3>
+				  <h3 class="titulohashtag">Mesa de Regalo</h3>
 				  <br>
-				  <span class="textoregalo">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>
+				  <span class="textoregalo text-dark">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>
 				  <br>
 				  <div class="switcher mt-5 mb-5">
 					<input type="radio" name="balance" value="yin" id="yin" class="switcher__input switcher__input--yin" checked="">
@@ -268,18 +295,17 @@
 					  <div class="owl-carousel carousel-boho-regalos">
 
 						@foreach ($regalos as $re)
-		
-						<div class="card p-5">
-						  <img class="card-img-top" src="{{asset($re ->image)}}" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">{{$re -> title}}</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<h5 class="cardprecio mt-3">${{$re -> precio}}</h5>
-							<br>
-							<a href="{{$re -> link}}" class="botonregalo">REGALAR</a>
-							<br>
-							<br>
-						  </div>
+
+						<div class="item card p-4 tarjeta">
+							<img class="card-img-top" src="{{asset($re -> image)}}" alt="Card image cap" height="350px" width="150px">
+							<div class="card-body">
+								<h5 class="card-title">LAMPARA COLGANTE</h5>
+							  <span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
+							  <h5 class="cardprecio mt-3">$36452</h5>
+							  <br>
+							  <br>
+							  <a href="#" class="botonregalo">REGALAR</a>
+							</div>
 						</div>
 
 						@endforeach
@@ -311,7 +337,7 @@
 		  </div>
 		</section>--}}
 
-		<section id="vestimenta">
+		{{--<section id="vestimenta">
 			<div class="container">
 			  <div class="row ">
 				<div class="col-12 text-center ">
@@ -321,27 +347,32 @@
 				</div>
 			  </div>
 			</div>
-		  </section>
+		  </section>--}}
   
-		<section id="testigos">
-		  <div class="container">
-			<div class="row ">
-			  <div class="col-3"></div>
-			  <div class="col-6 text-center">
-				<h1 class="titulohashtag">Padrinos</h1>
-				<div class="d-inline p-4 ">
-				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
-		  
+		  <section id="testigos">
+			<div class="container">
+			  <div class="row ">
+				<div class="col-12 text-center">
+				  <h1 class="titulohashtag">Padrinos</h1>
+				  <div class="inline">
+
+				  <div class="d-inline p-4 ">
+					<img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
+					<br>
+					<h5 class="padrinotxt">Roberto</h5>
+				  </div>
+
+				  <div class="d-inline p-4 ">
+					<img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
+					<br>
+				  	<h5 class="padrinotxt">Roberto</h5>
+				  </div>
+
 				</div>
-				<div class="d-inline p-4 ">
-				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
-			
 				</div>
 			  </div>
-			  <div class="col-3"></div>
 			</div>
-		  </div>
-		</section>
+		  </section>
   
   
 	  <div id="main-bg">
@@ -369,12 +400,12 @@
 				<form>
 				  <div class="form-group text-left">
 					<label class="labelform" for="inputEmail4">Nombre de la cancion*</label>
-					<input type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" placeholder="">
+					<input type="email" class="form-control" id="inputEmail5" aria-describedby="emailHelp" placeholder="">
 					
 				  </div>
 				  <div class="form-group text-left">
-					<label class="labelform" for="inputEmail4">Nombre de la cancion*</label>
-					<input type="password" class="form-control" id="inputEmail4" placeholder="">
+					<label class="labelform" for="inputEmail5">Nombre de la cancion*</label>
+					<input type="password" class="form-control" id="inputEmail5" placeholder="">
 				  </div>
 				  <br>
 				  <button class="botonhashtag" type="submit">CONFIRMACION</button>
@@ -384,23 +415,26 @@
 		  </div>
 		  </section>
 
+
 		  <section id="confirmacion">
-			<div class="container-fuild ">
-			  <div class="row ">
-				<div class="col-6 text-center ">
-				  <h1 class="titulohashtag text-light">Confirmacion</h1>
+			<div class="container">
+			  <div class="row text-xs-center">
+				<div class="col-md-12 text-center">
+				  <br>
+				  <h1 class="titulohashtag text-dark">Confirmacion</h1>
+				  <br>
 				  <p class="textoconfirmacion">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.
 					La fecha límite es el 20 de Marzo del 2023.
 					Completa el siguiente formulario para confirmar tu asistencia.</p>
-				</div>
-				<div class="col-6 text-center mt-4 text-white ">
+				  <br>
+				  <br>
 				  <form>
 					<div class="form-group text-left">
-					  <div class="form-check form-check-inline">
+					  <div class="form-check form-check-inline text-dark">
 						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
 						<label class="form-check-label" for="inlineRadio1">Si puedo</label>
 					  </div>
-					  <div class="form-check form-check-inline">
+					  <div class="form-check form-check-inline text-dark">
 						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
 						<label class="form-check-label" for="inlineRadio2">No puedo</label>
 					  </div>
@@ -417,10 +451,10 @@
 					<button class="botonhashtag" type="submit">CONFIRMACION</button>
 	
 				  </form>
-				</div>
+				  
 			  </div>
 			</div>
-		  </section>
+			</section>
   
 	  <section id="footer">
 		<div class="container">

@@ -199,20 +199,11 @@ function addgift(image){
   const link = document.getElementById('link').value;
 
 
-  $('.carousel-builder-regalo').trigger('add.owl.carousel', [`<div>
-                          
-  </div>
-  <div class="text-center" style="border: 1px solid grey; padding: 5px;">
-    <img src="`+image+`" alt="" height="100px" width="100px">
-    <br>
-    <h5 class="text-dark">`+titulo+`</h5>
-    <br>
-    <h5 class="text-dark">`+precio+`</h5>
-    <br>
-    <span class="text-dark" style="font-size: 13px;">`+descripcion+`</span>
-    <br>
-    <a href="`+link+`" class="text-dark"></a>
-  </div>
+  $('.carousel-builder-regalo').trigger('add.owl.carousel', [`<div class="text-center" style="padding: 1px;">
+  <img src="`+image+`" alt="" height="150px" width="100px">
+  <span  class="text-dark">`+precio+`</span>
+  <br>
+  <span class="text-dark">`+descripcion+`</span>
 </div>`])
         .trigger('refresh.owl.carousel');
 
@@ -233,6 +224,66 @@ function addgift(image){
 
 
 }
+
+
+
+
+
+
+  function weddytime(){
+
+     var time = document.getElementById('weddy-time');
+
+     const second = 1000,
+     minute = second * 60,
+     hour = minute * 60,
+     day = hour * 24;
+
+
+ console.log(new Date());
+
+//I'm adding this section so I don't have to keep updating this pen every year :-)
+//remove this if you don't need it
+let today = new Date(),
+
+   dd = String(today.getDate()).padStart(2, "0"),
+   mm = String(today.getMonth() + 1).padStart(2, "0"),
+   yyyy = today.getFullYear(),
+   nextYear = yyyy + 1,
+   dayMonth = "09/30/",
+   birthday = dayMonth + yyyy;
+
+today = mm + "/" + dd + "/" + yyyy;
+if (today > birthday) {
+ birthday = dayMonth + nextYear;
+}
+//end
+
+console.log(new Date());
+
+const countDown = new Date(time.value).getTime(),
+   x = setInterval(function() { 
+
+
+     const now = new Date().getTime(),
+           distance = countDown - now;
+
+
+     document.getElementById("days").innerText = Math.floor(distance / (day)),
+       document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+       document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+       document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+     //do something later when date is reached
+     if (distance < 0) {
+       document.getElementById("headline").innerText = "It's my birthday!";
+       document.getElementById("countdown").style.display = "none";
+       document.getElementById("content").style.display = "block";
+       clearInterval(x);
+     }
+     //seconds
+   }, 0)
+  }
 
 
 

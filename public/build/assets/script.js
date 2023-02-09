@@ -14,7 +14,7 @@ $(document).ready(function () {
       itemsDesktop : false,
       itemsDesktopSmall : false,
       itemsTablet: false,
-      itemsMobile : false,
+      itemsMobile : 1,
       loop: false
  
     });
@@ -30,7 +30,7 @@ $(document).ready(function () {
       itemsDesktop : false,
       itemsDesktopSmall : false,
       itemsTablet: false,
-      itemsMobile : false,
+      itemsMobile : 1,
       loop: false
  
     });
@@ -46,7 +46,7 @@ $(document).ready(function () {
       itemsDesktop : false,
       itemsDesktopSmall : false,
       itemsTablet: false,
-      itemsMobile : false,
+      itemsMobile : 1,
       loop: false
  
     });
@@ -137,6 +137,10 @@ $(document).ready(function () {
       });
       
       });
+
+
+
+     
 
 
 

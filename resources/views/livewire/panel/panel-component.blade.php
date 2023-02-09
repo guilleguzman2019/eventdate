@@ -11,7 +11,7 @@
   <nav class="gradient container-fluid bg-primary" style="position:fixed; z-index:99999;">
     <br>
     <div class="col align-self-end" style="text-align: end;" id="addEvent">
-			<button class="btn btn-light btn-lg btn-builder" onclick="addguille()" wire:click="add" wire:target="add">Compartir</button>
+			<button class="btn btn-light  btn-builder" onclick="addguille()" wire:click="add" wire:target="add">Compartir</button>
     </div>
   </nav>
   <div class="container-fluid">
@@ -20,30 +20,41 @@
   <div class="col-sm-3 col-md-2 sidebar">
     <div class="pt-5 p-2">
       <br>
-      <button type="button" class="btn btn-light btn-lg btn-builder" data-bs-toggle="modal" data-bs-target="#exampleModal">Gestion de Eventos</button>
-    </div>
-    <div class=" p-2">
-      <br>
-      <button type="button" class="btn btn-light btn-lg btn-builder" data-bs-toggle="modal" data-bs-target="#exampleGaleria">Gestion de Galeria</button>
+      <button type="button" class="btn btn-light btn-builder" data-bs-toggle="modal" data-bs-target="#exampleModal">Gestion de Eventos</button>
     </div>
 
     <div class=" p-2">
       <br>
-      <button type="button" class="btn btn-light btn-lg btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Regalos</button>
+      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleGaleria">Gestion de Galeria</button>
+    </div>
+
+    <div class=" p-2">
+      <br>
+      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Regalos</button>
+    </div>
+
+    <div class=" p-2">
+      <br>
+      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Padrinos</button>
     </div>
 
     <div class="p-3">
-    
+      <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Dia y hora del evento:</label>
+
+      <input wire:model.defer="time" style="width:180px" type="date-local" id="weddy-time"
+            placeholder="mm-dd-yyyy"
+            name="weddy-time" value="09/02/2023">
+      <br>
+      <br>
+      <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Horario</button>
     </div>
 
 
 
   </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2  main" style=" margin-top:150px; padding-left:55px; padding-right:55px;">
-      <div style="width: 100px; position:fixed; margin-top:100px;">
-        <span></span>
-      </div>
-      <livewire:web.card-component :slug="$invitacion -> slug"/>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2  main" style=" margin-top:150px; padding-left:55px; padding-right:55px; margin-bottom:500px;">
+
+      <livewire:web.card-component :slug="$invitacion -> slug"  height:900px/>
     </div>
   </div>
   </div>
@@ -241,6 +252,9 @@
 
 <script>
   
+  var time = document.getElementById('weddy-time');
+
+console.log(time.value)
 
 </script>
 </div>

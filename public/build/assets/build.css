@@ -28,7 +28,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       width:980px;
-      height: 970px;
+      height: 800px;
       overflow: scroll;
 
       }
@@ -36,8 +36,8 @@
 
       .btn-builder{
 
-        font-family: 'Noto Serif Display';
-        font-size: 9px;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 5px;
       }
 
       

@@ -21,7 +21,7 @@ class PanelComponent extends Component
 
     public $invitacion, $arrayEvent, $imageEvent, $arrayGalery, $imagen, $arrayRegalo, $imagenRegalo;
 
-
+    public $time ;
 
     public function mount(Card $slug){
 
@@ -78,6 +78,19 @@ class PanelComponent extends Component
         $this->reset('arrayRegalo');
 
         $this->reset('imagenRegalo');
+
+
+    }
+
+    public function changeTime(){
+
+        $this->invitacion = Card::find($this->invitacion -> id);
+
+        $this->invitacion -> start_date = date('Y-m-d', strtotime($this -> time));
+
+        $this->invitacion->save();
+
+        dd($this -> time);
 
 
     }

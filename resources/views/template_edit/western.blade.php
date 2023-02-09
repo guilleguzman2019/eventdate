@@ -380,7 +380,9 @@
 				<h1 class="titulotransporte">Padrinos</h1>
 				<div class="d-inline p-4 ">
 				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
-		  
+					<span>Roberto</span>
+					<br>
+					<span>Primo</span>
 				</div>
 				<div class="d-inline p-4 ">
 				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
