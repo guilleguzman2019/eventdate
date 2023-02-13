@@ -61,9 +61,8 @@
 
       input:focus{
 
-          border-color: #679b9b;
           outline: none;
-          color: #637373;
+        
       }
 
 
@@ -107,6 +106,70 @@
         height: 180px;
       }
 
+
+
+      .h-divider {
+        margin: auto;
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+      }
+      
+      .h-divider .shadow {
+        overflow: hidden;
+        height: 5px;
+      }
+      
+      
+      
+      .h-divider .text {
+        width: 100px;
+        height: 45px;
+        padding: 10px;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -33px;
+        left: 50%;
+        margin-left: -60px;
+        border-radius: 100%;
+        box-shadow: 0 2px 4px #999;
+        background: white;
+      }
+      
+      .h-divider .text i {
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        border-radius: 100%;
+        border: 1px dashed #aaa;
+        text-align: center;
+        line-height: 50px;
+        font-style: normal;
+        color: #999;
+      }
+      
+      .h-divider .text2 {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -35px;
+        left: 50%;
+        margin-left: -25px;
+        border-radius: 100%;
+        box-shadow: 0 2px 4px #999;
+        background: white;
+      }
+      
+      .h-divider img {
+        position: absolute;
+        margin: 4px;
+        max-width: 60px;
+        border-radius: 100%;
+        border: 1px dashed #aaa;
+      }
       
      
 

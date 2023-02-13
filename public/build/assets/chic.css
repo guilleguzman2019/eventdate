@@ -76,26 +76,25 @@ html,
 
 .tituloHistoria{
 
-    padding-top: 43px;
-    padding-bottom: 30px;
-    color: white;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 45px;
-    font-weight: 700;
-    font-style: italic;
+  padding-top: 43px;
+  padding-bottom: 30px;
+  color: #282727;
+  font-family: 'Playfair Display';
+  font-size: 45px;
+  font-weight: 500;
 }
 
 
 #historia{
 
-    background-color: #333333;
+    background-color: white;
     padding-bottom: 100px;
 }
 
 p{
 
     text-align: center;
-    color: #FFFFFF;
+    color: #050505;
     font-family: "Montserrat", Sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -106,34 +105,40 @@ p{
 
 #hashtag{
 
-    background-color: white;
-    padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background: url(https://eventdate.es/wp-content/uploads/jet-engine-forms/1/2022/09/romantic-3.jpg)no-repeat center center;
+  padding-bottom: 100px;
 
 
 }
 
 .titulohashtag{
 
-
-    padding-top: 43px;
-    padding-bottom: 30px;
-    color: #000000;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    font-style: italic;
+  padding:50px;
+  color: #FFFFFF;
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .hashtag{
 
-    padding-bottom: 30px;
-    color: #D7B7A2;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
     font-family: "Montserrat", Sans-serif;
     font-size: 25px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
+    background-color: black;
+    border-radius: 30px;
 }
 
 
@@ -152,7 +157,7 @@ p{
 
 #vestimenta{
 
-    background-color: #333333;
+    background-color: #ece7e3;
     padding-bottom: 100px;
 }
 
@@ -199,7 +204,7 @@ p{
 
 #canciones{
 
-    background-color: white;
+    background-color: #212121;
     padding-bottom: 100px;
 }
 
@@ -234,8 +239,8 @@ p{
     font-family: "Montserrat", Sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #C04371; 
-    background-color: #E7D8CB;
+    color: black; 
+    background-color: white;
     padding: 15px 15px 15px 15px;
     border-style: solid;
     border-width: 0px 0px 0px 0px;
@@ -286,6 +291,11 @@ p{
 
 }
 
+#transporte{
+
+  background-color: white;
+}
+
 
 
 
@@ -300,7 +310,7 @@ p{
   #eventos{
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: #d7b7a2;
+    background-color: #ece7e3;
   }
 
 
@@ -349,15 +359,22 @@ p{
     margin-bottom: 1.9em;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover !important;
     -moz-background-size: cover;
     background-size: cover;
-    background: url(https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg)no-repeat center center fixed;
+    background: url(https://eventdate.es/wp-content/uploads/2022/09/jonathan-borba-PGIDs5PKWns-unsplash-scaled.jpg)no-repeat center center fixed;
+  }
+
+
+  #main-bg-count{
+
+    background-color: #261e18;
   }
 
 
   .textodedicatoria{
 
+    padding-top: 30px;
     text-align: center;
     color: #FFFFFF;
     font-family: "Noto Serif Display", Sans-serif;
@@ -374,11 +391,11 @@ p{
     height: 71px;
     margin-top: 3px;
     padding: 19px;
-    background: #e7d8cb;
+    background: black;
     border-radius: 2px;
     width: 369px;
     border-radius: 30px;
-    border: solid 1px #ddd;
+    border: solid 1px black;
     position: relative;
   }
   
@@ -391,7 +408,7 @@ p{
     width: 50%;
     font-size: 12px;
     line-height: 30px;
-    color: #000;
+    color: #f8f8f8;
     text-align: center;
     cursor: pointer;
     position: inherit;
@@ -431,7 +448,7 @@ p{
 
   #regalos{
 
-    background-color: #d7b7a2;
+    background-color: #ece7e3;
   }
 
   .tituloregalo{
@@ -779,7 +796,8 @@ padding: 10px;
 /* fix blank or flashing items on carousel */
 .owl-carousel .item {
   position: relative;
-  z-index: 100; 
+  z-index: 100;
+  padding:4px;
   -webkit-backface-visibility: hidden; 
 }
 
@@ -806,7 +824,7 @@ padding: 10px;
 .card{
 
 
-  height: 700px !important;
+  height: 570px !important;
   width: 350px !important;
 }
 
@@ -831,6 +849,95 @@ padding: 10px;
     left: -5%;
 }
 
+
+.tituloconfirmacion{
+
+  color: #FFFFFF;
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+#inputEmail5{
+
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: black; 
+  background-color: #ece7e3;
+  padding: 15px 15px 15px 15px;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 100px 100px 100px 100px;
+  height:55px;
+}
+
+
+#countdown{
+
+  color:white ;
+}
+
+.contador{
+
+  font-family: 'Montserrat';
+  font-size: 90px;
+  font-weight: 500;
+  padding: 5px 71px 0px 0;
+}
+
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+
+#galeria{
+
+  margin-bottom: 80px;
+}
 
 
 

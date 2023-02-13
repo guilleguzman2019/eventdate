@@ -19,7 +19,6 @@
 
 	@yield('js')
 
-	@livewireScripts
 
 </body>
 </html>

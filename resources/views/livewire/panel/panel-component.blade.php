@@ -38,16 +38,38 @@
       <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Padrinos</button>
     </div>
 
+  
+
     <div class="p-3">
       <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Dia y hora del evento:</label>
 
-      <input wire:model.defer="time" style="width:180px" type="date-local" id="weddy-time"
+      <input wire:model.defer="time" style="width:180px" type="date" id="weddy-time"
             placeholder="mm-dd-yyyy"
-            name="weddy-time" value="09/02/2023">
+            name="weddy-time" value="02-14-23">
       <br>
       <br>
       <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Horario</button>
     </div>
+
+  
+    <div class="p-3">
+
+      
+      <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Ingrese la musica de fondo:</label>
+       
+      <input wire:model.defer="musica" style="width:230px" type="file" id="file-music" placeholder="">
+      <br>
+      <br>
+      <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Musica</button>
+    </div>
+
+
+    <div class="p-3 pt-5">
+      <br>
+      <button id="botonactualizar2" >actualizar</button>
+    </div>
+
+    
 
 
 

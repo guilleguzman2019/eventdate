@@ -37,13 +37,27 @@ html,
         }
         
         .view {
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-position: center center;
+            -webkit-background-size: cover !important;
+            -moz-background-size: cover !important;
+            -o-background-size: cover !important;
+            background-size: cover !important;
+            background-position: center;
     background-repeat: no-repeat;
         }
+
+        .view-divider {
+          background-image: url('https://eleve11.ar/wp-content/uploads/2022/09/terminacion-1.png');
+          height: 180px;
+          -webkit-background-size: cover !important;
+          -moz-background-size: cover !important;
+          -o-background-size: cover !important;
+          background-size: cover !important;
+          background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -150px;
+      }
+
+
 .wow {
   visibility: hidden;
 }
@@ -60,6 +74,23 @@ html,
 
 }
 
+.tituloParejas:not(:hover){
+  margin-top: 430px;
+    color: #FFFFFF;
+    font-family: "Oooh Baby", Sans-serif;
+    font-size: 120px;
+    font-weight: 300;
+    border: none;
+}
+
+.titulohashtag:hover{
+
+  border : 3px solid cyan;
+
+}
+
+
+
 .titulo{
 
     color: #FFFFFF;
@@ -70,22 +101,24 @@ html,
     letter-spacing: 6px;
 }
 
+.titulo:focus{
+
+  outline: none;
+}
+
 
 .tituloHistoria{
 
-    padding-top: 43px;
-    padding-bottom: 30px;
-    color: white;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 45px;
-    font-weight: 700;
-    font-style: italic;
+  color: #212121;
+  font-family: "Playfair Display SC", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 
 #historia{
 
-    background-color: #333333;
+    background-color: white;
     padding-bottom: 100px;
 }
 
@@ -109,28 +142,38 @@ p{
 
 }
 
+#hashtag:hover{
+
+  border-color: cyan !important;
+
+
+}
+
 .titulohashtag{
 
 
-    padding-top: 43px;
-    padding-bottom: 30px;
-    color: #000000;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    font-style: italic;
+  padding-top: 43px;
+  padding-bottom: 30px;
+  color: #000000;
+  font-family: "Playfair Display SC";
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .hashtag{
 
-    padding-bottom: 30px;
-    color: #D7B7A2;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  background-color: black;
+  border-radius: 30px;
 }
 
 
@@ -140,10 +183,10 @@ p{
     font-size: 12px;
     font-weight: 600;
     color: black;
-    background-color: #E7D8CB;
+    background-color: white;
     border-radius: 100px 100px 100px 100px;
     padding: 15px 40px 12px 40px;
-    border-color: white;
+    border-color: black;
 }
 
 
@@ -231,8 +274,8 @@ p{
     font-family: "Montserrat", Sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #C04371; 
-    background-color: #E7D8CB;
+    color: black; 
+    background-color: #e7e7e7;
     padding: 15px 15px 15px 15px;
     border-style: solid;
     border-width: 0px 0px 0px 0px;
@@ -297,7 +340,7 @@ p{
   #eventos{
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: #d7b7a2;
+    background-color: #e7e7e7;
   }
 
 
@@ -346,7 +389,7 @@ p{
     margin-bottom: 1.9em;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover !important;
     -moz-background-size: cover;
     background-size: cover;
     background: url(https://eleve11.ar/wp-content/uploads/jet-engine-forms/17/2022/09/jonathan-borba-_YBeqTdXj3w-unsplash-1-scaled.jpg)no-repeat center center fixed;
@@ -355,6 +398,7 @@ p{
 
   .textodedicatoria{
 
+    padding-top: 50px;
     text-align: center;
     color: #FFFFFF;
     font-family: "Noto Serif Display", Sans-serif;
@@ -371,11 +415,11 @@ p{
     height: 71px;
     margin-top: 3px;
     padding: 19px;
-    background: #e7d8cb;
+    background: black;
     border-radius: 2px;
     width: 369px;
     border-radius: 30px;
-    border: solid 1px #ddd;
+    border: solid 1px black;
     position: relative;
   }
   
@@ -388,7 +432,7 @@ p{
     width: 50%;
     font-size: 12px;
     line-height: 30px;
-    color: #000;
+    color: white;
     text-align: center;
     cursor: pointer;
     position: inherit;
@@ -428,18 +472,22 @@ p{
 
   #regalos{
 
-    background-color: #d7b7a2;
+    background-color: #e7e7e7;
   }
 
   .tituloregalo{
 
-    color: #FFFFFF;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    font-style: italic;
+    color: #212121;
+    font-family: "Oooh Baby", Sans-serif;
+    font-size: 50px;
+    font-weight: 300;
 
 
+  }
+
+  .tituloregalo:hover {
+
+    border: 3px solid cyan;
   }
 
   .textoregalo{
@@ -505,6 +553,7 @@ p{
   #testigos{
 
     padding-bottom: 30px;
+    background-color: #e7e7e7;
   }
 
 
@@ -527,10 +576,9 @@ p{
   }
 
 
-  input:focus { 
-    outline: none !important;
-    border-color: #004288;
-    box-shadow: 0 0 10px #719ECE;
+  .tituloParejas:focus { 
+
+    outline: none;
  }
 
 
@@ -803,7 +851,7 @@ padding: 10px;
 .card{
 
 
-  height: 700px !important;
+  height: 580px !important;
   width: 350px !important;
 }
 
@@ -827,6 +875,105 @@ padding: 10px;
     top: 2px;
     left: -5%;
 }
+
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+
+.contador{
+
+  color:white ;
+  font-family: 'Montserrat';
+  font-size: 90px;
+  font-weight: 500;
+  padding: 5px 71px 0px 0;
+}
+
+
+#countdown{
+
+  color:white ;
+}
+
+
+.textohistoria{
+
+  background-color: #e7e7e7;
+  padding: 50px;
+}
+
+
+.transparente{
+
+  background-color:transparent; 
+  
+  color:white; border: 0; 
+  
+  text-align: center;
+}
+
+
+.textohistoria:focus{
+
+  outline: none;
+}
+
+.textohistoria:hover{
+
+  border: 3px solid cyan !important;
+}
+
+
+input:focus{
+
+  outline: none;
+}
+
+
+
+
+
 
 
 

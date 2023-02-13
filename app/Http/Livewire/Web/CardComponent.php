@@ -28,7 +28,7 @@ class CardComponent extends Component
     protected $paginationTheme = 'bootstrap';
 
 
-    public $card, $titulo, $fecha, $historia, $image, $event, $imageEvent, $arrayEventEdit;
+    public $card, $titulo, $fecha, $historia, $image;
 
     public $eventos ;
 
@@ -37,32 +37,56 @@ class CardComponent extends Component
     public $arrayPlaces;
 
 
+    public $ArrayInvitacion = [] ;
+
+
     public function mount(Card $slug)
     {
 
 
         $this -> card = $slug;
 
-        $this -> titulo = $this ->card -> title ;
+        $this -> ArrayInvitacion['title'] = $this ->card -> title ;
 
-        $this -> historia = $this ->card -> history_description ;
+        $this -> ArrayInvitacion['subtitle'] = $this ->card -> subtitle ;
+
+        $this -> ArrayInvitacion['history_title'] = $this ->card -> history_title ;
+
+        $this -> ArrayInvitacion['history_description'] = $this ->card -> history_description ;
+
+        $this -> ArrayInvitacion['instagram_title'] = $this ->card -> instagram_title ;
+
+        $this -> ArrayInvitacion['instagram_hashtag'] = $this ->card -> instagram_hashtag ;
+
+        $this -> ArrayInvitacion['dresscode_title'] = $this ->card -> dresscode_title ;
+
+        $this -> ArrayInvitacion['dresscode_type'] = $this ->card -> dresscode_type ;
+
+        $this -> ArrayInvitacion['music_title'] = $this ->card -> music_title ;
+
+        $this -> ArrayInvitacion['music_description'] = $this ->card -> music_description ;
+
+        $this -> ArrayInvitacion['gift_title'] = $this ->card -> gift_title ;
+
+        $this -> ArrayInvitacion['gift_description'] = $this ->card -> gift_description ;
+
+        $this -> ArrayInvitacion['gift_bank'] = $this ->card -> gift_bank ;
+
+        $this -> ArrayInvitacion['phrase'] = $this ->card -> phrase ;
+
+        $this -> ArrayInvitacion['transport_private_title'] = $this ->card -> transport_private_title ;
+
+        $this -> ArrayInvitacion['transport_private_description'] = $this ->card -> transport_private_description ;
+
+        $this -> ArrayInvitacion['confirm_title'] = $this ->card -> confirm_title ;
+
+        $this -> ArrayInvitacion['confirm_description'] = $this ->card -> confirm_description ;
+
 
         $time = date('Y-m-d',strtotime($this -> card -> start_date));
 
         $this -> fecha = $time ;
 
-        $this -> eventos = Place::orderBy('title')-> where('card_id', $this -> card -> id)->get();
-
-
-        for ($i =0; $i < count($this -> eventos) ; $i++) {
-
-            $this -> arrayEventEdit[$i]['id'] = $this -> eventos[$i] -> id;
-            $this -> arrayEventEdit[$i]['title'] = $this -> eventos[$i] -> title;
-            $this -> arrayEventEdit[$i]['place_name'] = $this -> eventos[$i] -> place_name;
-            $this -> arrayEventEdit[$i]['address'] = $this -> eventos[$i] -> address;
-            $this -> arrayEventEdit[$i]['start_date'] = $this -> eventos[$i] -> start_date;
-
-        }
 
     }
 
@@ -75,6 +99,13 @@ class CardComponent extends Component
         
         $place->delete();
 
+    }
+
+    public function actualizar(){
+
+        $this->card->title = $this -> ArrayInvitacion['title'];
+      
+        $this->card->save();
     }
 
 

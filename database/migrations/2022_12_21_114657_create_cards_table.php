@@ -30,6 +30,8 @@ return new class extends Migration
             $table->string('gift_bank')->nullable();
             $table->string('dresscode_title')->nullable();
             $table->string('dresscode_description')->nullable();
+            $table->string('transport_private_title')->nullable();
+            $table->string('transport_private_description')->nullable();
             $table->string('recomendation_title')->nullable();
             $table->string('recomendation_transport')->nullable();
             $table->string('recomendation_host')->nullable();

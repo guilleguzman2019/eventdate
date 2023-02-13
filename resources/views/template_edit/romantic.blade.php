@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -20,12 +24,12 @@
 
 
 <div>
-    <div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
+    {{--<div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
         <div class="row">
           <div class="col align-self-start">
             <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
             <button id="boton" class="botonhashtag" wire:click="save" wire:target="save">CREAR INVITACION</button>
-            {{--<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>--}}
+            <a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>
 
           </div>
           <div class="col align-self-center">
@@ -52,7 +56,7 @@
 
 
         </div>
-    </div>
+    </div>--}}
 
 
 <main>
@@ -65,17 +69,18 @@
 					</div>
 					<div class="col-10 text-center p-0 m-0">
 						
-						<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
+						<input class="tituloParejas transparente" wire:model.defer="titulo" type="text" value="" style="width:750px; width:100%">
 						{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
-						<h3 class="titulo">!Nos Casamos!</h3>
+						
+						<br>
+						<input class="titulo transparente" type="text" value="!Nos Casamos!">
 					</div>
 					<div class="col-1">
 						<img class="imgdech position-absolute" src="" alt="">
-						<div id="my-button">
+						{{--<div id="my-button">
 							<label for="file-upload" class="botonhashtag">PORTADA</label>
-                            <label for="">Tamaño 900x1024</label>
 							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-						</div>
+						</div>--}}
 
 					</div>
 				</div>
@@ -84,8 +89,58 @@
 		</div>
 	</div>
   </main>
+  <div class="view-divider"></div>
 
   <!--/.Main-->
+
+  <section id="eventos">
+	<div class="container p-4">
+	  <div class="row  p-0 m-0">
+		<div class="col-md-12 text-center">
+		  <div class="carousel-wrap" wire:ignore>
+			<div class="owl-carousel carousel-romantic" wire:ignore>
+
+				@foreach ($events as $e)
+						<div class="item card p-4 two" wire:ignore>
+							<img class="card-img-top" src="{{asset($e -> image)}}" alt="Card image cap" height="350px" width="150px">
+							<div class="card-body">
+								<h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
+								<span class="card-text">Independencia 80, Cordoba</span>
+								<br>
+								<br>
+								<button href="#" class="botonhashtag">VER UBICACION</button>
+							</div>
+						</div>
+				@endforeach
+
+				
+			</div>
+		  </div>
+	  </div>
+	</div>
+	</section>
+
+
+	<div id="main-bg">
+		<div class="container">
+		  <div class="row">
+			<div class="col-12 text-center pt-3">
+  
+			  <div>
+				<div id="countdown">
+				  <ul>
+					<li><span id="days" class="contador"></span>Dias</li>
+					<li><span id="hours" class="contador"></span>hrs</li>
+					<li><span id="minutes" class="contador"></span>Min</li>
+					<li><span id="seconds" class="contador"></span>Seg</li>
+				  </ul>
+				</div>
+			  </div>
+  
+			</div>
+		  </div>
+		</div>
+	  </div>
   
   <!-- Outro -->
   <section id="historia">
@@ -93,74 +148,39 @@
 	<div class="row text-xs-center p-t-1 p-b-4">
 	  <div class="col-md-12 text-center">
 		<br>
-		<h3 class="tituloHistoria">Nuestra Historia</h3>
+		{{--<h3 class="titulohashtag">Nuestra Historia</h3>--}}
+		<input class="titulohashtag transparente text-dark" type="text" value="Nuestra Historia">
 		<br>
-		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.
+		{{--<p class="textohistoria text-dark">Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso. <br>
   
-		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.
+		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos. <br>
 		  
-		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>
+		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>--}}
+
+		  <textarea class="textohistoria text-dark" name="w3review" rows="8" cols="150" style="border: none; overflow:hidden;">Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.
+			Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.
+			Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.
+		  </textarea>
 	</div>
   </div>
   </section>
 
-  <section id="eventos">
-	<div class="container p-4">
-	  <div class="row  p-0 m-0">
-		<div class="col-md-12 text-center">
-		  <div class="carousel-wrap" wire:ignore.self>
-			<div class="owl-carousel" wire:ignore.self>
+  <section id="galeria">
+		<div class="container">
+		  <div class="row text-xs-center p-t-1 p-b-4">
+			<div class="col-md-12 text-center">
+			  <div class="carousel-wrap">
+				<div class="owl-carousel carousel-romantic-galeria">
 
-				
-				<div class="item card p-4 two" >
-					<button class="btn-delete btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-					<br>
-					<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
-					<div class="card-body text-center">
-                      <input class="card-title" type="text" value="Iglesia Cristiana">
-					  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
-					  <span class="card-text">Independencia 80, Cordoba</span>
-					  <br>
-					  <br>
-					  <a href="#" class="botonhashtag">VER UBICACION</a>
-					</div>
+					@foreach ($fotos as $f)
+						<div class="item"><img class="img" src="{{asset($f->image) }}" width="350px" height="500px"></div>
+			  		@endforeach
+
 				</div>
-
-                <div class="item card p-4 two" >
-					<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-					<br>
-					<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
-					<div class="card-body">
-                        <input class="card-title" type="text" value="Iglesia diabolica">
-					  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
-					  <span class="card-text">Independencia 80, Cordoba</span>
-					  <br>
-					  <br>
-					  <a href="#" class="botonhashtag">VER UBICACION</a>
-					</div>
-				</div>
-
-                <div class="item card p-4 two" >
-					<button class="btn btn-danger" onclick="remove_image(this);">Eliminar</button>
-					<br>
-					<img class="card-img-top" src="https://i.pinimg.com/236x/ce/59/83/ce59837dd46efcaa5549a75bf2b1e443.jpg" alt="Card image cap" height="450px" width="150px">
-					<div class="card-body">
-                        <input class="card-title" type="text" value="Iglesia circo">
-					  <h5 class="card-lugar">CATEGRAL DE CORDOBA</h5>
-					  <span class="card-text">Independencia 80, Cordoba</span>
-					  <br>
-					  <br>
-					  <a href="#" class="botonhashtag">VER UBICACION</a>
-					</div>
-				</div>
-
-				
-
-			</div>
+			  </div>
 		  </div>
-	  </div>
-	</div>
-	</section>
+		</div>
+		</section>
 
   
   <section id="hashtag">
@@ -168,47 +188,94 @@
 	  <div class="row text-xs-center p-t-1 p-b-4">
 		<div class="col-md-12 text-center">
 		  <br>
-		  <h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>
+		  {{--<h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>--}}
+		  <input class="titulohashtag transparente text-dark" type="text" value="Durante nuestra boda utiliza el hashtag" style="width: 800px; margin-bottom: 33px;">
 		  <br>
-		  <h5 class="hashtag">#BODAMARTIN&LAURA</h5>
+		  <div class="row">
+			<div class="col-3"></div>
+			<div class="col-6">
+				{{--<h5 class="hashtag">#BODAMARTIN&LAURA</h5>--}}
+				<input class="hashtag" type="text" value="#BODAMARTIN&LAURA" style="width:500px">
+			</div>
+			<div class="col-3"></div>
+		  </div>
 		  <br>
 		  <button class="botonhashtag">VER MURAL</button>
 	  </div>
 	</div>
 	</section>
 
-	{{--<section id="eventos">
-		<div class="container">
-		  <div class="row text-xs-center p-t-1 p-b-4">
-			<div class="col-md-12 text-center">
-			  <div class="carousel-wrap">
-				<div class="owl-carousel">
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
-				  <div class="item"><img class="img" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/Sin-titulo-1_Mesa-de-trabajo-1-576x1024.jpg" width="320px"></div>
+	<div class="view-divider"></div>
+
+	<section id="regalos">
+			<div class="container">
+			  <div class="row text-xs-center p-t-1 p-b-3">
+				<div class="col-md-12 text-center p-5">
+				  <br>
+				  {{--<h3 class="tituloregalo">Mesa de Regalo</h3>--}}
+				  <input class="tituloregalo transparente text-dark" type="text" value="Mesa de Regalo" style="margin-bottom: 60px;">
+				  <br>
+				  {{--<span class="textoregalo">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>--}}
+				  <textarea class="textohistoria text-dark" name="w3review" rows="3" cols="100" style="border: none; overflow:hidden;">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.
+				  </textarea> 
+				  <br>
+				  <div class="switcher mt-5 mb-5">
+					<input type="radio" name="balance" value="yin" id="yin" class="switcher__input switcher__input--yin" checked="">
+					<label for="yin" class="switcher__label">VER DATOS </label>
+					
+					<input type="radio" name="balance" value="yang" id="yang" class="switcher__input switcher__input--yang">
+					<label for="yang" class="switcher__label">VER LISTAS</label>
+					
+					<span class="switcher__toggle"></span>
+				  </div>
+				  <br>
+				  {{--<span class="datosbancarios">
+					TITULAR: MATIAS NICOLAS SANCHEZ
+					CBU: 1430001713011714940016
+					ALIAS: TUERCA.TRUCO.MANIJA
+					Nº DE CUENTA: 1301171494001
+					CUIT: 23-36988681-9</span>--}}
+					<textarea class="textohistoria text-dark" name="w3review" rows="2" cols="100" style="border: none; overflow:hidden;">TITULAR: MATIAS NICOLAS SANCHEZ CBU: 1430001713011714940016 ALIAS: TUERCA.TRUCO.MANIJA Nº DE CUENTA: 1301171494001 CUIT: 23-36988681-9
+					</textarea>
+					<br>
+					<div class="carousel-wrap regalos" style="display:none;">
+					  <div class="owl-carousel carousel-romantic-regalos regalos">
+		
+						@foreach ($regalos as $re)
+
+						<div class="item card p-4 tarjeta">
+							<img class="card-img-top" src="{{asset($re -> image)}}" alt="Card image cap" height="350px" width="150px">
+							<div class="card-body">
+								<h5 class="card-title">LAMPARA COLGANTE</h5>
+							  <span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
+							  <h5 class="cardprecio mt-3">$36452</h5>
+							  <br>
+							  <br>
+							  <a href="#" class="botonregalo">REGALAR</a>
+							</div>
+						</div>
+
+						@endforeach
+		  
+					  </div>
+					</div>
 				</div>
 			  </div>
-		  </div>
-		</div>
-		</section>--}}
-  
+			</div>
+		  </section>
+
 	<section id="vestimenta">
 	  <div class="container">
 		<div class="row text-xs-center p-t-1 p-b-4">
 		  <div class="col-md-12 text-center">
 			<br>
-			<h3 class="titulovestimenta">Codigo de Vestimenta</h3>
+			<h3 class="titulohashtag text-light">Vestimenta</h3>
 			<br>
-			<h5 class="hashtag">CASUAL-CHIC</h5>
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-6"><h5 class="hashtag">CASUAL-CHIC</h5></div>
+				<div class="col-3"></div>
+			</div>
 			<br>
 			<button class="botonhashtag">VER EJEMPLO</button>
 		</div>
@@ -220,7 +287,7 @@
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
 			  <br>
-			  <h3 class="titulocanciones">¿Qué canciones no pueden faltar?</h3>
+			  <h3 class="titulohashtag">¿Qué canciones no pueden faltar?</h3>
 			  <br>
 			  <span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>
 			  <br>
@@ -260,78 +327,6 @@
 		</div>
 		</section>
 
-		{{--<section id="regalos">
-			<div class="container">
-			  <div class="row text-xs-center p-t-1 p-b-3">
-				<div class="col-md-12 text-center p-5">
-				  <br>
-				  <h3 class="tituloregalo">Mesa de Regalo</h3>
-				  <br>
-				  <span class="textoregalo">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>
-				  <br>
-				  <div class="switcher mt-5 mb-5">
-					<input type="radio" name="balance" value="yin" id="yin" class="switcher__input switcher__input--yin" checked="">
-					<label for="yin" class="switcher__label">VER DATOS </label>
-					
-					<input type="radio" name="balance" value="yang" id="yang" class="switcher__input switcher__input--yang">
-					<label for="yang" class="switcher__label">VER LISTAS</label>
-					
-					<span class="switcher__toggle"></span>
-				  </div>
-				  <br>
-				  <span class="datosbancarios">
-					TITULAR: MATIAS NICOLAS SANCHEZ
-					CBU: 1430001713011714940016
-					ALIAS: TUERCA.TRUCO.MANIJA
-					Nº DE CUENTA: 1301171494001
-					CUIT: 23-36988681-9</span>
-					<br>
-					<div class="carousel-wrap" style="display:none;">
-					  <div class="owl-carousel ">
-		
-						<div class="card p-4">
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<h5 class="cardprecio mt-3">$36452</h5>
-							<br>
-							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
-						  </div>
-						</div>
-						
-						<div class="card p-4" >
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<h5 class="cardprecio mt-3">$36452</h5>
-							<br>
-							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
-						  </div>
-						</div>
-						
-						<div class="card p-4" >
-						  <img class="card-img-top" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/D_NQ_NP_885930-MLA47397157459_092021-O.webp" alt="Card image cap">
-						  <div class="card-body">
-							<h5 class="card-title">LAMPARA COLGANTE</h5>
-							<span class="card-text">Lampara Campana Colgante 40cm Nórdica Escandinaba Madera</span>
-							<br>
-							<h5 class="cardprecio mt-3">$36452</h5>
-							<br>
-							<br>
-							<a href="#" class="botonregalo">REGALAR</a>
-						  </div>
-						</div>
-		  
-					  </div>
-					</div>
-				</div>
-			  </div>
-			</div>
-		  </section>--}}
   
 		{{--<section id="testigos">
 		  <div class="container">
@@ -353,7 +348,7 @@
 		  </div>
 		</section>--}}
 
-		<section id="vestimenta">
+		{{--<section id="vestimenta">
 			<div class="container">
 			  <div class="row ">
 				<div class="col-12 text-center ">
@@ -363,14 +358,14 @@
 				</div>
 			  </div>
 			</div>
-		  </section>
+		  </section>--}}
   
 		<section id="testigos">
 		  <div class="container">
 			<div class="row ">
 			  <div class="col-3"></div>
 			  <div class="col-6 text-center">
-				<h1 class="titulotransporte">Padrinos</h1>
+				<h1 class="titulohashtag">Padrinos</h1>
 				<div class="d-inline p-4 ">
 				  <img class="redonda" src="https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="profile">
 		  
@@ -403,7 +398,7 @@
 			<div class="row text-xs-center fila">
 			  <div class="col-md-12 text-center">
 				<br>
-				<h3 class="titulotransporte">Transporte Privado</h3>
+				<h3 class="titulohashtag">Transporte Privado</h3>
 				<br>
 				<span class="textotransporte">Para facilitarte el traslado al lugar del evento contamos con un transporte privado.Para este servicio es necesario que confirmes para reservar tu lugar.</span>
 				<br>
@@ -430,7 +425,7 @@
 			<div class="container-fuild ">
 			  <div class="row ">
 				<div class="col-6 text-center ">
-				  <h1 class="titulovestimenta">Confirmacion</h1>
+				  <h1 class="titulohashtag text-light">Confirmacion</h1>
 				  <p class="textoconfirmacion">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.
 					La fecha límite es el 20 de Marzo del 2023.
 					Completa el siguiente formulario para confirmar tu asistencia.</p>
@@ -639,6 +634,6 @@
 
 <script src="https://use.fontawesome.com/826a7e3dce.js"></script>
 
-<script src="{{asset('/build/assets/script.js')}}"></script>
+<script src="{{asset('/build/assets/romantic.js')}}"></script>
 
 @stop

@@ -90,10 +90,10 @@ class PanelComponent extends Component
 
         $this->invitacion->save();
 
-        dd($this -> time);
-
 
     }
+
+    
 
     public function render()
     {
