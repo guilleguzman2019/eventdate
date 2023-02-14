@@ -1,52 +1,14 @@
-html,
-        body,
-        main,
-        .view {
-            height: 1024px;
-        }
-        /* Navigation*/
-        
-        .navbar {
-            background-color: transparent;
-        }
-        
-        .scrolling-navbar {
-            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            transition: background .5s ease-in-out, padding .5s ease-in-out;
-        }
-        
-        .top-nav-collapse {
-            background-color: #1C2331;
-        }
-        
-        footer.page-footer {
-            background-color: #1C2331;
-            margin-top: -1px;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                background-color: #1C2331;
-            }
-        }
-        /*Call to action*/
-        
-        .flex-center {
-            color: #fff;
-        }
-        
-        .view {
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
-        }
-.wow {
-  visibility: hidden;
+.portada{
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+
 }
 
 .tituloParejas {
@@ -81,6 +43,17 @@ html,
     font-size: 45px;
     font-weight: 700;
     font-style: italic;
+}
+
+.textohistoria{
+
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 28px;
 }
 
 
@@ -288,6 +261,10 @@ p{
 }
 
 
+#transporte{
+
+  padding-bottom: 50px;
+}
 
 
 
@@ -299,8 +276,8 @@ p{
   }
 
   #eventos{
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 97px;
+    padding-bottom: 80px;
     background-color: #d7b7a2;
   }
 
@@ -550,7 +527,7 @@ p{
 
 	position: absolute;
   right: 0px;
-  top:-320px;
+  top:-500px;
   width: 250px;
 	
  }
@@ -918,6 +895,11 @@ input:hover{
 input:focus{
 
   outline: none;
+}
+
+textarea{
+
+  resize: none;
 }
 
 

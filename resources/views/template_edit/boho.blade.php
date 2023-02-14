@@ -19,82 +19,29 @@
 
 
 <div>
-    {{--<div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
-        <div class="row">
-          <div class="col align-self-start">
-            <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
-            <button id="boton" class="botonhashtag" wire:click="save" wire:target="save">ACTUALIZAR</button>
-            <a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>
-
-          </div>
-          <div class="col align-self-center">
-            
-          </div>
-
-          <div class="col align-self-end" style="text-align: end; display:none;" id="addEvent">
-			<button class="botonhashtag" onclick="addedit()" >AGREGAR EVENTO</button>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addGalery">
-			<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR FOTO</button></a>
-			<a class="botonhashtag" href="#openModalfoto">AGREGAR FOTO</a>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addBank">
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR REGALO</button></a>
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR DATOS BANK</button></a>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addTestigo">
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR TESTIGOS</button></a>
-          </div>
-
-
-        </div>
-    </div>--}}
 
 
 <main>
-	<div id="portada" class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg') }})">
-		<div class="full-bg-img flex-center">
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col-1">
-						<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
-					</div>
-					<div class="col-10 text-center p-0 m-0">
 
-						<div style="margin-top:350px">
-
-							<div id="my-button" style="display:none;">
-								<label for="file-upload" class="botonhashtag">
-									<img src="{{asset('/img/reemplazar.svg')}}" alt="" width="30px" class="mr-4 text-light">
-									CAMBIAR PORTADA
-								</label>
-								<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-							</div>
-							
-							<input class="tituloParejas" wire:model.defer="titulo" type="text" value="MARCOS Y VICKY" style="width:750px; background-color:transparent; color:white; border: 0; text-align: center; width:100%">
-							{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
-							<h3 class="titulo">!Nos Casamos!</h3>
-						</div>
-
-					</div>
-					<div class="col-1">
-						<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas-2.png" alt="">
-						{{--<div id="my-button">
-							<label for="file-upload" class="botonhashtag">PORTADA</label>
-                            <label for="">Tamaño 900x1024</label>
-							<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-						</div>--}}
-
-					</div>
-				</div>
-				
-			</div>
+	<div id="portada" class="m-0 vh-100 row justify-content-center align-items-center portada" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg') }})">
+		<div class="col-1">
+			<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
 		</div>
-	</div>
-  </main>
+		<div class="col-10  text-center">
+			<div id="my-button" style="display:none;">
+				<label for="file-upload" class="botonhashtag">
+					<img src="{{asset('/img/reemplazar.svg')}}" alt="" width="30px">
+					  CAMBIAR PORTADA</label>
+				<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
+			</div>
+			<input class="tituloParejas transparente" wire:model.defer="ArrayInvitacion.title" type="text"  style="width:750px; width:100%">
+			<input wire:model.defer="ArrayInvitacion.subtitle" class="titulo transparente" type="text" style="margin-top: 30px; width:350px !important;">
+		</div>
+		<div class="col-1">
+			<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas-2.png" alt="">
+		</div>
+	  </div>
+  
 
   <!--/.Main-->
   
@@ -102,15 +49,18 @@
   <section id="historia">
   <div class="container">
 	<div class="row text-xs-center p-t-1 p-b-4">
-	  <div class="col-md-12 text-center">
+	  <div class="col-md-12 text-center p-5">
 		<br>
-		<h3 class="tituloHistoria">Nuestra Historia</h3>
+		{{--<h3 class="tituloHistoria">Nuestra Historia</h3>--}}
+		<input wire:model.defer="ArrayInvitacion.history_title" type="text" class="tituloHistoria transparente text-dark"   style="margin-bottom: 10px;  width:450px !important;">
 		<br>
-		<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.
+		{{--<p>Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso.
   
 		  Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que nos proponemos.
 		  
-		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>
+		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>--}}
+			<textarea wire:model.defer="ArrayInvitacion.history_description" class="textohistoria transparente text-dark" name="w3review" rows="8" cols="100" style="border: none; overflow:hidden;">
+			</textarea>
 	</div>
   </div>
   </section>
@@ -169,13 +119,17 @@
 	  <div class="row text-xs-center p-t-1 p-b-4">
 		<div class="col-md-12 text-center">
 		  <br>
-		  <h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>
+		  {{--<h3 class="titulohashtag">Durante nuestra boda utiliza el hashtag</h3>--}}
+		  <input wire:model.defer="ArrayInvitacion.instagram_title" class="titulohashtag transparente text-dark" type="text" value="Durante nuestra boda utiliza el hashtag" style="width: 900px">
 		  <br>
 		  <div class="row text-center">
 			<div class="col-4">
 				<img class="imgizq2" src="https://eleve11.ar/wp-content/uploads/2022/08/hojas.png" alt="">
 			</div>
-			<div class="col-4 text-center"><h5 class="hashtag">#BODAMARTIN&LAURA</h5></div>
+			<div class="col-4 text-center">
+				{{--<h5 class="hashtag">#BODAMARTIN&LAURA</h5>--}}
+				<input wire:model.defer="ArrayInvitacion.instagram_hashtag" type="text" class="hashtag  " value="#BODAMARTIN&LAURA" style="width: 500px;">
+			</div>
 			<div class="col-4"></div>
 		  </div>
 		  <br>
@@ -203,9 +157,11 @@
 			  <div class="row text-xs-center p-t-1 p-b-4">
 				<div class="col-md-12 text-center">
 				  <br>
-				  <h3 class="titulohashtag text-dark">¿Qué canciones no pueden faltar?</h3>
+				  {{--<h3 class="titulohashtag text-dark">¿Qué canciones no pueden faltar?</h3>--}}
+				  <input wire:model.defer="ArrayInvitacion.music_title" class="titulohashtag transparente text-dark" type="text"  style="width: 750px">
 				  <br>
-				  <span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>
+				  {{--<span class="textocanciones">¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!</span>--}}
+				  <input wire:model.defer="ArrayInvitacion.music_description" class="textocanciones transparente text-dark" type="text" value="¡Ayúdanos sugiriendo las canciones que pensás que no pueden faltaren nuestra boda!" style="width: 800px">
 				  <br>
 				  <div class="row">
 					<div class="col-2"></div>
@@ -251,11 +207,20 @@
 		<div class="row text-xs-center p-t-1 p-b-4">
 		  <div class="col-md-12 text-center">
 			<br>
-			<h3 class="titulohashtag text-dark">Codigo de Vestimenta</h3>
+			{{--<h3 class="titulohashtag text-dark">Codigo de Vestimenta</h3>--}}
+			<input wire:model.defer="ArrayInvitacion.dresscode_title" type="text" class="titulohashtag transparente text-dark" value="Codigo de Vestimenta" style="width: 500px; margin-bottom:10px;">
 			<br>
 			<div class="row">
 				<div class="col-4"></div>
-				<div class="col-4"><h5 class="hashtag">CASUAL-CHIC</h5></div>
+				<div class="col-4">
+					<select class="hashtag" wire:model.defer="ArrayInvitacion.dresscode_type" style="margin-bottom: 35px;">
+						<option value="0">Semi-formal</option>
+						<option value="1">Sport</option>
+						<option value="2">Elegante</option>
+						<option value="3">Traje</option>
+						<option value="4">con chancla</option>
+					</select>
+				</div>
 				<div class="col-4"></div>
 			  </div>
 			<br>
@@ -270,9 +235,12 @@
 			  <div class="row text-xs-center p-t-1 p-b-3">
 				<div class="col-md-12 text-center p-5">
 				  <br>
-				  <h3 class="titulohashtag">Mesa de Regalo</h3>
+				  {{--<h3 class="titulohashtag">Mesa de Regalo</h3>--}}
+				  <input wire:model.defer="ArrayInvitacion.gift_title" type="text" class="titulohashtag transparente text-dark" value="Mesa de Regalo" style="width: 500px; margin-bottom:20px;">
 				  <br>
-				  <span class="textoregalo text-dark">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>
+				  {{--<span class="textoregalo text-dark">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.</span>--}}
+				  <textarea wire:model.defer="ArrayInvitacion.gift_description" class="textoregalo transparente text-dark" name="w3review" rows="5" cols="120" style="border: none; overflow:hidden;">Tu presencia es nuestro mejor regalo, pero si quieres bendecirnos con algún bien material, aquí te dejamos una lista de regalos que nos gustaría recibir, o bien, también puedes colaborar con nuestra Luna de Miel.
+				</textarea>
 				  <br>
 				  <div class="switcher mt-5 mb-5">
 					<input type="radio" name="balance" value="yin" id="yin" class="switcher__input switcher__input--yin" checked="">
@@ -284,12 +252,14 @@
 					<span class="switcher__toggle"></span>
 				  </div>
 				  <br>
-				  <span class="datosbancarios">
+				  {{--<span class="datosbancarios">
 					TITULAR: MATIAS NICOLAS SANCHEZ
 					CBU: 1430001713011714940016
 					ALIAS: TUERCA.TRUCO.MANIJA
 					Nº DE CUENTA: 1301171494001
-					CUIT: 23-36988681-9</span>
+					CUIT: 23-36988681-9</span>--}}
+					<textarea wire:model.defer="ArrayInvitacion.gift_bank" class="textohistoria transparente datosbancarios text-dark" name="w3review" rows="5" cols="100" style="border: none; overflow:hidden;">
+					</textarea>
 					<br>
 					<div class="carousel-wrap regalos" style="display:none;">
 					  <div class="owl-carousel carousel-boho-regalos">
@@ -379,7 +349,8 @@
 		<div class="container">
 		  <div class="row">
 			<div class="col-12 text-center pt-5">
-			  <h4 class="textodedicatoria">Vayan poniendose sus mejores trajes que estos novios se casan</h4>
+			  {{--<h4 class="textodedicatoria">Vayan poniendose sus mejores trajes que estos novios se casan</h4>--}}
+			  <input wire:model.defer="ArrayInvitacion.phrase" type="text" class="textodedicatoria transparente" value="Vayan poniendose sus mejores trajes que estos novios se casan" style="width: 750px">
 			</div>
 		  </div>
 		</div>
@@ -389,12 +360,15 @@
   
 		<section id="transporte">
 		  <div class="container">
-			<div class="row text-xs-center fila">
+			<div class="row text-xs-center">
 			  <div class="col-md-12 text-center">
 				<br>
-				<h3 class="titulohashtag">Transporte Privado</h3>
+				{{--<h3 class="titulohashtag">Transporte Privado</h3>--}}
+				<input wire:model.defer="ArrayInvitacion.transport_private_title" type="text" class="titulohashtag transparente text-dark"  width="600px">
 				<br>
-				<span class="textotransporte">Para facilitarte el traslado al lugar del evento contamos con un transporte privado.Para este servicio es necesario que confirmes para reservar tu lugar.</span>
+				{{--<span class="textotransporte">Para facilitarte el traslado al lugar del evento contamos con un transporte privado.Para este servicio es necesario que confirmes para reservar tu lugar.</span>--}}
+				<textarea wire:model.defer="ArrayInvitacion.transport_private_description" class="textotransporte transparente text-dark " name="w3review" rows="3" cols="100" style="border: none; overflow:hidden;">Para facilitarte el traslado al lugar del evento contamos con un transporte privado.Para este servicio es necesario que confirmes para reservar tu lugar.
+				</textarea>
 				<br>
 				<br>
 				<form>
@@ -421,11 +395,14 @@
 			  <div class="row text-xs-center">
 				<div class="col-md-12 text-center">
 				  <br>
-				  <h1 class="titulohashtag text-dark">Confirmacion</h1>
+				  {{--<h1 class="titulohashtag text-dark">Confirmacion</h1>--}}
+				  <input wire:model.defer="ArrayInvitacion.confirm_title" type="text" class="titulohashtag transparente text-dark" value="Confirmacion" style="margin-bottom: 10px;">
 				  <br>
-				  <p class="textoconfirmacion">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.
+				  {{--<p class="textoconfirmacion">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.
 					La fecha límite es el 20 de Marzo del 2023.
-					Completa el siguiente formulario para confirmar tu asistencia.</p>
+					Completa el siguiente formulario para confirmar tu asistencia.</p>--}}
+					<textarea wire:model.defer="ArrayInvitacion.confirm_description" class="textoconfirmacion transparente text-dark" name="w3review" rows="5" cols="100" style="border: none; overflow:hidden;">Para poder participar de todo esto, es necesario que confirmes tu asistencia cuanto antes.La fecha límite es el 20 de Marzo del 2023.Completa el siguiente formulario para confirmar tu asistencia.
+					</textarea>
 				  <br>
 				  <br>
 				  <form>
@@ -461,154 +438,15 @@
 		  <div class="row text-xs-center p-t-1 p-b-4">
 			<div class="col-md-12 text-center">
 			  <br>
-			  <h5 class="textofooter">!Nos Casamos!</h5>
-			  <h3 class="titulofooter">Martin & Laura</h3>
+			  {{--<h5 class="textofooter">!Nos Casamos!</h5>--}}
+			  <input  wire:model.defer="ArrayInvitacion.title" type="text" class="titulofooter transparente" value="!Nos Casamos!" style="width:300px;">
+			  {{--<h3 class="titulofooter">Martin & Laura</h3>--}}
+			  <br>
+			  <input  wire:model.defer="ArrayInvitacion.subtitle" type="text" class="textofooter transparente" value="Martin & Laura" style="width:400px; margin-bottom:60px;">
 			  <br>
 		  </div>
 		</div>
 		</section>
-
-		{{--<div id="openModal" class="modalDialog">
-			<div>
-				<h2 class="titulomodal">AGREGAR EVENTOS</h2>
-				<a href="#close" title="Close" class="close">&times;</a>
-				<div class="row table">
-					<div class="col-sm-5">
-						<div class="p-4 border-dashed rounded-4 position-relative">
-			
-							<div class="">
-								<div class="bg bg-opacity-10 px-4 py-2 rounded-4">
-									<label class="fs-14 text-muted">Nombre del evento<span class="text-danger fs-16">*</span></label><br>
-									<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="event.title" autofocus="" placeholder="">
-								</div>
-			
-												</div>
-			
-							<br>
-							<div class="">
-								<div class="bg bg-opacity-10 px-4 py-2 rounded-4">
-									<label class="fs-14 text-muted">Nombre del lugar del evento<span class="text-danger fs-16">*</span></label><br>
-									<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="event.place_name" autofocus="" placeholder="">
-								</div>
-			
-												</div>
-			
-							<br>
-							<div class="">
-								<div class="bg bg-opacity-10 px-4 py-2 rounded-4">
-									<label class="fs-14 text-muted">Direccion<span class="text-danger fs-16">*</span></label><br>
-									<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="event.address" autofocus="" placeholder="">
-								</div>
-			
-							</div>
-							<br>
-							<div class="">
-								<div class="bg bg-opacity-10 px-4 py-2 rounded-4">
-									<label class="fs-14 text-muted">Google maps<span class="text-danger fs-16">*</span></label><br>
-									<input class="border-0 bg-transparent w-100" type="text" wire:model.defer="event.google_maps" autofocus="" placeholder="">
-								</div>
-			
-												</div>
-			
-							<br>
-							<div class="">
-								<div class="bg bg-opacity-10 px-4 py-2 rounded-4">
-									<label class="fs-14 text-muted">Fecha de evento<span class="text-danger fs-16">*</span></label><br>
-									<input class="border-0 bg-transparent w-100" type="date" wire:model.defer="event.start_date" autofocus="" placeholder="">
-								</div>
-			
-												</div>
-			
-							<br>
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="mb-3">
-										<label class="fs-14 d-block mb-2">Imagen<span class="text-danger fs-16">*</span></label>
-										<div class="ratio ratio-1x1 bg-img w-75 mx-auto rounded-4" style="background-image: url(https://icones.pro/wp-content/uploads/2021/02/icono-de-camara-gris.png);">
-											<div>
-												<a onclick="$('.imageUpload').click()" class="rounded-circle shadow bg-dark-4 p-2 d-block position-absolute top-0 start-100 translate-middle"><img src="http://localhost:8000/img/icos/ico-edit.svg" width="16" height="16" class="float-start f-invert"></a>
-											</div>
-										</div>
-			
-										<input class="imageUpload float-start" type="file" accept=".jpg,.png,.jpeg" wire:model="imageEvent" style="height: 1px; opacity: 0; overflow: hidden; width: 1px;">
-			
-																</div>
-								</div>
-							</div>
-			
-							<br>
-							<button class="btn btn-success py-3 lh-1 px-4 rounded-3" wire:click="addEvent" wire:loading.attr="disabled" wire:target="">Guardar</button>
-							<br>
-						</div>
-					</div>
-					
-					<div class="col-sm-7">
-						@if ( $events -> count() )
-
-						<table class="table table-borderless">
-							<thead class="fs-14 text-muted opacity-50 text-uppercase border">
-								<tr>
-								<th class=""></th>
-								<th class="">Nombre</th>
-								<th class="">Direccion</th>
-								<th></th>
-							</tr></thead>
-							<tbody class="fs-14 text-muted opacity-50 text-uppercase border">
-								@foreach ($events as $e)
-										<tr class="border-bottom-dashed align-middle">
-										<td class="ps-0 py-3">
-											<div class="d-flex align-items-center">
-												<div class="ratio ratio-1x1 rounded-3 bg-img me-3" style="background-image: url(http://localhost:8000/); width: 40px;"></div>
-												<img src="" alt="" height="100px;" width="100px;">
-											</div>
-										</td>
-
-										<td>
-											<span class="">{{$e -> place_name}}</span>
-										</td>
-										<td>
-											<span class="">{{$e -> address}}</span>
-										</td>
-										<td class="text-end pe-0">
-											<div class="dropdown">
-												<button class="bg-light rounded-circle border-0 p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="http://localhost:8000/img/icos/ico-dots.svg" width="16" height="16" class="d-block"></button>
-												<ul class="dropdown-menu dropdown-menu-end">
-												  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editCat" wire:click="edit('3')">Editar</a></li>
-												  <li><a class="dropdown-item" onclick="confirm('¿Seguro que deseas eliminar este registro?') || event.stopImmediatePropagation()" wire:click="destroy('3')">Eliminar</a></li>
-												</ul>
-											</div>
-										</td>
-
-									</tr>
-									@endforeach
-													</tbody>
-						</table>
-						{{ $events -> links() }}
-
-						@else
-
-							<div class="py-5">
-								<img src="{{ asset('img/panel/think.svg') }}" width="128" class="d-block mx-auto mb-3">
-								<p class="text-center text-dark">No hay eventos aquí.</p>
-							</div>
-
-            		@endif 
-					</div>
-				</div>
-				
-			</div>
-		</div>
-
-		<div id="openModalfoto" class="modalDialog">
-			<div>
-				<h2 class="titulomodal">AGREGAR EVENTOS</h2>
-				<a href="#close" title="Close" class="close">&times;</a>
-				<span>aca van las fotos</span>
-			</div>
-		</div>
-
-		
-    </div>--}}
 
 	<div class="audio">
 		<audio id="track">
@@ -621,6 +459,11 @@
 		  </div>
 	</div>
 
+	<button id="botonactualizar" wire:click="actualizar" wire:target="actualizar" style="display:none;">actualizar</button>
+
+
+</main>
+
 @section('js')
 
 
@@ -631,6 +474,6 @@
 
 <script src="https://use.fontawesome.com/826a7e3dce.js"></script>
 
-<script src="{{asset('/build/assets/script.js')}}"></script>
+<script src="{{asset('/build/assets/boho.js')}}"></script>
 
 @stop

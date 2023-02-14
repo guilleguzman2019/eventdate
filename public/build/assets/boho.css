@@ -1,51 +1,14 @@
-html,
-        body,
-        main,
-        .view {
-            height: 1024px;
-        }
-        /* Navigation*/
-        
-        .navbar {
-            background-color: transparent;
-        }
-        
-        .scrolling-navbar {
-            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-            transition: background .5s ease-in-out, padding .5s ease-in-out;
-        }
-        
-        .top-nav-collapse {
-            background-color: #1C2331;
-        }
-        
-        footer.page-footer {
-            background-color: #1C2331;
-            margin-top: -1px;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                background-color: #1C2331;
-            }
-        }
-        /*Call to action*/
-        
-        .flex-center {
-            color: #fff;
-        }
-        
-        .view {
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-position: center center;
-    background-repeat: no-repeat;
-        }
-.wow {
-  visibility: hidden;
+.portada{
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  box-shadow: inset 0 0 0 2000px rgba(7, 7, 7, 0.3);
 }
 
 .tituloParejas {
@@ -74,7 +37,7 @@ html,
     padding-top: 43px;
     padding-bottom: 30px;
     color: #212121;
-    font-family: "Meow Script", Sans-serif;
+    font-family: "Meow Script", Sans-serif !important;
     font-size: 62px;
     font-weight: 300;
 }
@@ -84,6 +47,15 @@ html,
 
     background-color: #ffffff;
     padding-bottom: 100px;
+}
+
+.textohistoria {
+
+    color: #212121;
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic; 
 }
 
 p{
@@ -114,8 +86,10 @@ p{
     0px;
     padding-top: 43px;
     padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     color: #212121;
-    font-family: "Meow Script", Sans-serif;
+    font-family: "Meow Script", Sans-serif !important;
     font-size: 55px;
     font-weight: 300;
     text-transform: capitalize !important;
@@ -125,15 +99,16 @@ p{
 
     padding-bottom: 30px;
     color: #000000;
-    font-family:Sans-serif;
+    font-family:Sans-serif !important;
     font-size: 25px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     background-color: white;
     text-align: center;
-    border-radius: 13px;
+    border-radius: 10px;
     padding: 7px;
+    border-color: white;
 }
 
 
@@ -179,18 +154,17 @@ p{
 
 .titulofooter{
 
-    color: #FFFFFF;
-    font-family: "Noto Serif Display", Sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    font-style: italic;
+  color: #212121;
+  font-family: "Meow Script", Sans-serif !important;
+  font-size: 45px;
+  font-weight: 300;
 }
 
 
 .textofooter{
 
     color: #FFFFFF;
-    font-family: "Montserrat", Sans-serif;
+    font-family: "Montserrat", Sans-serif !important;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -210,7 +184,7 @@ p{
     padding-top: 60px;
     padding-bottom: 40px;
     color: black;
-    font-family: "Noto Serif Display", Sans-serif;
+    font-family: "Noto Serif Display", Sans-serif !important;
     font-size: 35px;
     font-weight: 700;
     font-style: italic;
@@ -221,8 +195,8 @@ p{
 
     text-align: center;
     color: #000000;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 16px;
+    font-family: "Montserrat", Sans-serif !important;
+    font-size: 17px;
     font-weight: 300;
     font-style: normal;
     line-height: 28px;
@@ -278,13 +252,18 @@ p{
 
     text-align: center;
     color: #000000;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 16px;
+    font-family: "Montserrat", Sans-serif !important;
+    font-size: 17px;
     font-weight: 300;
     font-style: normal;
     line-height: 28px;
     padding-bottom: 50px;
 
+}
+
+#transporte{
+
+  margin-bottom: 50px;
 }
 
 
@@ -336,6 +315,7 @@ p{
 
 
 #main-bg{
+
     width: 100%;
     height: 230px;
     margin-bottom: 1.9em;
@@ -344,7 +324,7 @@ p{
     -webkit-background-size: cover !important;
     -moz-background-size: cover;
     background-size: cover;
-    background: url(https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg)no-repeat center center fixed;
+    background:linear-gradient(0deg, rgba(17, 16, 16, 0.3), rgba(14, 13, 14, 0.3)), url(https://eleve11.ar/wp-content/uploads/jet-engine-forms/1/2022/09/MODELO-BODA-1-1.jpg)no-repeat center center fixed;
   }
 
  
@@ -446,7 +426,7 @@ p{
     text-align: center;
     color: #000000;
     font-family: "Montserrat", Sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
     font-style: normal;
     line-height: 28px;
@@ -511,9 +491,9 @@ p{
   .textoconfirmacion{
 
     text-align: left;
-    color: rgb(2, 2, 2);
+    color: black;
     font-family: "Montserrat", Sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
     font-style: normal;
     line-height: 28px;
@@ -522,7 +502,7 @@ p{
   #confirmacion{
 
     background-color: #ece7e3;
-    padding: 90px;
+    padding: 1px 90px 90px 90px;
 
   }
 
@@ -532,28 +512,22 @@ p{
     
  }
 
- input:focus { 
-    
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 
-}
 
 
 .imgizq {
   width: 476px;
   position: absolute;
   left: 0;
-  top: -325px;
+  top: -490px;
 }
 
  .imgdech{
 
 	position: absolute;
     right: 0px;
-    top: 197px;
-    width: 362px;
+    top: -90px;
+    width: 476px;
 	
  }
 
@@ -831,7 +805,7 @@ padding: 10px;
 
 input{
 
-  border: 0;
+  
 }
 
 
@@ -1069,7 +1043,43 @@ input:hover{
 }
 
 
+.transparente{
 
+  background-color:transparent; 
+  
+  color:white; 
+  
+  border: 0; 
+  
+  text-align: center;
+}
+
+input:focus{
+
+  outline:none;
+}
+
+textarea:hover{
+
+  border: 3px solid cyan !important;
+}
+
+
+textarea:focus{
+
+ outline: none;
+}
+
+textarea{
+
+  resize: none;
+}
+
+
+select{
+
+  outline: none;
+}
 
 
 

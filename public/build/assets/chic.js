@@ -82,3 +82,41 @@ $(document).ready(function () {
     });
     
     });
+
+
+    window.onload = function() {
+      const hijo = document.querySelector('.tituloParejas');
+      const hijo2 = document.querySelector('.titulo');		
+      const padre = document.querySelector('.portada');
+  
+      hijo.addEventListener('mouseenter', function() {
+        this.style.border = '3px solid cyan';
+        padre.style.border = '';
+            
+      });
+      
+      hijo.addEventListener('mouseleave', function() {  
+        this.style.border = '';
+        padre.style.border = '3px solid cyan';
+      });
+      
+      hijo2.addEventListener('mouseenter', function() {
+        this.style.border = '3px solid cyan';
+        padre.style.border = '';
+            
+      });
+      
+      hijo2.addEventListener('mouseleave', function() {  
+        this.style.border = '';
+        padre.style.border = '3px solid cyan';
+      });	
+      
+      padre.addEventListener('mouseenter', function() {
+        this.style.border = '3px solid cyan';
+            
+      });
+      
+      padre.addEventListener('mouseleave', function() {  
+        this.style.border = '';
+      });		
+    };

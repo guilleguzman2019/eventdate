@@ -1,7 +1,8 @@
-<div>
+
 @extends('layouts.template')
 
 @section('css')
+
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,79 +18,26 @@
 	<link rel="stylesheet" href="{{asset('/build/assets/western.css')}}">
 @stop
 
-
-
-{{--<div>
-    <div class="container-fluid p-4" id="boton_cont" style="position:fixed; width: 100%; z-index: 99999999999;">
-        <div class="row">
-          {{--<div class="col align-self-start">
-            <a style="color:white;" href="{{ route('panel.cards')}}"><button class="botonhashtag" >VOLVER</button></a>
-            <button id="boton" class="botonhashtag" wire:click="save" wire:target="save">CREAR INVITACION</button>
-            <a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >VER</button></a>
-
-		  </div>
-          <div class="col align-self-center">
-            
-          </div>
-
-          <div class="col align-self-end" style="text-align: end; display:none;" id="addEvent">
-			<button class="botonhashtag" onclick="addguille()" wire:click="add" wire:target="add">AGREGAR EVENTO</button>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addGalery">
-			<a style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR FOTO</button></a>
-			<a class="botonhashtag" href="#openModalfoto">AGREGAR FOTO</a>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addBank">
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR REGALO</button></a>
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR DATOS BANK</button></a>
-          </div>
-
-		  <div class="col align-self-end" style="text-align: end; display:none;" id="addTestigo">
-			<a  style="color:white;"target="_blank" href="http://localhost:8000/invitacion/"><button class="botonhashtag" >AGREGAR TESTIGOS</button></a>
-          </div>
-
-
-        </div>
-    </div>--}}
-
-
 <main>
-	<div id="portada" class="view hm-black-light" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg') }})">
-		<div class="full-bg-img flex-center">
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col-1">
-						<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-izquierda-285x1024.png" alt="">
-					</div>
-					<div class="col-10 text-center p-0 m-0">
 
-						<div style="margin-top:350px">
-							<div id="my-button" style="display:none;">
-								<label for="file-upload" class="botonhashtag">
-									<img src="{{asset('/img/reemplazar.svg')}}" alt="" width="30px">
-									  CAMBIAR PORTADA</label>
-								<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
-							</div>
-							
-							<input class="tituloParejas transparente" wire:model.defer="ArrayInvitacion.title" type="text"  style="width:750px; width:100%">
-							{{--<h1 class="tituloParejas">{{$card->title}}</h1>--}}
-							{{--<h3 class="titulo">!Nos Casamos!</h3>--}}
-							<input wire:model.defer="ArrayInvitacion.subtitle" class="titulo transparente" type="text" style="margin-top: 30px; width:350px !important;">
-						</div>
-
-					</div>
-					<div class="col-1">
-						<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-derecha.png" alt="">
-
-					</div>
-				</div>
-				
-			</div>
-		</div>
+  <div id="portada" class="m-0 vh-100 row justify-content-center align-items-center portada" style="background-image: url({{ asset(($image) ? $image -> temporaryUrl() : 'https://eleve11.ar/wp-content/uploads/2022/09/jonathan-borba-PjFIGt4t9Cw-unsplash-scaled.jpg') }})">
+	<div class="col-1">
+		<img class="imgizq" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-izquierda-285x1024.png" alt="">
 	</div>
-  </main>
+	<div class="col-10  text-center">
+		<div id="my-button" style="display:none;">
+			<label for="file-upload" class="botonhashtag">
+				<img src="{{asset('/img/reemplazar.svg')}}" alt="" width="30px">
+				  CAMBIAR PORTADA</label>
+			<input wire:model.defer="image" id="file-upload" type="file" style="display: none" onchange="uploadFile(this.files)" />
+		</div>
+		<input class="tituloParejas transparente" wire:model.defer="ArrayInvitacion.title" type="text"  style="width:750px; width:100%">
+		<input wire:model.defer="ArrayInvitacion.subtitle" class="titulo transparente" type="text" style="margin-top: 30px; width:350px !important;">
+	</div>
+	<div class="col-1">
+		<img class="imgdech position-absolute" src="https://eleve11.ar/wp-content/uploads/2022/09/lineas-1-derecha.png" alt="">
+	</div>
+  </div>
 
   <!--/.Main-->
   
@@ -97,7 +45,7 @@
   <section id="historia">
   <div class="container">
 	<div class="row text-xs-center p-t-1 p-b-4">
-	  <div class="col-md-12 text-center">
+	  <div class="col-md-12 col-md-1 text-center">
 		<br>
 		{{--<h3 class="tituloHistoria">Nuestra Historia</h3>--}}
 		<input wire:model.defer="ArrayInvitacion.history_title" type="text" class="tituloHistoria transparente"  style="margin-bottom: 10px;  width:450px !important;">
@@ -108,7 +56,7 @@
 		  
 		  Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa y estamos listos para compartir el resto de nuestros días juntos.</p>--}}
 
-		  <textarea wire:model.defer="ArrayInvitacion.history_description" class="textohistoria transparente " name="w3review" rows="8" cols="150" style="border: none; overflow:hidden;">
+		  <textarea wire:model.defer="ArrayInvitacion.history_description" class="textohistoria transparente " name="w3review" rows="8" cols="120" style="border: none; overflow:hidden;">
 			
 		</textarea>
 	</div>
@@ -117,12 +65,12 @@
 
   <section id="eventos">
 	<div class="container p-4">
-	  <div class="row  p-0 m-0">
+	  <div class="row  p-0 m-0 justify-content-center">
 		<div class="col-md-12 text-center">
 		  <div class="carousel-wrap" wire:ignore>
 			<div class="owl-carousel carousel-western" wire:ignore>
 
-				@foreach ($events as $e)
+				@forelse ($events as $e)
 						<div class="item card p-4 two" wire:ignore>
 							<img class="card-img-top" src="{{asset($e -> image)}}" alt="Card image cap" height="350px" width="150px">
 							<div class="card-body">
@@ -133,7 +81,9 @@
 								<a href="#" class="botonhashtag">VER UBICACION</a>
 							</div>
 						</div>
-				@endforeach
+				@empty
+						
+				@endforelse
 
 			</div>
 		  </div>
@@ -451,7 +401,7 @@
 					  <input type="password" class="form-control" id="inputEmail4" placeholder="ingrese algun dato importante">
 					</div>
 					<br>
-					<button class="botonhashtag" type="submit">CONFIRMACION</button>
+					<button class="botonhashtag" type="submit" >CONFIRMACION</button>
 	
 				  </form>
 				</div>
@@ -487,10 +437,10 @@
 		  </div>
 	</div>--}}
 
-	<button id="botonactualizar" wire:click="actualizar" wire:target="actualizar">actualizar</button>
-	<br>
-	<br>
-	<br>
+	<button id="botonactualizar" wire:click="actualizar" wire:target="actualizar" style="display:none;">actualizar</button>
+	
+
+</main>
 
 @section('js')
 

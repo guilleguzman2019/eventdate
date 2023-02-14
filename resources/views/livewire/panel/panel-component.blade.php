@@ -14,59 +14,53 @@
 			<button class="btn btn-light  btn-builder" onclick="addguille()" wire:click="add" wire:target="add">Compartir</button>
     </div>
   </nav>
+
   <div class="container-fluid">
 
   <div class="row">
-  <div class="col-sm-3 col-md-2 sidebar">
-    <div class="pt-5 p-2">
-      <br>
-      <button type="button" class="btn btn-light btn-builder" data-bs-toggle="modal" data-bs-target="#exampleModal">Gestion de Eventos</button>
-    </div>
 
-    <div class=" p-2">
-      <br>
-      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleGaleria">Gestion de Galeria</button>
-    </div>
+    <div class="col-sm-3 col-md-2 sidebar">
 
-    <div class=" p-2">
-      <br>
-      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Regalos</button>
-    </div>
+      <div class="pt-4 p-2">
+        <br>
+        <button type="button" class="btn btn-light btn-builder  m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Gestion de Eventos</button>
+        
+        <button type="button" class="btn btn-light  btn-builder m-3" data-bs-toggle="modal" data-bs-target="#exampleGaleria">Gestion de Galeria</button>
+   
+        <button type="button" class="btn btn-light  btn-builder m-3" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Regalos</button>
+    
+        <button type="button" class="btn btn-light  btn-builder m-3" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Padrinos</button>
 
-    <div class=" p-2">
-      <br>
-      <button type="button" class="btn btn-light  btn-builder" data-bs-toggle="modal" data-bs-target="#exampleRegalos">Gestion de Padrinos</button>
-    </div>
+        <div class="p-3">
+          <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="">Musica en tu Invitacion</label>
+          <label class="uploadFile">
 
-  
+          <img src="https://w7.pngwing.com/pngs/22/217/png-transparent-computer-icons-music-musik-rectangle-beat-symbol-thumbnail.png" alt="" height="20px" width="20px">
+          <span class="filename">subi tu musica</span>
+          <input type="file" class="inputfile form-control" name="file" >
 
-    <div class="p-3">
-      <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Dia y hora del evento:</label>
+          </label>
 
-      <input wire:model.defer="time" style="width:180px" type="date" id="weddy-time"
-            placeholder="mm-dd-yyyy"
-            name="weddy-time" value="02-14-23">
-      <br>
-      <br>
-      <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Horario</button>
-    </div>
+          <button onclick="" type="button" class="btn btn-light  btn-builder" wire:click="" wire:target="">Cambiar Musica</button>
+        </div>
 
-  
-    <div class="p-3">
-
-      
-      <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Ingrese la musica de fondo:</label>
-       
-      <input wire:model.defer="musica" style="width:230px" type="file" id="file-music" placeholder="">
-      <br>
-      <br>
-      <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Musica</button>
-    </div>
+        <div class="p-3">
+          <label style="font-family: 'Montserrat', Sans-serif;" class="text-light" for="meeting-time">Fecha de Inicio del Evento</label>
+    
+          <input wire:model.defer="time" style="width:180px" type="date" id="weddy-time"
+                placeholder="mm-dd-yyyy"
+                name="weddy-time" value="02-14-23">
+          <br>
+          <br>
+          <button onclick="weddytime()" type="button" class="btn btn-light  btn-builder" wire:click="changeTime" wire:target="changeTime">Cambiar Horario</button>
+        </div>
+        
+      </div>
 
 
     <div class="p-3 pt-5">
       <br>
-      <button id="botonactualizar2" >actualizar</button>
+      <button id="botonactualizar2" type="button" class="btn btn-success btn-lg btn-block">Actualizar</button>
     </div>
 
     

@@ -61,7 +61,7 @@ $(document).ready(function () {
   
     window.onload = function() {
       const hijo = document.querySelector('.tituloParejas');			
-      const padre = document.querySelector('.view');
+      const padre = document.querySelector('.portada');
       const hijo2 = document.querySelector('.titulo');
   
       hijo.addEventListener('mouseenter', function() {
@@ -97,32 +97,7 @@ $(document).ready(function () {
     };
   
   
-    const view = document.getElementById('portada');
-  
-      const btnportada = document.getElementById("my-button");
-  
-      view.addEventListener('click', (e) => {
-  
-        if(event.target.className == 'tituloParejas'){
-  
-          return 
-        }
-  
-  
-        if (btnportada.style.display === "none") {
-  
-          btnportada.style.display = "block";
-  
-          console.log(1);
-  
-        } else {
-  
-          btnportada.style.display = "none";
-  
-          console.log(2);
-        }
-  
-      });
+   
   
   
   
@@ -148,6 +123,36 @@ $(document).ready(function () {
             
         });
         
+        });
+
+
+        const view = document.getElementById('portada');
+  
+        const btnportada = document.getElementById("my-button");
+    
+        view.addEventListener('click', (event) => {
+
+          console.log(event);
+    
+          if(event.target.className === 'tituloParejas transparente'  || event.target.className === 'titulo transparente'){
+    
+            return 
+          }
+    
+    
+          if (btnportada.style.display === "none") {
+    
+            btnportada.style.display = "block";
+    
+            console.log(1);
+    
+          } else {
+    
+            btnportada.style.display = "none";
+    
+            console.log(2);
+          }
+    
         });
   
   

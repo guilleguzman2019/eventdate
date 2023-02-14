@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('home_bg_desktop');
             $table->string('home_bg_mobile');
             $table->string('history_title')->nullable();
-            $table->string('history_description')->nullable();
+            $table->longText('history_description')->nullable();
             $table->string('music_title')->nullable();
             $table->string('music_description')->nullable();
             $table->string('gift_title')->nullable();
