@@ -1,4 +1,4 @@
-.portada{
+#portada{
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -964,6 +964,12 @@ textarea{
     font-weight: 300;
     text-transform: uppercase;
     margin: 10px 10px 10px 10px;
+}
+
+
+input{
+
+  border: solid 3px rgba(255, 0, 0, 0);
 }
 
 

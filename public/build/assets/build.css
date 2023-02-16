@@ -1,219 +1,182 @@
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-  .gradient {
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #46474c;
+  color: #fff;
+  transition: all 0.3s;
+  font-family: font-family: "Montserrat", Sans-serif;
+  position: fixed;
+  top: 100px;
+  height: 100%;
+}
+
+#sidebar a,
+#sidebar a:hover,
+#sidebar a:focus {
+  color: inherit;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #46474c;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+#content p a {
+  color:
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+.btn{
+
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+}
+
+
+.gradient{
+
+ 
     height:100px;
     background: #3494E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(90deg, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(90deg, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
-
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #46474c;
-    border-right: 1px solid #eee;
-    }
-
-
-    .main {
-      padding-right: 40px;
-      padding-left: 220px; /* 180 + 40 */
-      overflow-x: hidden;
-      overflow-y: auto;
-      width:980px;
-      height: 800px;
-      overflow: scroll;
-
-      }
-
-
-      .btn-builder{
-
-        font-family: "Montserrat", Sans-serif;
-        font-size: 5px;
-      }
-
-      
-    .modal{
-
-        margin-top: 200px;
-
-        height: 75% !important;
-    }
-
-
-      input{
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        margin-bottom: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        font-family: 'Noto Serif Display' !important;
-        color: black;
-        font-size: 13px;
-      }
-
-      input:focus{
-
-          outline: none;
-        
-      }
-
-
-      .modal-content{
-
-        width: 700px !important;
-      }
-
-
-      .modal-body{
-
-        width: 100% !important;
-      }
-
-
-      input{
-
-        margin: 20px;
-      }
-
-      .next{
-
-        background: #3494E6;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(90deg, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(90deg, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-      }
-
-      #click{
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 150px;
-      }
-
-      #click2{
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 180px;
-      }
-
-
-
-      .h-divider {
-        margin: auto;
-        margin-top: 10px;
-        width: 100%;
-        position: relative;
-      }
-      
-      .h-divider .shadow {
-        overflow: hidden;
-        height: 5px;
-      }
-      
-      
-      
-      .h-divider .text {
-        width: 100px;
-        height: 45px;
-        padding: 10px;
-        position: absolute;
-        bottom: 100%;
-        margin-bottom: -33px;
-        left: 50%;
-        margin-left: -60px;
-        border-radius: 100%;
-        box-shadow: 0 2px 4px #999;
-        background: white;
-      }
-      
-      .h-divider .text i {
-        position: absolute;
-        top: 4px;
-        bottom: 4px;
-        left: 4px;
-        right: 4px;
-        border-radius: 100%;
-        border: 1px dashed #aaa;
-        text-align: center;
-        line-height: 50px;
-        font-style: normal;
-        color: #999;
-      }
-      
-      .h-divider .text2 {
-        width: 70px;
-        height: 70px;
-        position: absolute;
-        bottom: 100%;
-        margin-bottom: -35px;
-        left: 50%;
-        margin-left: -25px;
-        border-radius: 100%;
-        box-shadow: 0 2px 4px #999;
-        background: white;
-      }
-      
-      .h-divider img {
-        position: absolute;
-        margin: 4px;
-        max-width: 60px;
-        border-radius: 100%;
-        border: 1px dashed #aaa;
-      }
-
-
-      .uploadFile {
-        width: 65%;
-        background-color: white;
-        border: 1px solid grey;
-        color: grey;
-        font-size: 16px;
-        line-height: 23px;
-        overflow: hidden;
-        padding: 10px 10px 4px 10px;
-        position: relative;
-        resize: none;
-        font-family: "Montserrat", Sans-serif;
-        border-radius: 5px;
-        
-      }
-
-      [type="file"] {
-        cursor: pointer !important;
-        display: block;
-        font-size: 999px;
-        filter: alpha(opacity=0);
-        min-height: 100%;
-        min-width: 100%;
-        opacity: 0;
-        position: absolute;
-        right: 0px;
-        text-align: right;
-        top: 0px;
-        z-index: 1;
-      }
-      
-     
-
-
-
-
-
-      
-
-
-      
-      
-      
+  
+}
